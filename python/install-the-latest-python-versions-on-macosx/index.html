@@ -488,6 +488,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#quickstart-commands" title="Quickstart Commands" class="md-nav__link">
+    Quickstart Commands
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -690,6 +697,13 @@
         <li class="md-nav__item">
   <a href="#python-packaging" title="Python Packaging" class="md-nav__link">
     Python Packaging
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quickstart-commands" title="Quickstart Commands" class="md-nav__link">
+    Quickstart Commands
   </a>
   
 </li>
@@ -942,6 +956,24 @@ allow you to run tests with multiple different versions of Python, if needed.</p
 <p>After completing a Python program or two, you will be interested in learning how to distribute them
 effectively.  The <a href="https://packaging.python.org/">Python Packaging User Guide</a> has some good advice
 on this topic.</p>
+<h2 id="quickstart-commands">Quickstart Commands<a class="headerlink" href="#quickstart-commands" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="c1"># if you need homebrew</span>
+xcode-select --install
+/usr/bin/ruby -e <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">&quot;</span>
+
+<span class="c1"># install pyenv and latest major python versions</span>
+brew install pyenv
+
+cat &gt;&gt;<span class="nv">$HOME</span>/.bash_profile &lt;&lt;<span class="s2">&quot;EOF&quot;</span>
+<span class="k">if</span> which pyenv &gt; /dev/null<span class="p">;</span> <span class="k">then</span> <span class="nb">eval</span> <span class="s2">&quot;</span><span class="k">$(</span>pyenv init -<span class="k">)</span><span class="s2">&quot;</span><span class="p">;</span> <span class="k">fi</span>
+EOF
+
+<span class="nb">source</span> <span class="nv">$HOME</span>/.bash_profile
+
+pyenv install <span class="m">2</span>.7.14
+pyenv install <span class="m">3</span>.6.3
+pyenv versions
+</pre></div>
                 
                   
                 
