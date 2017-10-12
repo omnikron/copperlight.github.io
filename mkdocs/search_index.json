@@ -1,0 +1,14 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Copperlight Writes\n\n\nSomething or other.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#copperlight-writes", 
+            "text": "Something or other.", 
+            "title": "Copperlight Writes"
+        }
+    ]
+}
