@@ -1,0 +1,1103 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A site for knowledge sharing and neat things.">
+      
+      
+        <link rel="canonical" href="http://copperlight.github.io/ansible/running-ansible-playbooks-on-windows/">
+      
+      
+        <meta name="author" content="Matthew Johnson">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.1">
+    
+    
+      
+        <title>Running Ansible Playbooks on Windows - Copperlight Writes</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-a20f419c8e.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Menlo">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Menlo","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://copperlight.github.io/" title="Copperlight Writes" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon md-icon--home"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Ansible
+                </span>
+              
+            
+            Running Ansible Playbooks on Windows
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/copperlight/copperlight.github.io" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <div class="md-nav__button md-logo">
+      
+        <i class="md-icon md-icon--home"></i>
+      
+    </div>
+    Copperlight Writes
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/copperlight/copperlight.github.io" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Ansible
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Ansible
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible-vault-and-ssh-key-distribution/" title="Ansible Vault and SSH Key Distribution" class="md-nav__link">
+      Ansible Vault and SSH Key Distribution
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Running Ansible Playbooks on Windows
+      </label>
+    
+    <a href="./" title="Running Ansible Playbooks on Windows" class="md-nav__link md-nav__link--active">
+      Running Ansible Playbooks on Windows
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#but-first-some-history" title="But First, Some History" class="md-nav__link">
+    But First, Some History
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" title="Motivation" class="md-nav__link">
+    Motivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ansible-roadmap-update" title="Ansible Roadmap Update" class="md-nav__link">
+    Ansible Roadmap Update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" title="Pre-Requisites" class="md-nav__link">
+    Pre-Requisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playbooks" title="Playbooks" class="md-nav__link">
+    Playbooks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demonstration" title="Demonstration" class="md-nav__link">
+    Demonstration
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../testing-ansible-galaxy-roles-with-docker/" title="Testing Ansible Galaxy Roles with Docker" class="md-nav__link">
+      Testing Ansible Galaxy Roles with Docker
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      AWS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        AWS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aws/aws-credential-files-for-java-and-python/" title="AWS Credential Files for Java and Python" class="md-nav__link">
+      AWS Credential Files for Java and Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aws/build-a-fake-instance-metadata-server-for-ubuntu-on-vagrant/" title="Build a Fake Instance Metadata Server for Ubuntu on Vagrant" class="md-nav__link">
+      Build a Fake Instance Metadata Server for Ubuntu on Vagrant
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aws/configuring-multiple-interfaces-on-the-same-network-in-ec2/" title="Configuring Multiple Interfaces on the Same Network in EC2" class="md-nav__link">
+      Configuring Multiple Interfaces on the Same Network in EC2
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      GitHub
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        GitHub
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../github/how-i-built-my-blog/" title="How I Built My Blog" class="md-nav__link">
+      How I Built My Blog
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../linux/linux-ftrace-delivers-dtrace-like-functionality/" title="Linux ftrace Delivers dtrace-like Functionality" class="md-nav__link">
+      Linux ftrace Delivers dtrace-like Functionality
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/building-rest-apis-with-python-flask/" title="Building REST APIs with Python Flask" class="md-nav__link">
+      Building REST APIs with Python Flask
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/stop-using-print-for-debugging/" title="Stop Using "print" for Debugging" class="md-nav__link">
+      Stop Using "print" for Debugging
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Scala
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Scala
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scala/starting-scala-repls-with-gradle-and-sbt/" title="Starting Scala REPLs with Gradle and SBT" class="md-nav__link">
+      Starting Scala REPLs with Gradle and SBT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scala/using-the-scala-repl-to-configure-amazon-ses-notifications/" title="Using the Scala REPL to Configure Amazon SES Notifications" class="md-nav__link">
+      Using the Scala REPL to Configure Amazon SES Notifications
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Shell
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Shell
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../shell/measuring-transfer-speed-over-time-with-curl/" title="Measuring Transfer Speed Over Time with cURL" class="md-nav__link">
+      Measuring Transfer Speed Over Time with cURL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../shell/parsing-json-on-the-command-line/" title="Parsing JSON on the Command Line" class="md-nav__link">
+      Parsing JSON on the Command Line
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Talks
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Talks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../talks/netflix-atlas-telemetry-a-platform-begets-an-ecosystem/" title="Netflix Atlas Telemetry - A Platform Begets an Ecosystem" class="md-nav__link">
+      Netflix Atlas Telemetry - A Platform Begets an Ecosystem
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#but-first-some-history" title="But First, Some History" class="md-nav__link">
+    But First, Some History
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" title="Motivation" class="md-nav__link">
+    Motivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ansible-roadmap-update" title="Ansible Roadmap Update" class="md-nav__link">
+    Ansible Roadmap Update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" title="Pre-Requisites" class="md-nav__link">
+    Pre-Requisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playbooks" title="Playbooks" class="md-nav__link">
+    Playbooks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demonstration" title="Demonstration" class="md-nav__link">
+    Demonstration
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="running-ansible-playbooks-on-windows">Running Ansible Playbooks on Windows<a class="headerlink" href="#running-ansible-playbooks-on-windows" title="Permanent link">&para;</a></h1>
+<p><small>2014-06-29</small></p>
+<h2 id="but-first-some-history">But First, Some History<a class="headerlink" href="#but-first-some-history" title="Permanent link">&para;</a></h2>
+<p>In early 2006, running almost a thousand servers for Blackboard Product Development that were evenly
+distributed across Windows, Linux and Solaris, we needed an automation tool that would allow us to
+quickly deploy and configure the Blackboard Learning Management System (LMS).  The real sticking
+point for us was managing the Windows ecosystem.</p>
+<p>The <a href="https://github.com/puppetlabs/puppet/commit/54e9b5e3561977ea063417da12c46aad2a4c1332">first commit</a>
+of PuppetLabs Puppet occurred in April 2005 and the <a href="https://github.com/puppetlabs/puppet/tree/0.9.3">first tagged release</a>
+was on Jan 3, 2006.  The <a href="https://github.com/opscode/chef/commit/b5117775e86cff40399187b6292c98fba9dc5034">first commit</a>
+of OpsCode Chef occurred in March 2008 and the <a href="https://github.com/opscode/chef/tree/0.5.2">first tagged release</a>
+was on Jan 31, 2009.  Needless to say, the modern configuration management ecosystem was much sparser
+in 2006 then as compared to today.  Puppet was still very new and in the process of gaining mind share
+and adding functionality; it did not support Windows at first.  <a href="http://cfengine.com/">CFEngine</a> was
+available, but it also did not support Windows in the open source version.</p>
+<p>I worked with Dave Carter at the beginning of 2006 to develop our own in-house configuration
+management system that we called Fusion.  It was based on <a href="http://ant.apache.org/">Ant</a> and
+<a href="http://ant-contrib.sourceforge.net/tasks/tasks/index.html">Ant-Contrib</a>.  Since Blackboard was a
+Java based application, we always had one or more versions of JDKs installed on our systems as a
+part of the imaging or virtual machine cloning process, so picking a tool that ran on the JDK made
+sense and offered us the platform independence we needed.  Dave developed a state machine with a
+socket listener that would accept XML-formatted messages and then kick off various tasks.  I
+developed a library and property inheritance hierarchy for the the system, along with a parallel job
+execution client and added the set of scripts that deployed and configured the Blackboard LMS.  I
+figured out that by cherry-picking a few key utilities out of the <a href="http://unxutils.sourceforge.net/">UnxUtils distribution</a>,
+I could write Windows batch scripts in a manner similar to Linux bash scripts and this lent to a
+somewhat manageable level of consistency between the disparate operating systems without completely
+abandoning the hooks we needed for Windows.</p>
+<h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">&para;</a></h2>
+<p>Anyone who has spoken with me in the past year about my work knows that <a href="http://www.ansible.com/home">Ansible</a>
+is hands-down my favorite piece of software tooling.  Using Ansible, I was able to effectively
+manage 500-odd Ubuntu Linux systems at Blackboard, half of which were deployed in a VPC at AWS and
+half of which were deployed in the Blackboard Managed Hosting data centers.  Part of the challenge
+that we had at Blackboard in the Product Development department is that 30-40% of the several
+thousand servers used for development and testing were Windows, which made it difficult to choose a
+single configuration management system to rule them all.  For the better part of a year, I kept
+saying that it was a terrible shame that Ansible did not support Windows and that Opscode Chef would
+probably be the best choice for configuration management of all systems, since it arguably had the
+best support for that platform in 2013.  After meeting with <a href="https://www.linkedin.com/in/michaeldehaan">Michael DeHaan</a>,
+creator and CTO of Ansible, at Blackboard headquarters, we talked through their rough plans for
+Windows support.  In short, it was something they wanted to be thoughtful about.  Some time later,
+we had a hack day organized at Blackboard and I decided that I would attempt to develop an Ansible
+playbook that could install and uninstall a JDK on Windows, using my previous experience with
+building the Fusion configuration management system.</p>
+<p>It turns out that this works. Quite well. Even though it wasn't intended to.</p>
+<h2 id="ansible-roadmap-update">Ansible Roadmap Update<a class="headerlink" href="#ansible-roadmap-update" title="Permanent link">&para;</a></h2>
+<p>On June 19, 2014, Michael DeHaan announced <a href="http://www.ansible.com/blog/windows-is-coming">Windows Is Coming</a>.
+PowerShell remoting is a far cleaner solution and I am looking forward to seeing it hit the release
+branch, although I don't have to worry about Windows machines so much these days.  I learned this
+nifty fact from <a href="https://devopsu.com/newsletters/ansible-weekly/38.html">Ansible Weekly Issue 38</a>;
+this is not a bad way to keep up on the latest Ansible news.</p>
+<h2 id="pre-requisites">Pre-Requisites<a class="headerlink" href="#pre-requisites" title="Permanent link">&para;</a></h2>
+<p>Windows + Cygwin + SSHd + Python</p>
+<h2 id="playbooks">Playbooks<a class="headerlink" href="#playbooks" title="Permanent link">&para;</a></h2>
+<p>Ansible inventory file <code>hosts</code>:</p>
+<div class="codehilite"><pre><span></span><span class="k">[w7x64-jf]</span>
+<span class="na">w7x64-jf.pd.local</span>
+</pre></div>
+
+
+<p>JDK7 installation playbook <code>jdk7_install.yml</code>:</p>
+<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">install oracle jdk7</span>
+  <span class="l l-Scalar l-Scalar-Plain">hosts</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">w7x64-jf</span>
+  <span class="l l-Scalar l-Scalar-Plain">user</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">administrator</span>
+  <span class="l l-Scalar l-Scalar-Plain">gather_facts</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+  <span class="l l-Scalar l-Scalar-Plain">vars</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">7u45</span>
+    <span class="l l-Scalar l-Scalar-Plain">build</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">b18</span>
+    <span class="l l-Scalar l-Scalar-Plain">version_padded</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1.7.0_45</span>
+    <span class="l l-Scalar l-Scalar-Plain">dodrootca2</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">c:\\jdk\{{version_padded}}\\jre\\lib\\security\\dod.root-ca-2.pem</span>
+    <span class="l l-Scalar l-Scalar-Plain">cacerts</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">c:\\jdk{{version_padded}}\\jre\\lib\\security\\cacerts</span>
+  <span class="l l-Scalar l-Scalar-Plain">tasks</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">wget -P /usr/local/src --no-cookies --no-check-certificate --header Cookie:gpw_e24=http%3A%2F%2Fwww.oracle.com http://download.oracle.com/otn-pub/java/jdk/{{version}}-{{build}}/jdk-{{version}}-windows-x64.exe creates=/usr/local/src/jdk-{{version}}-windows-x64.exe</span>
+
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">file</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">path=/usr/local/src/jdk-{{version}}-windows-x64.exe mode=0755</span>
+
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">shell</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/usr/local/src/jdk-{{version}}-windows-x64.exe /s INSTALLDIR=c:\\jdk{{version_padded}} /INSTALLDIRPUBJRE=c:\\jre{{version_padded}} REBOOT=Suppress ADDLOCAL=ToolsFeature,SourceFeature,PublicjreFeature AUTOUPDATE=0 SYSTRAY=0 SYSTRAY=0 /L c:\\cygwin\\usr\\local\\src\\jdk-install-log.txt creates=/cygdrive/c/jdk{{version_padded}}</span>
+
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">copy</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">src=../certs/dod.root-ca-2.pem dest=/cygdrive/c/jdk{{version_padded}}/jre/lib/security/dod.root-ca-2.pem</span>
+
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/cygdrive/c/jdk{{version_padded}}/bin/keytool -import -trustcacerts -alias dodrootca2 -file {{dodrootca2}} -keystore $cacerts -storepass changeit -noprompt</span>
+    <span class="l l-Scalar l-Scalar-Plain">ignore_errors</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">copy</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">src=files/cygdrive_c_java_jre_lib_security_US_export_policy.jar dest=/cygdrive/c/jdk{{version_padded}}/jre/lib/security/US_export_policy.jar</span>
+
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">copy</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">src=files/cygdrive_c_java_jre_lib_security_local_policy.jar dest=/cygdrive/c/jdk{{version_padded}}/jre/lib/security/local_policy.jar</span>
+
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">shell</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/cygdrive/c/jdk{{version_padded}}/bin/java -version 2&gt;&amp;1 |head -1 |awk &#39;{print $3}&#39; |sed -e &#39;s/&quot;//g&#39;</span>
+    <span class="l l-Scalar l-Scalar-Plain">register</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">java_version</span>
+
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fail</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">msg=&quot;The Java version does not match the expected value {{ version_padded }}.&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">when</span><span class="p p-Indicator">:</span> <span class="s">&quot;&#39;{{</span><span class="nv"> </span><span class="s">java_version.stdout</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="nv"> </span><span class="s">!=</span><span class="nv"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">version_padded</span><span class="nv"> </span><span class="s">}}&#39;&quot;</span>
+</pre></div>
+
+
+<p>JDK7 uninstallation playbook <code>jdk7_uninstall.yml</code>:</p>
+<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">uninstall oracle jdk7</span>
+  <span class="l l-Scalar l-Scalar-Plain">hosts</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">w7x64-jf</span>
+  <span class="l l-Scalar l-Scalar-Plain">user</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">administrator</span>
+  <span class="l l-Scalar l-Scalar-Plain">gather_facts</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+  <span class="l l-Scalar l-Scalar-Plain">vars</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">7u45</span>
+    <span class="l l-Scalar l-Scalar-Plain">version_padded</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1.7.0_45</span>
+    <span class="l l-Scalar l-Scalar-Plain">version_text</span><span class="p p-Indicator">:</span> <span class="s">&quot;7</span><span class="nv"> </span><span class="s">Update</span><span class="nv"> </span><span class="s">45&quot;</span>
+  <span class="l l-Scalar l-Scalar-Plain">tasks</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">template</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">src=templates/usr_local_src_remove-programs.vbs dest=/usr/local/src/remove-programs.vbs</span>
+
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">shell</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">cscript remove-programs.vbs |grep &quot;Java {{version_text}} (64-bit)&quot; chdir=/usr/local/src</span>
+    <span class="l l-Scalar l-Scalar-Plain">register</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">result</span>
+    <span class="l l-Scalar l-Scalar-Plain">ignore_errors</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">cscript remove-programs.vbs /uninstall &quot;Java {{version_text}} (64-bit)&quot; chdir=/usr/local/src</span>
+    <span class="l l-Scalar l-Scalar-Plain">when</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">result|success</span>
+
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">shell</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">cscript remove-programs.vbs |grep &quot;Java SE Development Kit {{version_text}} (64-bit)&quot; chdir=/usr/local/src</span>
+    <span class="l l-Scalar l-Scalar-Plain">register</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">result</span>
+    <span class="l l-Scalar l-Scalar-Plain">ignore_errors</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">cscript remove-programs.vbs /uninstall &quot;Java SE Development Kit {{version_text}} (64-bit)&quot; chdir=/usr/local/src</span>
+    <span class="l l-Scalar l-Scalar-Plain">when</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">result|success</span>
+
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">file</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">path={{item}} state=absent</span>
+    <span class="l l-Scalar l-Scalar-Plain">with_items</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/usr/local/src/jdk-{{version}}-windows-x64.exe</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/usr/local/src/jdk-install-log.txt</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/usr/local/src/remove-programs.vbs</span>
+</pre></div>
+
+
+<p>The <code>remove-programs.vbs</code> helper script:</p>
+<div class="codehilite"><pre><span></span>If Wscript.Arguments.Count = 0 Then
+  inventory_software()
+ElseIf Wscript.Arguments.Count = 2 Then
+  If Wscript.Arguments(0) = &quot;/uninstall&quot; Then
+    &#39;Expecting: cscript remove-programs.vbs /uninstall &quot;Java(TM) 6 Update 26&quot;
+    &#39;Expecting: cscript remove-programs.vbs /uninstall &quot;Java(TM) SE Development Kit 6 Update 26&quot;
+    uninstall_software(Wscript.Arguments(1))
+  Else
+    Wscript.Echo &quot;Usage: remove-programs.vbs [/uninstall &quot;&quot;software&quot;&quot;]&quot;
+  End If
+Else
+  Wscript.Echo &quot;Usage: remove-programs.vbs [/uninstall &quot;&quot;software&quot;&quot;]&quot;
+End If
+
+Sub inventory_software()
+  strComputer = &quot;.&quot;
+
+  Set objWMIService = GetObject(&quot;winmgmts:&quot; _
+    &amp; &quot;{impersonationLevel=impersonate}!\\&quot; _
+    &amp; strComputer &amp; &quot;\root\cimv2&quot;)
+  Set colSoftware = objWMIService.ExecQuery _
+    (&quot;Select * from Win32_Product&quot;)
+
+  For Each objSoftware in colSoftware
+    Wscript.Echo &quot;Name: &quot; &amp; objSoftware.Name
+    &#39;Wscript.Echo &quot;Version: &quot; &amp; objSoftware.Version
+  Next
+End Sub
+
+Sub inventory_java_software()
+  strComputer = &quot;.&quot;
+
+  Set objWMIService = GetObject(&quot;winmgmts:&quot; _
+    &amp; &quot;{impersonationLevel=impersonate}!\\&quot; _
+    &amp; strComputer &amp; &quot;\root\cimv2&quot;)
+  Set colSoftware = objWMIService.ExecQuery _
+    (&quot;Select * from Win32_Product &quot; _
+        &amp; &quot;Where Name Like &#39;Java%&#39;&quot;)
+
+  For Each objSoftware in colSoftware
+    Wscript.Echo &quot;Name: &quot; &amp; objSoftware.Name
+    Wscript.Echo &quot;Version: &quot; &amp; objSoftware.Version
+  Next
+End Sub
+
+Sub uninstall_software(strApplicationName)
+  &#39;Make sure to run this with Administrator privileges
+  strComputer = &quot;.&quot;
+
+  Set objWMIService = GetObject(&quot;winmgmts:&quot; _
+    &amp; &quot;{impersonationLevel=impersonate}!\\&quot; _
+    &amp; strComputer &amp; &quot;\root\cimv2&quot;)
+  Set colSoftware = objWMIService.ExecQuery _
+    (&quot;Select * From Win32_Product Where Name = &#39;&quot; _
+    &amp; strApplicationName &amp; &quot;&#39;&quot;)
+
+  For Each objSoftware in colSoftware
+    objSoftware.Uninstall()
+  Next
+End Sub
+</pre></div>
+
+
+<h2 id="demonstration">Demonstration<a class="headerlink" href="#demonstration" title="Permanent link">&para;</a></h2>
+<p>File system state before install:</p>
+<div class="codehilite"><pre><span></span>administrator@W7X64-JF~
+$ ls -l /cygdrive/c <span class="p">|</span>egrep <span class="s2">&quot;jdk|jre&quot;</span>
+drwx------+ <span class="m">1</span> SYSTEM SYSTEM <span class="m">0</span> Jun <span class="m">24</span> <span class="m">2010</span> jdk5
+drwx------+ <span class="m">1</span> SYSTEM SYSTEM <span class="m">0</span> Oct <span class="m">4</span> <span class="m">2012</span> jdk6
+drwx------+ <span class="m">1</span> SYSTEM SYSTEM <span class="m">0</span> Oct <span class="m">4</span> <span class="m">2012</span> jdk7
+</pre></div>
+
+
+<p>Install JDK7 on Windows:</p>
+<div class="codehilite"><pre><span></span>copperpro:windows-hack mjohnson$ ansible-playbook -i hosts jdk7_install.yml
+
+PLAY <span class="o">[</span>install oracle jdk7<span class="o">]</span> ****************************************************
+
+TASK: <span class="o">[</span><span class="nb">command</span> wget -P /usr/local/src --no-cookies --no-check-certificate --header Cookie:gpw_e24<span class="o">=</span>http%3A%2F%2Fwww.oracle.com http://download.oracle.com/otn-pub/java/jdk/7u45-b18/jdk-7u45-windows-x64.exe <span class="nv">creates</span><span class="o">=</span>/usr/local/src/jdk-7u45-windows-x64.exe<span class="o">]</span> ***
+changed: <span class="o">[</span>w7x64-jf.pd.local<span class="o">]</span>
+
+TASK: <span class="o">[</span>file <span class="nv">path</span><span class="o">=</span>/usr/local/src/jdk-7u45-windows-x64.exe <span class="nv">mode</span><span class="o">=</span><span class="m">0755</span><span class="o">]</span> ***********
+changed: <span class="o">[</span>w7x64-jf.pd.local<span class="o">]</span>
+
+TASK: <span class="o">[</span>shell /usr/local/src/jdk-7u45-windows-x64.exe /s <span class="nv">INSTALLDIR</span><span class="o">=</span>c:<span class="se">\\</span>jdk1.7.0_45 /INSTALLDIRPUBJRE<span class="o">=</span>c:<span class="se">\\</span>jre1.7.0_45 <span class="nv">REBOOT</span><span class="o">=</span>Suppress <span class="nv">ADDLOCAL</span><span class="o">=</span>ToolsFeature,SourceFeature,PublicjreFeature <span class="nv">AUTOUPDATE</span><span class="o">=</span><span class="m">0</span> <span class="nv">SYSTRAY</span><span class="o">=</span><span class="m">0</span> <span class="nv">SYSTRAY</span><span class="o">=</span><span class="m">0</span> /L c:<span class="se">\\</span>cygwin<span class="se">\\</span>usr<span class="se">\\</span>local<span class="se">\\</span>src<span class="se">\\</span>jdk-install-log.txt <span class="nv">creates</span><span class="o">=</span>/cygdrive/c/jdk1.7.0_45<span class="o">]</span> ***
+changed: <span class="o">[</span>w7x64-jf.pd.local<span class="o">]</span>
+
+TASK: <span class="o">[</span>copy <span class="nv">src</span><span class="o">=</span>../certs/dod.root-ca-2.pem <span class="nv">dest</span><span class="o">=</span>/cygdrive/c/jdk1.7.0_45/jre/lib/security/dod.root-ca-2.pem<span class="o">]</span> ***
+changed: <span class="o">[</span>w7x64-jf.pd.local<span class="o">]</span>
+
+TASK: <span class="o">[</span><span class="nb">command</span> /cygdrive/c/jdk1.7.0_45/bin/keytool -import -trustcacerts -alias dodrootca2 -file c:<span class="se">\\</span>jdk1.7.0_45<span class="se">\\</span>jre<span class="se">\\</span>lib<span class="se">\\</span>security<span class="se">\\</span>dod.root-ca-2.pem -keystore c:<span class="se">\\</span>jdk1.7.0_45<span class="se">\\</span>jre<span class="se">\\</span>lib<span class="se">\\</span>security<span class="se">\\</span>cacerts -storepass changeit -noprompt<span class="o">]</span> ***
+changed: <span class="o">[</span>w7x64-jf.pd.local<span class="o">]</span>
+
+TASK: <span class="o">[</span>copy <span class="nv">src</span><span class="o">=</span>files/cygdrive_c_java_jre_lib_security_US_export_policy.jar <span class="nv">dest</span><span class="o">=</span>/cygdrive/c/jdk1.7.0_45/jre/lib/security/US_export_policy.jar<span class="o">]</span> ***
+changed: <span class="o">[</span>w7x64-jf.pd.local<span class="o">]</span>
+
+TASK: <span class="o">[</span>copy <span class="nv">src</span><span class="o">=</span>files/cygdrive_c_java_jre_lib_security_local_policy.jar <span class="nv">dest</span><span class="o">=</span>/cygdrive/c/jdk1.7.0_45/jre/lib/security/local_policy.jar<span class="o">]</span> ***
+changed: <span class="o">[</span>w7x64-jf.pd.local<span class="o">]</span>
+
+TASK: <span class="o">[</span>shell /cygdrive/c/jdk1.7.0_45/bin/java -version <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span>head -1 <span class="p">|</span>awk <span class="s1">&#39;{print $3}&#39;</span> <span class="p">|</span>sed -e <span class="s1">&#39;s/&quot;//g&#39;</span><span class="o">]</span> ***
+changed: <span class="o">[</span>w7x64-jf.pd.local<span class="o">]</span>
+
+TASK: <span class="o">[</span>fail <span class="nv">msg</span><span class="o">=</span><span class="s2">&quot;The Java version does not match the expected value 1.7.0_45.&quot;</span><span class="o">]</span> ***
+skipping: <span class="o">[</span>w7x64-jf.pd.local<span class="o">]</span>
+
+PLAY RECAP ********************************************************************
+w7x64-jf.pd.local : <span class="nv">ok</span><span class="o">=</span><span class="m">8</span> <span class="nv">changed</span><span class="o">=</span><span class="m">8</span> <span class="nv">unreachable</span><span class="o">=</span><span class="m">0</span> <span class="nv">failed</span><span class="o">=</span><span class="m">0</span>
+</pre></div>
+
+
+<p>File system state after install and before uninstall:</p>
+<div class="codehilite"><pre><span></span>administrator@W7X64-JF ~
+$ ls -l /cygdrive/c <span class="p">|</span>egrep <span class="s2">&quot;jdk|jre&quot;</span>
+drwx------+ <span class="m">1</span> SYSTEM SYSTEM <span class="m">0</span> Dec <span class="m">12</span> <span class="m">23</span>:17 jdk1.7.0_45
+drwx------+ <span class="m">1</span> SYSTEM SYSTEM <span class="m">0</span> Jun <span class="m">24</span> <span class="m">2010</span> jdk5
+drwx------+ <span class="m">1</span> SYSTEM SYSTEM <span class="m">0</span> Oct <span class="m">4</span> <span class="m">2012</span> jdk6
+drwx------+ <span class="m">1</span> SYSTEM SYSTEM <span class="m">0</span> Oct <span class="m">4</span> <span class="m">2012</span> jdk7
+drwx------+ <span class="m">1</span> SYSTEM SYSTEM <span class="m">0</span> Dec <span class="m">12</span> <span class="m">23</span>:17 jre1.7.0_45
+</pre></div>
+
+
+<p>Uninstall JDK7 on Windows:</p>
+<div class="codehilite"><pre><span></span>copperpro:windows-hack mjohnson$ ansible-playbook -i hosts jdk7_uninstall.yml
+
+PLAY <span class="o">[</span>uninstall oracle jdk7<span class="o">]</span> **************************************************
+
+TASK: <span class="o">[</span>template <span class="nv">src</span><span class="o">=</span>templates/usr_local_src_remove-programs.vbs <span class="nv">dest</span><span class="o">=</span>/usr/local/src/remove-programs.vbs<span class="o">]</span> ***
+changed: <span class="o">[</span>w7x64-jf.pd.local<span class="o">]</span>
+
+TASK: <span class="o">[</span>shell cscript remove-programs.vbs <span class="p">|</span>grep <span class="s2">&quot;Java 7 Update 45 (64-bit)&quot;</span> <span class="nv">chdir</span><span class="o">=</span>/usr/local/src<span class="o">]</span> ***
+changed: <span class="o">[</span>w7x64-jf.pd.local<span class="o">]</span>
+
+TASK: <span class="o">[</span><span class="nb">command</span> cscript remove-programs.vbs /uninstall <span class="s2">&quot;Java 7 Update 45 (64-bit)&quot;</span> <span class="nv">chdir</span><span class="o">=</span>/usr/local/src<span class="o">]</span> ***
+changed: <span class="o">[</span>w7x64-jf.pd.local<span class="o">]</span>
+
+TASK: <span class="o">[</span>shell cscript remove-programs.vbs <span class="p">|</span>grep <span class="s2">&quot;Java SE Development Kit 7 Update 45 (64-bit)&quot;</span> <span class="nv">chdir</span><span class="o">=</span>/usr/local/src<span class="o">]</span> ***
+changed: <span class="o">[</span>w7x64-jf.pd.local<span class="o">]</span>
+
+TASK: <span class="o">[</span><span class="nb">command</span> cscript remove-programs.vbs /uninstall <span class="s2">&quot;Java SE Development Kit 7 Update 45 (64-bit)&quot;</span> <span class="nv">chdir</span><span class="o">=</span>/usr/local/src<span class="o">]</span> ***
+changed: <span class="o">[</span>w7x64-jf.pd.local<span class="o">]</span>
+
+TASK: <span class="o">[</span>file <span class="nv">path</span><span class="o">=</span><span class="nv">$item</span> <span class="nv">state</span><span class="o">=</span>absent<span class="o">]</span> ******************************************
+changed: <span class="o">[</span>w7x64-jf.pd.local<span class="o">]</span> <span class="o">=</span>&gt; <span class="o">(</span><span class="nv">item</span><span class="o">=</span>/usr/local/src/jdk-7u45-windows-x64.exe<span class="o">)</span>
+changed: <span class="o">[</span>w7x64-jf.pd.local<span class="o">]</span> <span class="o">=</span>&gt; <span class="o">(</span><span class="nv">item</span><span class="o">=</span>/usr/local/src/jdk-install-log.txt<span class="o">)</span>
+changed: <span class="o">[</span>w7x64-jf.pd.local<span class="o">]</span> <span class="o">=</span>&gt; <span class="o">(</span><span class="nv">item</span><span class="o">=</span>/usr/local/src/remove-programs.vbs<span class="o">)</span>
+
+PLAY RECAP ********************************************************************
+w7x64-jf.pd.local : <span class="nv">ok</span><span class="o">=</span><span class="m">6</span> <span class="nv">changed</span><span class="o">=</span><span class="m">6</span> <span class="nv">unreachable</span><span class="o">=</span><span class="m">0</span> <span class="nv">failed</span><span class="o">=</span><span class="m">0</span>
+</pre></div>
+
+
+<p>File system state after uninstall:</p>
+<div class="codehilite"><pre><span></span>administrator@W7X64-JF ~
+$ ls -l /cygdrive/c <span class="p">|</span>egrep <span class="s2">&quot;jdk|jre&quot;</span>
+drwx------+ <span class="m">1</span> SYSTEM SYSTEM <span class="m">0</span> Jun <span class="m">24</span> <span class="m">2010</span> jdk5
+drwx------+ <span class="m">1</span> SYSTEM SYSTEM <span class="m">0</span> Oct <span class="m">4</span> <span class="m">2012</span> jdk6
+drwx------+ <span class="m">1</span> SYSTEM SYSTEM <span class="m">0</span> Oct <span class="m">4</span> <span class="m">2012</span> jdk7
+</pre></div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../ansible-vault-and-ssh-key-distribution/" title="Ansible Vault and SSH Key Distribution" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Ansible Vault and SSH Key Distribution
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../testing-ansible-galaxy-roles-with-docker/" title="Testing Ansible Galaxy Roles with Docker" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Testing Ansible Galaxy Roles with Docker
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-52382416-1","copperlight.github.io"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>
