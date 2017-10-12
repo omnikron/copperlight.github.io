@@ -896,6 +896,8 @@ cd ..
 </li>
 </ol>
 <h2 id="useful-python-packages">Useful Python Packages<a class="headerlink" href="#useful-python-packages" title="Permanent link">&para;</a></h2>
+<p>This is a small collecton of useful packages that will help get you started doing useful things
+with Python.</p>
 <p>Install <a href="http://flake8.pycqa.org/en/latest/">flake8</a>, which is a static analyzer that enforces
 good Python coding style and alerts you to coding mistakes.  Now that you have Python installed,
 you can use the <code>pip</code> command to install any additional modules that you want to use.  You will
@@ -912,6 +914,53 @@ website has more information on these tools.</p>
 <div class="codehilite"><pre><span></span>pip install ipython jupyter
 ipython
 jupyter notebook
+</pre></div>
+
+
+<p>Install <a href="http://docs.python-requests.org/en/master/">Requests: HTTP for Humans</a>, which makes it easy
+to consume HTTP services. See GitHub's <a href="https://developer.github.com/v3/">REST API v3</a> documentation
+for more details on endpoints that are avaialble.</p>
+<div class="codehilite"><pre><span></span>pip install requests
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">python</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">requests</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com/users/copperlight&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">r</span><span class="o">.</span><span class="n">ok</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span>
+<span class="mi">200</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;content-type&#39;</span><span class="p">]</span>
+<span class="s1">&#39;application/json; charset=utf8&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">r</span><span class="o">.</span><span class="n">encoding</span>
+<span class="s1">&#39;utf-8&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span>
+<span class="sa">u</span><span class="s1">&#39;{&quot;login&quot;:&quot;copperlight&quot;, ...}&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="p">{</span><span class="sa">u</span><span class="s1">&#39;public_repos&#39;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span> <span class="o">...</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;login&#39;</span><span class="p">]</span>
+<span class="sa">u</span><span class="s1">&#39;copperlight&#39;</span>
+</pre></div>
+
+
+<p>Install <a href="http://flask.pocoo.org/">Flask: A Python Microframework</a>, which can be used to quickly build
+small websites that automate everyday tasks.</p>
+<div class="codehilite"><pre><span></span>pip install Flask
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;Hello World!&quot;</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>FLASK_APP=hello.py flask run
+curl http://127.0.0.1:5000
 </pre></div>
 
 
