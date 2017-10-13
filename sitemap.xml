@@ -34,6 +34,12 @@
     
         
     <url>
+     <loc>http://copperlight.github.io//aws/assume-role-with-awscli/</loc>
+     <lastmod>2017-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>http://copperlight.github.io//aws/aws-credential-files-for-java-and-python/</loc>
      <lastmod>2017-10-12</lastmod>
      <changefreq>daily</changefreq>
@@ -41,6 +47,12 @@
         
     <url>
      <loc>http://copperlight.github.io//aws/build-a-fake-instance-metadata-server-for-ubuntu-on-vagrant/</loc>
+     <lastmod>2017-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://copperlight.github.io//aws/checking-and-changing-content-type-of-s3-object-with-awscli/</loc>
      <lastmod>2017-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -76,6 +88,40 @@
     
         
     <url>
+     <loc>http://copperlight.github.io//misc/clone-stash-pull-requests/</loc>
+     <lastmod>2017-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://copperlight.github.io//misc/dual-boot-osx-10.10-and-ubuntu-14.04-on-a-2013-macbook-pro-retina/</loc>
+     <lastmod>2017-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://copperlight.github.io//misc/reset-jenkins-build-number/</loc>
+     <lastmod>2017-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://copperlight.github.io//misc/switching-jdks-in-osx/</loc>
+     <lastmod>2017-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://copperlight.github.io//python/accessing-google-apis-with-python/</loc>
+     <lastmod>2017-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>http://copperlight.github.io//python/building-rest-apis-with-python-flask/</loc>
      <lastmod>2017-10-12</lastmod>
      <changefreq>daily</changefreq>
@@ -83,6 +129,12 @@
         
     <url>
      <loc>http://copperlight.github.io//python/install-the-latest-python-versions-on-macosx/</loc>
+     <lastmod>2017-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://copperlight.github.io//python/memory-profiling-with-pyrasite-and-heapy/</loc>
      <lastmod>2017-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -98,7 +150,37 @@
     
         
     <url>
+     <loc>http://copperlight.github.io//scala/intellij-configuration-tips/</loc>
+     <lastmod>2017-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://copperlight.github.io//scala/overview-of-debugging-tools/</loc>
+     <lastmod>2017-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://copperlight.github.io//scala/scalafmt-configuration-tips/</loc>
+     <lastmod>2017-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>http://copperlight.github.io//scala/starting-scala-repls-with-gradle-and-sbt/</loc>
+     <lastmod>2017-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://copperlight.github.io//scala/testing-aws-clients-with-iam-assumerole-credentials-in-scala/</loc>
+     <lastmod>2017-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://copperlight.github.io//scala/using-gradle-to-run-scala-projects-locally/</loc>
      <lastmod>2017-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -121,6 +203,12 @@
         
     <url>
      <loc>http://copperlight.github.io//shell/parsing-json-on-the-command-line/</loc>
+     <lastmod>2017-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://copperlight.github.io//shell/schedule-ad-hoc-jobs-for-later-on-an-instance-with-atd/</loc>
      <lastmod>2017-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>

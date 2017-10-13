@@ -10,7 +10,7 @@
         <meta name="description" content="A site for knowledge sharing and neat things.">
       
       
-        <link rel="canonical" href="http://copperlight.github.io/shell/parsing-json-on-the-command-line/">
+        <link rel="canonical" href="http://copperlight.github.io/misc/clone-stash-pull-requests/">
       
       
         <meta name="author" content="Matthew Johnson">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Parsing JSON on the Command Line - Copperlight Writes</title>
+        <title>Clone Stash Pull Requests - Copperlight Writes</title>
       
     
     
@@ -84,11 +84,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Shell
+                  Misc
                 </span>
               
             
-            Parsing JSON on the Command Line
+            Clone Stash Pull Requests
           
         </span>
       </div>
@@ -423,10 +423,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
       Misc
@@ -442,11 +444,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../misc/clone-stash-pull-requests/" title="Clone Stash Pull Requests" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="Clone Stash Pull Requests" class="md-nav__link md-nav__link--active">
       Clone Stash Pull Requests
     </a>
+    
   </li>
 
         
@@ -456,7 +467,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../misc/dual-boot-osx-10.10-and-ubuntu-14.04-on-a-2013-macbook-pro-retina/" title="Dual Boot OSX 10.10 and Ubuntu 14.04 on a 2013 Macbook Pro Retina" class="md-nav__link">
+    <a href="../dual-boot-osx-10.10-and-ubuntu-14.04-on-a-2013-macbook-pro-retina/" title="Dual Boot OSX 10.10 and Ubuntu 14.04 on a 2013 Macbook Pro Retina" class="md-nav__link">
       Dual Boot OSX 10.10 and Ubuntu 14.04 on a 2013 Macbook Pro Retina
     </a>
   </li>
@@ -468,7 +479,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../misc/reset-jenkins-build-number/" title="Reset Jenkins Build Number" class="md-nav__link">
+    <a href="../reset-jenkins-build-number/" title="Reset Jenkins Build Number" class="md-nav__link">
       Reset Jenkins Build Number
     </a>
   </li>
@@ -480,7 +491,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../misc/switching-jdks-in-osx/" title="Switching JDKs in OSX" class="md-nav__link">
+    <a href="../switching-jdks-in-osx/" title="Switching JDKs in OSX" class="md-nav__link">
       Switching JDKs in OSX
     </a>
   </li>
@@ -687,12 +698,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
     <label class="md-nav__link" for="nav-9">
       Shell
@@ -710,7 +719,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../measuring-transfer-speed-over-time-with-curl/" title="Measuring Transfer Speed Over Time with cURL" class="md-nav__link">
+    <a href="../../shell/measuring-transfer-speed-over-time-with-curl/" title="Measuring Transfer Speed Over Time with cURL" class="md-nav__link">
       Measuring Transfer Speed Over Time with cURL
     </a>
   </li>
@@ -720,20 +729,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-    <a href="./" title="Parsing JSON on the Command Line" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../shell/parsing-json-on-the-command-line/" title="Parsing JSON on the Command Line" class="md-nav__link">
       Parsing JSON on the Command Line
     </a>
-    
   </li>
 
         
@@ -743,7 +743,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../schedule-ad-hoc-jobs-for-later-on-an-instance-with-atd/" title="Schedule Ad-Hoc Jobs for Later on an Instance with atd" class="md-nav__link">
+    <a href="../../shell/schedule-ad-hoc-jobs-for-later-on-an-instance-with-atd/" title="Schedule Ad-Hoc Jobs for Later on an Instance with atd" class="md-nav__link">
       Schedule Ad-Hoc Jobs for Later on an Instance with atd
     </a>
   </li>
@@ -818,55 +818,22 @@
               
                 
                 
-                <h1 id="parsing-json-on-the-command-line">Parsing JSON on the Command Line<a class="headerlink" href="#parsing-json-on-the-command-line" title="Permanent link">&para;</a></h1>
-<p><small>2014-07-16</small></p>
-<p>With more APIs moving to JSON, being able to parse it at the command line allows you to write more
-sophisticated shell scripts that can interact with your favorite services.  Most first attempts at
-JSON parsing using some variation of the following to get the job done, which initially seems
-reasonable:</p>
-<div class="codehilite"><pre><span></span>curl -s http://endpoint.info <span class="se">\</span>
-    <span class="p">|</span>python -mjson.tool <span class="se">\</span>
-    <span class="p">|</span>grep foo <span class="se">\</span>
-    <span class="p">|</span>cut -d: -f2 <span class="se">\</span>
-    <span class="p">|</span>sed -e <span class="s1">&#39;s/&quot;//g&#39;</span>
+                <h1 id="clone-stash-pull-requests">Clone Stash Pull Requests<a class="headerlink" href="#clone-stash-pull-requests" title="Permanent link">&para;</a></h1>
+<p><small>2015-11-18</small></p>
+<p><a href="https://answers.atlassian.com/questions/179848/local-checkout-of-a-pull-request-in-stash">https://answers.atlassian.com/questions/179848/local-checkout-of-a-pull-request-in-stash</a></p>
+<div class="codehilite"><pre><span></span><span class="k">[alias]</span>
+  <span class="na">prstash</span> <span class="o">=</span> <span class="s">&quot;!f() { git fetch $1 refs/pull-requests/$2/from:$3; } ; f&quot;</span>
 </pre></div>
 
 
-<p>However, this can rapidly get out of hand, if you have key duplication, complex nested structures or
-you need to pull in all of the elements of a list.  For awhile,
-<a href="https://github.com/ddopson/underscore-cli">underscore-cli</a> was my favorite fully-featured JSON
-parser, but I found its documentation somewhat lacking and it hasn't seen serious development since
-November 2012.  Since then, I found <a href="http://stedolan.github.io/jq/">jq</a> which has a beautiful,
-well-written <a href="http://stedolan.github.io/jq/manual/">manual</a> with many usage examples and it is under
-active development.  It also has the benefit of being written in C, which helps speed and it has a
-fairly concise descriptor language.  To install:</p>
-<div class="codehilite"><pre><span></span>brew install jq
-</pre></div>
+<div class="codehilite"><pre><span></span><span class="c1"># where 3 is the 3rd pull request</span>
+git prstash origin <span class="m">3</span> dest-branch
+git checkout dest-branch
 
-
-<p>Then you can do things like flattening a complex JSON structure into a simple CSV:</p>
-<div class="codehilite"><pre><span></span><span class="nv">PAYLOADS</span><span class="o">=</span><span class="k">$(</span> curl -s <span class="nv">$URL</span> <span class="p">|</span>jq <span class="s1">&#39;.payloads&#39;</span> <span class="k">)</span>
-<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$PAYLOADS</span><span class="s2">&quot;</span> !<span class="o">=</span> <span class="s2">&quot;[]&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo</span> <span class="nv">$PAYLOADS</span> <span class="se">\</span>
-        <span class="p">|</span> jq -r <span class="s1">&#39;.[] | .minutes[].payload.items[] | [.actions.actionTime, (.actions | {actions} | .actions.email.state), .sourceInstance, (.actions | {actions} | .actions.email.info )] | @csv&#39;</span>
-<span class="k">fi</span>
-</pre></div>
-
-
-<p>As a bonus feature, if you have to deal in XML rather than JSON, then
-<a href="http://xmlstar.sourceforge.net/">xmlstarlet</a> is a good choice for handling it.  Naturally,
-installation:</p>
-<div class="codehilite"><pre><span></span>brew install xmlstarlet
-</pre></div>
-
-
-<p>Once you have xmlstarlet, you can do things like pull the build number out of an Atlassian Bamboo
-HTML page, which was necessary when they did not have an API call available to report the version
-number of the last known good build for a project:</p>
-<div class="codehilite"><pre><span></span>curl -s --insecure https://bamboo.local/browse/<span class="si">${</span><span class="nv">BUILDKEY</span><span class="si">}${</span><span class="nv">BUILD</span><span class="si">}</span> <span class="se">\</span>
-    <span class="p">|</span>tidy -asxhtml -numeric --force-output <span class="nb">true</span> <span class="m">2</span>&gt;/dev/null <span class="se">\</span>
-    <span class="p">|</span>xmlstarlet sel -N <span class="nv">x</span><span class="o">=</span><span class="s2">&quot;http://www.w3.org/1999/xhtml&quot;</span> -t -m <span class="s2">&quot;//x:div[@id=&#39;sr-build&#39;]/x:h2/x:a&quot;</span> -v <span class="s2">&quot;.&quot;</span> <span class="se">\</span>
-    <span class="p">|</span>sed -e <span class="s2">&quot;s/#//g&quot;</span>
+<span class="c1"># to reclone</span>
+git checkout master
+git prstash origin <span class="m">3</span> dest-branch
+git checkout dest-branch
 </pre></div>
                 
                   
@@ -886,7 +853,7 @@ number of the last known good build for a project:</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../measuring-transfer-speed-over-time-with-curl/" title="Measuring Transfer Speed Over Time with cURL" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../linux/linux-ftrace-delivers-dtrace-like-functionality/" title="Linux ftrace Delivers dtrace-like Functionality" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -895,19 +862,19 @@ number of the last known good build for a project:</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Measuring Transfer Speed Over Time with cURL
+                Linux ftrace Delivers dtrace-like Functionality
               </span>
             </div>
           </a>
         
         
-          <a href="../schedule-ad-hoc-jobs-for-later-on-an-instance-with-atd/" title="Schedule Ad-Hoc Jobs for Later on an Instance with atd" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../dual-boot-osx-10.10-and-ubuntu-14.04-on-a-2013-macbook-pro-retina/" title="Dual Boot OSX 10.10 and Ubuntu 14.04 on a 2013 Macbook Pro Retina" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Schedule Ad-Hoc Jobs for Later on an Instance with atd
+                Dual Boot OSX 10.10 and Ubuntu 14.04 on a 2013 Macbook Pro Retina
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

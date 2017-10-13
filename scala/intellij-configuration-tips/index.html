@@ -10,7 +10,7 @@
         <meta name="description" content="A site for knowledge sharing and neat things.">
       
       
-        <link rel="canonical" href="http://copperlight.github.io/shell/parsing-json-on-the-command-line/">
+        <link rel="canonical" href="http://copperlight.github.io/scala/intellij-configuration-tips/">
       
       
         <meta name="author" content="Matthew Johnson">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Parsing JSON on the Command Line - Copperlight Writes</title>
+        <title>IntelliJ Configuration Tips - Copperlight Writes</title>
       
     
     
@@ -84,11 +84,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Shell
+                  Scala
                 </span>
               
             
-            Parsing JSON on the Command Line
+            IntelliJ Configuration Tips
           
         </span>
       </div>
@@ -579,10 +579,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
     
     <label class="md-nav__link" for="nav-8">
       Scala
@@ -598,11 +600,108 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../scala/intellij-configuration-tips/" title="IntelliJ Configuration Tips" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        IntelliJ Configuration Tips
+      </label>
+    
+    <a href="./" title="IntelliJ Configuration Tips" class="md-nav__link md-nav__link--active">
       IntelliJ Configuration Tips
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#optimize-imports" title="Optimize Imports" class="md-nav__link">
+    Optimize Imports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-style" title="Code Style" class="md-nav__link">
+    Code Style
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-declaration-parameters" title="Method declaration parameters" class="md-nav__link">
+    Method declaration parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-signature-warnings" title="Method Signature Warnings" class="md-nav__link">
+    Method Signature Warnings
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-with-accessor-like-name-has-unit-result-type" title="Method with accessor-like name has Unit result type" class="md-nav__link">
+    Method with accessor-like name has Unit result type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-with-unit-result-type-is-defined-like-procedure" title="Method with Unit result type is defined like procedure" class="md-nav__link">
+    Method with Unit result type is defined like procedure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scala-worksheet" title="Scala Worksheet" class="md-nav__link">
+    Scala Worksheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zero-latency-typing" title="Zero-Latency Typing" class="md-nav__link">
+    Zero-Latency Typing
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -612,7 +711,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../scala/overview-of-debugging-tools/" title="Overview of Debugging Tools" class="md-nav__link">
+    <a href="../overview-of-debugging-tools/" title="Overview of Debugging Tools" class="md-nav__link">
       Overview of Debugging Tools
     </a>
   </li>
@@ -624,7 +723,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../scala/scalafmt-configuration-tips/" title="Scalafmt Configuration Tips" class="md-nav__link">
+    <a href="../scalafmt-configuration-tips/" title="Scalafmt Configuration Tips" class="md-nav__link">
       Scalafmt Configuration Tips
     </a>
   </li>
@@ -636,7 +735,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../scala/starting-scala-repls-with-gradle-and-sbt/" title="Starting Scala REPLs with Gradle and SBT" class="md-nav__link">
+    <a href="../starting-scala-repls-with-gradle-and-sbt/" title="Starting Scala REPLs with Gradle and SBT" class="md-nav__link">
       Starting Scala REPLs with Gradle and SBT
     </a>
   </li>
@@ -648,7 +747,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../scala/testing-aws-clients-with-iam-assumerole-credentials-in-scala/" title="Testing AWS Clients with IAM AssumeRole Credentials in Scala" class="md-nav__link">
+    <a href="../testing-aws-clients-with-iam-assumerole-credentials-in-scala/" title="Testing AWS Clients with IAM AssumeRole Credentials in Scala" class="md-nav__link">
       Testing AWS Clients with IAM AssumeRole Credentials in Scala
     </a>
   </li>
@@ -660,7 +759,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../scala/using-gradle-to-run-scala-projects-locally/" title="Using Gradle to Run Scala Projects Locally" class="md-nav__link">
+    <a href="../using-gradle-to-run-scala-projects-locally/" title="Using Gradle to Run Scala Projects Locally" class="md-nav__link">
       Using Gradle to Run Scala Projects Locally
     </a>
   </li>
@@ -672,7 +771,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../scala/using-the-scala-repl-to-configure-amazon-ses-notifications/" title="Using the Scala REPL to Configure Amazon SES Notifications" class="md-nav__link">
+    <a href="../using-the-scala-repl-to-configure-amazon-ses-notifications/" title="Using the Scala REPL to Configure Amazon SES Notifications" class="md-nav__link">
       Using the Scala REPL to Configure Amazon SES Notifications
     </a>
   </li>
@@ -687,12 +786,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
     <label class="md-nav__link" for="nav-9">
       Shell
@@ -710,7 +807,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../measuring-transfer-speed-over-time-with-curl/" title="Measuring Transfer Speed Over Time with cURL" class="md-nav__link">
+    <a href="../../shell/measuring-transfer-speed-over-time-with-curl/" title="Measuring Transfer Speed Over Time with cURL" class="md-nav__link">
       Measuring Transfer Speed Over Time with cURL
     </a>
   </li>
@@ -720,20 +817,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-    <a href="./" title="Parsing JSON on the Command Line" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../shell/parsing-json-on-the-command-line/" title="Parsing JSON on the Command Line" class="md-nav__link">
       Parsing JSON on the Command Line
     </a>
-    
   </li>
 
         
@@ -743,7 +831,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../schedule-ad-hoc-jobs-for-later-on-an-instance-with-atd/" title="Schedule Ad-Hoc Jobs for Later on an Instance with atd" class="md-nav__link">
+    <a href="../../shell/schedule-ad-hoc-jobs-for-later-on-an-instance-with-atd/" title="Schedule Ad-Hoc Jobs for Later on an Instance with atd" class="md-nav__link">
       Schedule Ad-Hoc Jobs for Later on an Instance with atd
     </a>
   </li>
@@ -807,6 +895,81 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#optimize-imports" title="Optimize Imports" class="md-nav__link">
+    Optimize Imports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-style" title="Code Style" class="md-nav__link">
+    Code Style
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-declaration-parameters" title="Method declaration parameters" class="md-nav__link">
+    Method declaration parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-signature-warnings" title="Method Signature Warnings" class="md-nav__link">
+    Method Signature Warnings
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-with-accessor-like-name-has-unit-result-type" title="Method with accessor-like name has Unit result type" class="md-nav__link">
+    Method with accessor-like name has Unit result type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-with-unit-result-type-is-defined-like-procedure" title="Method with Unit result type is defined like procedure" class="md-nav__link">
+    Method with Unit result type is defined like procedure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scala-worksheet" title="Scala Worksheet" class="md-nav__link">
+    Scala Worksheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zero-latency-typing" title="Zero-Latency Typing" class="md-nav__link">
+    Zero-Latency Typing
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -818,56 +981,83 @@
               
                 
                 
-                <h1 id="parsing-json-on-the-command-line">Parsing JSON on the Command Line<a class="headerlink" href="#parsing-json-on-the-command-line" title="Permanent link">&para;</a></h1>
-<p><small>2014-07-16</small></p>
-<p>With more APIs moving to JSON, being able to parse it at the command line allows you to write more
-sophisticated shell scripts that can interact with your favorite services.  Most first attempts at
-JSON parsing using some variation of the following to get the job done, which initially seems
-reasonable:</p>
-<div class="codehilite"><pre><span></span>curl -s http://endpoint.info <span class="se">\</span>
-    <span class="p">|</span>python -mjson.tool <span class="se">\</span>
-    <span class="p">|</span>grep foo <span class="se">\</span>
-    <span class="p">|</span>cut -d: -f2 <span class="se">\</span>
-    <span class="p">|</span>sed -e <span class="s1">&#39;s/&quot;//g&#39;</span>
+                <h1 id="intellij-configuration-tips">IntelliJ Configuration Tips<a class="headerlink" href="#intellij-configuration-tips" title="Permanent link">&para;</a></h1>
+<p>This page provides a few tips on configuring IntelliJ for working with Scala code.</p>
+<h2 id="optimize-imports">Optimize Imports<a class="headerlink" href="#optimize-imports" title="Permanent link">&para;</a></h2>
+<p>The preference for organizing imports is to keep them on a single line per import, rather than
+bunching them together with curly braces.  You can enforce this behavior with IntelliJ by modifying
+the following configuration:</p>
+<ul>
+<li>IntelliJ IDEA &gt; Preferences</li>
+<li>Code Style &gt; Scala &gt; Imports</li>
+<li>Uncheck: <em>Collect imports with the same prefix into one import</em></li>
+</ul>
+<p>When you run Code &gt; Optimize Imports on a source file, it will unbundle imports
+and leave them with a single one per line.</p>
+<h2 id="code-style">Code Style<a class="headerlink" href="#code-style" title="Permanent link">&para;</a></h2>
+<p>Navigate to these configuration options as follows:</p>
+<ul>
+<li>IntelliJ IDEA &gt; Preferences</li>
+<li>Editor &gt; Code Style &gt; Scala</li>
+</ul>
+<h3 id="method-declaration-parameters">Method declaration parameters<a class="headerlink" href="#method-declaration-parameters" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Uncheck: Align when multiline</li>
+</ul>
+<p>This prevents Intellij from indenting parameter lists when cutting and pasting code within a file.</p>
+<h2 id="method-signature-warnings">Method Signature Warnings<a class="headerlink" href="#method-signature-warnings" title="Permanent link">&para;</a></h2>
+<p>Navigate to these configuration options as follows:</p>
+<ul>
+<li>IntelliJ IDEA &gt; Preferences</li>
+<li>Editor &gt; Inspections &gt; Scala &gt; Method Signature</li>
+</ul>
+<h3 id="method-with-accessor-like-name-has-unit-result-type">Method with accessor-like name has Unit result type<a class="headerlink" href="#method-with-accessor-like-name-has-unit-result-type" title="Permanent link">&para;</a></h3>
+<p>The intent of this warning is to cover the following case:</p>
+<blockquote>
+<p>Methods that follow JavaBean naming contract for accessors are expected to have no side effects.
+However, methods with a result type of Unit are only executed for their side effects.</p>
+<p>Refer to Programming in Scala, 2.3 Define some functions</p>
+</blockquote>
+<p>This indicates poor naming of the method involved, but depending on the code you are working with,
+there may be multiple examples of this present.  You may want to set this to be a weak warning until
+you can update method names to be more descriptive.</p>
+<h3 id="method-with-unit-result-type-is-defined-like-procedure">Method with Unit result type is defined like procedure<a class="headerlink" href="#method-with-unit-result-type-is-defined-like-procedure" title="Permanent link">&para;</a></h3>
+<p>This inspection is disabled by default.  It should be enabled.</p>
+<blockquote>
+<p>It is not recommended to use procedure-like syntax for methods with Unit return type. It is
+inconsistent, may lead to errors and will be deprecated in future versions of Scala.</p>
+<p>Reference: The talk "Scala with Style" by Martin Odersky at ScalaDays 2013</p>
+<p>Hint: You can use Analyze / Run Inspection by Name (Ctrl+Alt+Shift+I) to apply this inspection
+to the whole project</p>
+</blockquote>
+<h2 id="scala-worksheet">Scala Worksheet<a class="headerlink" href="#scala-worksheet" title="Permanent link">&para;</a></h2>
+<p>This is a good way to gain access to an interactive repl-style experience for
+evaluating Scala code.  As long as the worksheet file is established within
+your <code>main</code> directory, you will have access to import all the dependencies of
+your project.</p>
+<p>However, the default configuration of the Scala Worksheet will not be able to find
+Akka actor resources (<a href="https://youtrack.jetbrains.com/issue/SCL-9229">SCL-9229</a>).
+You will receive the following error:</p>
+<div class="codehilite"><pre><span></span>com.typesafe.config.ConfigException$Missing:
+  No configuration setting found for key &#39;akka&#39;
 </pre></div>
 
 
-<p>However, this can rapidly get out of hand, if you have key duplication, complex nested structures or
-you need to pull in all of the elements of a list.  For awhile,
-<a href="https://github.com/ddopson/underscore-cli">underscore-cli</a> was my favorite fully-featured JSON
-parser, but I found its documentation somewhat lacking and it hasn't seen serious development since
-November 2012.  Since then, I found <a href="http://stedolan.github.io/jq/">jq</a> which has a beautiful,
-well-written <a href="http://stedolan.github.io/jq/manual/">manual</a> with many usage examples and it is under
-active development.  It also has the benefit of being written in C, which helps speed and it has a
-fairly concise descriptor language.  To install:</p>
-<div class="codehilite"><pre><span></span>brew install jq
-</pre></div>
-
-
-<p>Then you can do things like flattening a complex JSON structure into a simple CSV:</p>
-<div class="codehilite"><pre><span></span><span class="nv">PAYLOADS</span><span class="o">=</span><span class="k">$(</span> curl -s <span class="nv">$URL</span> <span class="p">|</span>jq <span class="s1">&#39;.payloads&#39;</span> <span class="k">)</span>
-<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$PAYLOADS</span><span class="s2">&quot;</span> !<span class="o">=</span> <span class="s2">&quot;[]&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo</span> <span class="nv">$PAYLOADS</span> <span class="se">\</span>
-        <span class="p">|</span> jq -r <span class="s1">&#39;.[] | .minutes[].payload.items[] | [.actions.actionTime, (.actions | {actions} | .actions.email.state), .sourceInstance, (.actions | {actions} | .actions.email.info )] | @csv&#39;</span>
-<span class="k">fi</span>
-</pre></div>
-
-
-<p>As a bonus feature, if you have to deal in XML rather than JSON, then
-<a href="http://xmlstar.sourceforge.net/">xmlstarlet</a> is a good choice for handling it.  Naturally,
-installation:</p>
-<div class="codehilite"><pre><span></span>brew install xmlstarlet
-</pre></div>
-
-
-<p>Once you have xmlstarlet, you can do things like pull the build number out of an Atlassian Bamboo
-HTML page, which was necessary when they did not have an API call available to report the version
-number of the last known good build for a project:</p>
-<div class="codehilite"><pre><span></span>curl -s --insecure https://bamboo.local/browse/<span class="si">${</span><span class="nv">BUILDKEY</span><span class="si">}${</span><span class="nv">BUILD</span><span class="si">}</span> <span class="se">\</span>
-    <span class="p">|</span>tidy -asxhtml -numeric --force-output <span class="nb">true</span> <span class="m">2</span>&gt;/dev/null <span class="se">\</span>
-    <span class="p">|</span>xmlstarlet sel -N <span class="nv">x</span><span class="o">=</span><span class="s2">&quot;http://www.w3.org/1999/xhtml&quot;</span> -t -m <span class="s2">&quot;//x:div[@id=&#39;sr-build&#39;]/x:h2/x:a&quot;</span> -v <span class="s2">&quot;.&quot;</span> <span class="se">\</span>
-    <span class="p">|</span>sed -e <span class="s2">&quot;s/#//g&quot;</span>
-</pre></div>
+<p>The work-around for this issue is as follows:</p>
+<ul>
+<li>IntelliJ IDEA &gt; Preferences</li>
+<li>Languages &amp; Frameworks &gt; Scala &gt; Worksheet</li>
+<li>Uncheck: <em>Run worksheet in the compiler process</em></li>
+</ul>
+<h2 id="zero-latency-typing">Zero-Latency Typing<a class="headerlink" href="#zero-latency-typing" title="Permanent link">&para;</a></h2>
+<p>See <a href="https://blog.jetbrains.com/idea/2015/08/experimental-zero-latency-typing-in-intellij-idea-15-eap/">Experimental Zero-latency Typing in IntelliJ IDEA 15 EAP</a> for an explanation of this feature.
+To implement it, follow these steps:</p>
+<ul>
+<li>Help &gt; Edit Custom Properties...</li>
+<li>Add <code>editor.zero.latency.typing=true</code></li>
+<li>Restart IntelliJ</li>
+</ul>
+<p>At some point, this will become the default.</p>
                 
                   
                 
@@ -886,7 +1076,7 @@ number of the last known good build for a project:</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../measuring-transfer-speed-over-time-with-curl/" title="Measuring Transfer Speed Over Time with cURL" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../python/stop-using-print-for-debugging/" title="Stop Using "print" for Debugging" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -895,19 +1085,19 @@ number of the last known good build for a project:</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Measuring Transfer Speed Over Time with cURL
+                Stop Using "print" for Debugging
               </span>
             </div>
           </a>
         
         
-          <a href="../schedule-ad-hoc-jobs-for-later-on-an-instance-with-atd/" title="Schedule Ad-Hoc Jobs for Later on an Instance with atd" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../overview-of-debugging-tools/" title="Overview of Debugging Tools" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Schedule Ad-Hoc Jobs for Later on an Instance with atd
+                Overview of Debugging Tools
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

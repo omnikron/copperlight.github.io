@@ -10,7 +10,7 @@
         <meta name="description" content="A site for knowledge sharing and neat things.">
       
       
-        <link rel="canonical" href="http://copperlight.github.io/shell/parsing-json-on-the-command-line/">
+        <link rel="canonical" href="http://copperlight.github.io/python/memory-profiling-with-pyrasite-and-heapy/">
       
       
         <meta name="author" content="Matthew Johnson">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Parsing JSON on the Command Line - Copperlight Writes</title>
+        <title>Memory Profiling with Pyrasite and Heapy - Copperlight Writes</title>
       
     
     
@@ -84,11 +84,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Shell
+                  Python
                 </span>
               
             
-            Parsing JSON on the Command Line
+            Memory Profiling with Pyrasite and Heapy
           
         </span>
       </div>
@@ -495,10 +495,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
     
     <label class="md-nav__link" for="nav-7">
       Python
@@ -516,7 +518,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../python/accessing-google-apis-with-python/" title="Accessing Google APIs with Python" class="md-nav__link">
+    <a href="../accessing-google-apis-with-python/" title="Accessing Google APIs with Python" class="md-nav__link">
       Accessing Google APIs with Python
     </a>
   </li>
@@ -528,7 +530,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../python/building-rest-apis-with-python-flask/" title="Building REST APIs with Python Flask" class="md-nav__link">
+    <a href="../building-rest-apis-with-python-flask/" title="Building REST APIs with Python Flask" class="md-nav__link">
       Building REST APIs with Python Flask
     </a>
   </li>
@@ -540,7 +542,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../python/install-the-latest-python-versions-on-macosx/" title="Install the Latest Python Versions on Mac OSX" class="md-nav__link">
+    <a href="../install-the-latest-python-versions-on-macosx/" title="Install the Latest Python Versions on Mac OSX" class="md-nav__link">
       Install the Latest Python Versions on Mac OSX
     </a>
   </li>
@@ -550,11 +552,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../python/memory-profiling-with-pyrasite-and-heapy/" title="Memory Profiling with Pyrasite and Heapy" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="Memory Profiling with Pyrasite and Heapy" class="md-nav__link md-nav__link--active">
       Memory Profiling with Pyrasite and Heapy
     </a>
+    
   </li>
 
         
@@ -564,7 +575,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../python/stop-using-print-for-debugging/" title="Stop Using "print" for Debugging" class="md-nav__link">
+    <a href="../stop-using-print-for-debugging/" title="Stop Using "print" for Debugging" class="md-nav__link">
       Stop Using "print" for Debugging
     </a>
   </li>
@@ -687,12 +698,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
     <label class="md-nav__link" for="nav-9">
       Shell
@@ -710,7 +719,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../measuring-transfer-speed-over-time-with-curl/" title="Measuring Transfer Speed Over Time with cURL" class="md-nav__link">
+    <a href="../../shell/measuring-transfer-speed-over-time-with-curl/" title="Measuring Transfer Speed Over Time with cURL" class="md-nav__link">
       Measuring Transfer Speed Over Time with cURL
     </a>
   </li>
@@ -720,20 +729,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-    <a href="./" title="Parsing JSON on the Command Line" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../shell/parsing-json-on-the-command-line/" title="Parsing JSON on the Command Line" class="md-nav__link">
       Parsing JSON on the Command Line
     </a>
-    
   </li>
 
         
@@ -743,7 +743,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../schedule-ad-hoc-jobs-for-later-on-an-instance-with-atd/" title="Schedule Ad-Hoc Jobs for Later on an Instance with atd" class="md-nav__link">
+    <a href="../../shell/schedule-ad-hoc-jobs-for-later-on-an-instance-with-atd/" title="Schedule Ad-Hoc Jobs for Later on an Instance with atd" class="md-nav__link">
       Schedule Ad-Hoc Jobs for Later on an Instance with atd
     </a>
   </li>
@@ -818,56 +818,77 @@
               
                 
                 
-                <h1 id="parsing-json-on-the-command-line">Parsing JSON on the Command Line<a class="headerlink" href="#parsing-json-on-the-command-line" title="Permanent link">&para;</a></h1>
-<p><small>2014-07-16</small></p>
-<p>With more APIs moving to JSON, being able to parse it at the command line allows you to write more
-sophisticated shell scripts that can interact with your favorite services.  Most first attempts at
-JSON parsing using some variation of the following to get the job done, which initially seems
-reasonable:</p>
-<div class="codehilite"><pre><span></span>curl -s http://endpoint.info <span class="se">\</span>
-    <span class="p">|</span>python -mjson.tool <span class="se">\</span>
-    <span class="p">|</span>grep foo <span class="se">\</span>
-    <span class="p">|</span>cut -d: -f2 <span class="se">\</span>
-    <span class="p">|</span>sed -e <span class="s1">&#39;s/&quot;//g&#39;</span>
+                <h1 id="memory-profiling-with-pyrasite-and-heapy">Memory Profiling with Pyrasite and Heapy<a class="headerlink" href="#memory-profiling-with-pyrasite-and-heapy" title="Permanent link">&para;</a></h1>
+<p><small>2017-09-17</small></p>
+<ol>
+<li>
+<p>Build or install Pyrasite from the develop branch in the GitHub repo.  The PyPi package does not
+have the latest code, which allows you to control the IPC timeout.</p>
+<ol>
+<li><a href="https://github.com/lmacken/pyrasite">https://github.com/lmacken/pyrasite</a></li>
+</ol>
+</li>
+<li>
+<p>Install profiling tools.</p>
+<div class="codehilite"><pre><span></span>sudo apt-get update
+sudo apt-get install pyrasite guppy
 </pre></div>
 
 
-<p>However, this can rapidly get out of hand, if you have key duplication, complex nested structures or
-you need to pull in all of the elements of a list.  For awhile,
-<a href="https://github.com/ddopson/underscore-cli">underscore-cli</a> was my favorite fully-featured JSON
-parser, but I found its documentation somewhat lacking and it hasn't seen serious development since
-November 2012.  Since then, I found <a href="http://stedolan.github.io/jq/">jq</a> which has a beautiful,
-well-written <a href="http://stedolan.github.io/jq/manual/">manual</a> with many usage examples and it is under
-active development.  It also has the benefit of being written in C, which helps speed and it has a
-fairly concise descriptor language.  To install:</p>
-<div class="codehilite"><pre><span></span>brew install jq
+</li>
+<li>
+<p>Enable ptrace, so that you can inject into the process.</p>
+<div class="codehilite"><pre><span></span>echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
 </pre></div>
 
 
-<p>Then you can do things like flattening a complex JSON structure into a simple CSV:</p>
-<div class="codehilite"><pre><span></span><span class="nv">PAYLOADS</span><span class="o">=</span><span class="k">$(</span> curl -s <span class="nv">$URL</span> <span class="p">|</span>jq <span class="s1">&#39;.payloads&#39;</span> <span class="k">)</span>
-<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$PAYLOADS</span><span class="s2">&quot;</span> !<span class="o">=</span> <span class="s2">&quot;[]&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo</span> <span class="nv">$PAYLOADS</span> <span class="se">\</span>
-        <span class="p">|</span> jq -r <span class="s1">&#39;.[] | .minutes[].payload.items[] | [.actions.actionTime, (.actions | {actions} | .actions.email.state), .sourceInstance, (.actions | {actions} | .actions.email.info )] | @csv&#39;</span>
-<span class="k">fi</span>
+</li>
+<li>
+<p>Connect to the running process.</p>
+<div class="codehilite"><pre><span></span>export PYRASITE_IPC_TIMEOUT=10  # default is 5 seconds
+
+/apps/python/bin/pyrasite-shell 3640
+Pyrasite Shell 2.0
+Connected to &#39;...&#39;
+Python 2.7.12 (default, Nov 19 2016, 06:48:10)
+[GCC 5.4.0 20160609] on linux2
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+(DistantInteractiveConsole)
+
+&gt;&gt;&gt;
 </pre></div>
 
 
-<p>As a bonus feature, if you have to deal in XML rather than JSON, then
-<a href="http://xmlstar.sourceforge.net/">xmlstarlet</a> is a good choice for handling it.  Naturally,
-installation:</p>
-<div class="codehilite"><pre><span></span>brew install xmlstarlet
+</li>
+<li>
+<p>Enumerate the threads in the current process.</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">traceback</span>
+
+<span class="k">for</span> <span class="n">thread</span><span class="p">,</span> <span class="n">frame</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">_current_frames</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Thread 0x</span><span class="si">%x</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">thread</span><span class="p">)</span>
+    <span class="n">traceback</span><span class="o">.</span><span class="n">print_stack</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">()</span>
 </pre></div>
 
 
-<p>Once you have xmlstarlet, you can do things like pull the build number out of an Atlassian Bamboo
-HTML page, which was necessary when they did not have an API call available to report the version
-number of the last known good build for a project:</p>
-<div class="codehilite"><pre><span></span>curl -s --insecure https://bamboo.local/browse/<span class="si">${</span><span class="nv">BUILDKEY</span><span class="si">}${</span><span class="nv">BUILD</span><span class="si">}</span> <span class="se">\</span>
-    <span class="p">|</span>tidy -asxhtml -numeric --force-output <span class="nb">true</span> <span class="m">2</span>&gt;/dev/null <span class="se">\</span>
-    <span class="p">|</span>xmlstarlet sel -N <span class="nv">x</span><span class="o">=</span><span class="s2">&quot;http://www.w3.org/1999/xhtml&quot;</span> -t -m <span class="s2">&quot;//x:div[@id=&#39;sr-build&#39;]/x:h2/x:a&quot;</span> -v <span class="s2">&quot;.&quot;</span> <span class="se">\</span>
-    <span class="p">|</span>sed -e <span class="s2">&quot;s/#//g&quot;</span>
+</li>
+<li>
+<p>Profile process memory with heapy.</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">guppy</span> <span class="kn">import</span> <span class="n">hpy</span>
+<span class="n">hp</span> <span class="o">=</span> <span class="n">hpy</span><span class="p">()</span>
+<span class="n">hp</span><span class="o">.</span><span class="n">heap</span><span class="p">()</span>
 </pre></div>
+
+
+</li>
+<li>
+<p>Debug the pyrasite process, if needed.</p>
+<div class="codehilite"><pre><span></span>/apps/python/bin/pyrasite --verbose &lt;pid&gt; helloworld.py
+</pre></div>
+
+
+</li>
+</ol>
                 
                   
                 
@@ -886,7 +907,7 @@ number of the last known good build for a project:</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../measuring-transfer-speed-over-time-with-curl/" title="Measuring Transfer Speed Over Time with cURL" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../install-the-latest-python-versions-on-macosx/" title="Install the Latest Python Versions on Mac OSX" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -895,19 +916,19 @@ number of the last known good build for a project:</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Measuring Transfer Speed Over Time with cURL
+                Install the Latest Python Versions on Mac OSX
               </span>
             </div>
           </a>
         
         
-          <a href="../schedule-ad-hoc-jobs-for-later-on-an-instance-with-atd/" title="Schedule Ad-Hoc Jobs for Later on an Instance with atd" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../stop-using-print-for-debugging/" title="Stop Using "print" for Debugging" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Schedule Ad-Hoc Jobs for Later on an Instance with atd
+                Stop Using "print" for Debugging
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
