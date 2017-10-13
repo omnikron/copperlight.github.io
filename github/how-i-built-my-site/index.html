@@ -408,6 +408,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sign-up-for-google-analytics" title="Sign Up for Google Analytics" class="md-nav__link">
+    Sign Up for Google Analytics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#build-the-site" title="Build the Site" class="md-nav__link">
     Build the Site
   </a>
@@ -878,6 +885,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sign-up-for-google-analytics" title="Sign Up for Google Analytics" class="md-nav__link">
+    Sign Up for Google Analytics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#build-the-site" title="Build the Site" class="md-nav__link">
     Build the Site
   </a>
@@ -929,6 +943,21 @@ dependencies for a fully functioning site.</p>
 </pre></div>
 
 
+<h2 id="sign-up-for-google-analytics">Sign Up for Google Analytics<a class="headerlink" href="#sign-up-for-google-analytics" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must disable ad-blocking software in order to be able to see the Google Analytics page.</p>
+</div>
+<ol>
+<li>Navigate to <a href="https://analytics.google.com/analytics/web/">Google Analytics</a> &gt; Admin</li>
+<li>Property &gt; Create New Property<ol>
+<li><strong>Website Name:</strong> username.github.io</li>
+<li><strong>Website URL:</strong> https://username.github.io</li>
+<li>Get Tracking ID</li>
+</ol>
+</li>
+<li>Note the Tracking ID (looks like: <code>UA-00000000-0</code>) assigned to this property.</li>
+</ol>
 <h2 id="build-the-site">Build the Site<a class="headerlink" href="#build-the-site" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
@@ -954,7 +983,9 @@ cd username.github.com
 <p>Create a <code>./mkdocs.yml</code> site configuration file. Setting the <code>remote_branch</code> to <code>master</code> is
 important for the GitHub deployment hooks in MkDocs. Choose a
 <a href="https://creativecommons.org/choose/">Creative Commons license</a> for your site - I chose
-<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> for my site.</p>
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> for my site.  Add your Google
+Analytics property Tracking ID to <code>google_analytics</code>.  If you do not have a Tracking ID, then delete this
+line in the configuration file.</p>
 <div class="codehilite"><pre><span></span>site_name: My Site
 site_url: &#39;http://username.github.io/&#39;
 repo_url: &#39;https://github.com/username/username.github.io&#39;
@@ -962,7 +993,7 @@ edit_uri: &#39;&#39;
 site_description: My Site
 site_author: My Name
 copyright: <span class="nt">&lt;a</span> <span class="na">rel=</span><span class="s">&quot;license&quot;</span> <span class="na">href=</span><span class="s">&quot;http://creativecommons.org/licenses/by-nc-sa/4.0/&quot;</span><span class="nt">&gt;&lt;img</span> <span class="na">alt=</span><span class="s">&quot;Creative Commons License&quot;</span> <span class="na">style=</span><span class="s">&quot;border-width:0&quot;</span> <span class="na">src=</span><span class="s">&quot;https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png&quot;</span> <span class="nt">/&gt;&lt;/a&gt;</span>
-google_analytics: [&#39;UA-........-.&#39;, &#39;username.github.io&#39;]
+google_analytics: [&#39;UA-00000000-0&#39;, &#39;username.github.io&#39;]
 remote_branch: master
 
 strict: True
