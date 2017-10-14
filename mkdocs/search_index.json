@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Copperlight Writes\n\n\n\n  \n2017-10-13\n\n  \nDiscuss\n\n\n\n\n\n\n\nMy name is \nMatthew Johnson\n and I am currently a Sr. DevOps Engineer at \nNetflix\n; I have been working in the DevOps space since I joined \nBlackboard\n in 2004.  The purpose of this site is to share notes and neat ways of solving problems.\n\n\nIf you have questions or comments on this site, file a GitHub issue and discussion will take place there.\n\n\nPopular Pages\n\n\n\n\nInstall the Latest Python Versions on Mac OSX\n\n\nHow I Built My Site\n\n\nAnsible Vault and SSH Key Distribution\n\n\nRunning Ansible Playbooks on Windows", 
+            "text": "Copperlight Writes\n\n\n\n  \n2017-10-13\n\n  \nDiscuss\n\n\n\n\n\n\n\nMy name is \nMatthew Johnson\n and I am currently a Sr. DevOps Engineer at \nNetflix\n; I have been working in the DevOps space since I joined \nBlackboard\n in 2004.  The purpose of this site is to share notes and neat ways of solving problems.\n\n\nIf you have questions or comments on this site, file a GitHub issue and discussion will take place there.\n\n\nPopular Pages\n\n\n\n\nInstall the Latest Python Versions on Mac OSX\n\n\nHow I Built My Site\n\n\nNetflix Atlas Telemetry - A Platform Begets an Ecosystem\n\n\nAnsible Vault and SSH Key Distribution\n\n\nRunning Ansible Playbooks on Windows", 
             "title": "Home"
         }, 
         {
@@ -12,7 +12,7 @@
         }, 
         {
             "location": "/#popular-pages", 
-            "text": "Install the Latest Python Versions on Mac OSX  How I Built My Site  Ansible Vault and SSH Key Distribution  Running Ansible Playbooks on Windows", 
+            "text": "Install the Latest Python Versions on Mac OSX  How I Built My Site  Netflix Atlas Telemetry - A Platform Begets an Ecosystem  Ansible Vault and SSH Key Distribution  Running Ansible Playbooks on Windows", 
             "title": "Popular Pages"
         }, 
         {
