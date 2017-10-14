@@ -1,0 +1,1524 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A site for knowledge sharing and neat things.">
+      
+      
+        <link rel="canonical" href="http://copperlight.github.io/talks/the-packaging-gradient/">
+      
+      
+        <meta name="author" content="Matthew Johnson">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.1">
+    
+    
+      
+        <title>The Packaging Gradient - Copperlight Writes</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-a20f419c8e.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Menlo">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Menlo","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://copperlight.github.io/" title="Copperlight Writes" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon md-icon--home"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Talks
+                </span>
+              
+            
+            The Packaging Gradient
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/copperlight/copperlight.github.io" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <div class="md-nav__button md-logo">
+      
+        <i class="md-icon md-icon--home"></i>
+      
+    </div>
+    Copperlight Writes
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/copperlight/copperlight.github.io" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Ansible
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Ansible
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ansible/ansible-vault-and-ssh-key-distribution/" title="Ansible Vault and SSH Key Distribution" class="md-nav__link">
+      Ansible Vault and SSH Key Distribution
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ansible/running-ansible-playbooks-on-windows/" title="Running Ansible Playbooks on Windows" class="md-nav__link">
+      Running Ansible Playbooks on Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ansible/testing-ansible-galaxy-roles-with-docker/" title="Testing Ansible Galaxy Roles with Docker" class="md-nav__link">
+      Testing Ansible Galaxy Roles with Docker
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      AWS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        AWS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aws/assume-role-with-awscli/" title="Assume Role with AWSCLI" class="md-nav__link">
+      Assume Role with AWSCLI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aws/aws-credential-files-for-java-and-python/" title="AWS Credential Files for Java and Python" class="md-nav__link">
+      AWS Credential Files for Java and Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aws/build-a-fake-instance-metadata-server-for-ubuntu-on-vagrant/" title="Build a Fake Instance Metadata Server for Ubuntu on Vagrant" class="md-nav__link">
+      Build a Fake Instance Metadata Server for Ubuntu on Vagrant
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aws/checking-and-changing-content-type-of-s3-object-with-awscli/" title="Checking and Changing Content-Type of S3 Object with AWSCLI" class="md-nav__link">
+      Checking and Changing Content-Type of S3 Object with AWSCLI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aws/configuring-multiple-interfaces-on-the-same-network-in-ec2/" title="Configuring Multiple Interfaces on the Same Network in EC2" class="md-nav__link">
+      Configuring Multiple Interfaces on the Same Network in EC2
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      GitHub
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        GitHub
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../github/how-i-built-my-site/" title="How I Built My Site" class="md-nav__link">
+      How I Built My Site
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../linux/linux-ftrace-delivers-dtrace-like-functionality/" title="Linux ftrace Delivers dtrace-like Functionality" class="md-nav__link">
+      Linux ftrace Delivers dtrace-like Functionality
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Misc
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Misc
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/clone-stash-pull-requests/" title="Clone Stash Pull Requests" class="md-nav__link">
+      Clone Stash Pull Requests
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/dual-boot-osx-10.10-and-ubuntu-14.04-on-a-2013-macbook-pro-retina/" title="Dual Boot OSX 10.10 and Ubuntu 14.04 on a 2013 Macbook Pro Retina" class="md-nav__link">
+      Dual Boot OSX 10.10 and Ubuntu 14.04 on a 2013 Macbook Pro Retina
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/reset-jenkins-build-number/" title="Reset Jenkins Build Number" class="md-nav__link">
+      Reset Jenkins Build Number
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/switching-jdks-in-osx/" title="Switching JDKs in OSX" class="md-nav__link">
+      Switching JDKs in OSX
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/accessing-google-apis-with-python/" title="Accessing Google APIs with Python" class="md-nav__link">
+      Accessing Google APIs with Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/building-rest-apis-with-python-flask/" title="Building REST APIs with Python Flask" class="md-nav__link">
+      Building REST APIs with Python Flask
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/install-the-latest-python-versions-on-macosx/" title="Install the Latest Python Versions on Mac OSX" class="md-nav__link">
+      Install the Latest Python Versions on Mac OSX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/memory-profiling-with-pyrasite-and-heapy/" title="Memory Profiling with Pyrasite and Heapy" class="md-nav__link">
+      Memory Profiling with Pyrasite and Heapy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/stop-using-print-for-debugging/" title="Stop Using "print" for Debugging" class="md-nav__link">
+      Stop Using "print" for Debugging
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Scala
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Scala
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scala/intellij-configuration-tips/" title="IntelliJ Configuration Tips" class="md-nav__link">
+      IntelliJ Configuration Tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scala/overview-of-debugging-tools/" title="Overview of Debugging Tools" class="md-nav__link">
+      Overview of Debugging Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scala/scalafmt-configuration-tips/" title="Scalafmt Configuration Tips" class="md-nav__link">
+      Scalafmt Configuration Tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scala/starting-scala-repls-with-gradle-and-sbt/" title="Starting Scala REPLs with Gradle and SBT" class="md-nav__link">
+      Starting Scala REPLs with Gradle and SBT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scala/testing-aws-clients-with-iam-assumerole-credentials-in-scala/" title="Testing AWS Clients with IAM AssumeRole Credentials in Scala" class="md-nav__link">
+      Testing AWS Clients with IAM AssumeRole Credentials in Scala
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scala/using-gradle-to-run-scala-projects-locally/" title="Using Gradle to Run Scala Projects Locally" class="md-nav__link">
+      Using Gradle to Run Scala Projects Locally
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scala/using-the-scala-repl-to-configure-amazon-ses-notifications/" title="Using the Scala REPL to Configure Amazon SES Notifications" class="md-nav__link">
+      Using the Scala REPL to Configure Amazon SES Notifications
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Shell
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Shell
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../shell/measuring-transfer-speed-over-time-with-curl/" title="Measuring Transfer Speed Over Time with cURL" class="md-nav__link">
+      Measuring Transfer Speed Over Time with cURL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../shell/parsing-json-on-the-command-line/" title="Parsing JSON on the Command Line" class="md-nav__link">
+      Parsing JSON on the Command Line
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../shell/pet-cli-snippet-manager/" title="pet - CLI Snippet Manager" class="md-nav__link">
+      pet - CLI Snippet Manager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../shell/schedule-ad-hoc-jobs-for-later-on-an-instance-with-atd/" title="Schedule Ad-Hoc Jobs for Later on an Instance with atd" class="md-nav__link">
+      Schedule Ad-Hoc Jobs for Later on an Instance with atd
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" checked>
+    
+    <label class="md-nav__link" for="nav-10">
+      Talks
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Talks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a-better-scala-repl/" title="A Better Scala REPL" class="md-nav__link">
+      A Better Scala REPL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../amazon-s3-elastic-mapreduce-to-monitor-at-gigascale/" title="Amazon S3 and Elastic MapReduce to Monitor at Gigascale" class="md-nav__link">
+      Amazon S3 and Elastic MapReduce to Monitor at Gigascale
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../are-we-there-yet/" title="Are We There Yet?" class="md-nav__link">
+      Are We There Yet?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../automating-your-browser-and-desktop-apps/" title="Automating Your Browser and Desktop Apps" class="md-nav__link">
+      Automating Your Browser and Desktop Apps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../beyond-pep-8-best-practices-for-beautiful-intelligible-code/" title="Beyond PEP 8 Best Practices for Beautiful Intelligible Code" class="md-nav__link">
+      Beyond PEP 8 Best Practices for Beautiful Intelligible Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../boot-can-build-it/" title="Boot Can Build It" class="md-nav__link">
+      Boot Can Build It
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bottom-up-vs-top-down-design-in-clojure/" title="Bottom Up vs Top Down Design in Clojure" class="md-nav__link">
+      Bottom Up vs Top Down Design in Clojure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../built-in-super-heroes/" title="Built-In Super Heroes" class="md-nav__link">
+      Built-In Super Heroes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clojure-concurrency/" title="Clojure Concurrency" class="md-nav__link">
+      Clojure Concurrency
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clojure-core-async/" title="Clojure core.async" class="md-nav__link">
+      Clojure core.async
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clojure-made-simple/" title="Clojure Made Simple" class="md-nav__link">
+      Clojure Made Simple
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clojure-parallelism-beyond-futures/" title="Clojure Parallelism Beyond Futures" class="md-nav__link">
+      Clojure Parallelism Beyond Futures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clojurescript-for-skeptics/" title="ClojureScript for Skeptics" class="md-nav__link">
+      ClojureScript for Skeptics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../composing-interactive-apps-with-zelkova/" title="Composing Interactive Apps with Zelkova" class="md-nav__link">
+      Composing Interactive Apps with Zelkova
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dagobah-a-data-centric-meta-scheduler/" title="Dagobah - A Data-Centric Meta-Scheduler" class="md-nav__link">
+      Dagobah - A Data-Centric Meta-Scheduler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../debugging-clojure-code-with-cursive/" title="Debugging Clojure Code with Cursive" class="md-nav__link">
+      Debugging Clojure Code with Cursive
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../design-and-prototype-a-language-in-clojure/" title="Design and Prototype a Language in Clojure" class="md-nav__link">
+      Design and Prototype a Language in Clojure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../developing-clojurescript-with-figwheel/" title="Developing ClojureScript with Figwheel" class="md-nav__link">
+      Developing ClojureScript with Figwheel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fear-and-awaiting-in-async/" title="Fear and Awaiting in Async" class="md-nav__link">
+      Fear and Awaiting in Async
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../from-0-to-prototype-using-clojurescript-re-frame-and-friends/" title="From 0 to Prototype Using ClojureScript Re-Frame and Friends" class="md-nav__link">
+      From 0 to Prototype Using ClojureScript Re-Frame and Friends
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hammock-driven-development/" title="Hammock Driven Development" class="md-nav__link">
+      Hammock Driven Development
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../handmade-hero-day-001-setting-up-the-windows-build/" title="Handmade Hero Day 001 - Setting Up the Windows Build" class="md-nav__link">
+      Handmade Hero Day 001 - Setting Up the Windows Build
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../interactive-programming-flappy-bird-in-clojurescript/" title="Interactive Programming Flappy Bird in ClojureScript" class="md-nav__link">
+      Interactive Programming Flappy Bird in ClojureScript
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../logging-and-testing-and-debugging-oh-my/" title="Logging and Testing and Debugging Oh My" class="md-nav__link">
+      Logging and Testing and Debugging Oh My
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../machete-mode-debugging-hacking-your-way-out-of-a-tight-spot/" title="Machete-Mode Debugging Hacking Your Way Out of a Tight Spot" class="md-nav__link">
+      Machete-Mode Debugging Hacking Your Way Out of a Tight Spot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../monitoring-monitoring-systems-at-netflix/" title="Monitoring Monitoring Systems at Netflix" class="md-nav__link">
+      Monitoring Monitoring Systems at Netflix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netflix-atlas-telemetry-a-platform-begets-an-ecosystem/" title="Netflix Atlas Telemetry - A Platform Begets an Ecosystem" class="md-nav__link">
+      Netflix Atlas Telemetry - A Platform Begets an Ecosystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parallel-programming-fork-join-and-reducers/" title="Parallel Programming Fork Join and Reducers" class="md-nav__link">
+      Parallel Programming Fork Join and Reducers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsing-text-with-a-virtual-machine/" title="Parsing Text with a Virtual Machine" class="md-nav__link">
+      Parsing Text with a Virtual Machine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-as-a-configuration-language/" title="Python as a Configuration Language" class="md-nav__link">
+      Python as a Configuration Language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-concurrency-from-the-ground-up/" title="Python Concurrency from the Ground Up" class="md-nav__link">
+      Python Concurrency from the Ground Up
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-language-pycon-2016/" title="Python Language - PyCon 2016" class="md-nav__link">
+      Python Language - PyCon 2016
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-vs-ruby-a-battle-to-the-death/" title="Python vs Ruby - A Battle to the Death" class="md-nav__link">
+      Python vs Ruby - A Battle to the Death
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../repl-based-development-demo/" title="REPL Based Development Demo" class="md-nav__link">
+      REPL Based Development Demo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../refactoring-python-why-and-how-to-restructure-your-code/" title="Refactoring Python Why and How to Restructure Your Code" class="md-nav__link">
+      Refactoring Python Why and How to Restructure Your Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../removing-pythons-gil-the-gilectomy/" title="Removing Pythons GIL - The Gilectomy" class="md-nav__link">
+      Removing Pythons GIL - The Gilectomy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rethinking-the-developer-career-path/" title="Rethinking the Developer Career Path" class="md-nav__link">
+      Rethinking the Developer Career Path
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rich-hickey-on-clojure-spec/" title="Rich Hickey on clojure.spec" class="md-nav__link">
+      Rich Hickey on clojure.spec
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../simple-made-easy/" title="Simple Made Easy" class="md-nav__link">
+      Simple Made Easy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../spec-ulation-keynote/" title="Spec-ulation Keynote" class="md-nav__link">
+      Spec-ulation Keynote
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../stop-writing-classes/" title="Stop Writing Classes" class="md-nav__link">
+      Stop Writing Classes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../the-joys-and-perils-of-interactive-development/" title="The Joys and Perils of Interactive Development" class="md-nav__link">
+      The Joys and Perils of Interactive Development
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="The Packaging Gradient" class="md-nav__link md-nav__link--active">
+      The Packaging Gradient
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../the-reactjs-landscape/" title="The ReactJS Landscape" class="md-nav__link">
+      The ReactJS Landscape
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../the-unix-chainsaw/" title="The Unix Chainsaw" class="md-nav__link">
+      The Unix Chainsaw
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../think-like-a-pythonista/" title="Think Like a Pythonista" class="md-nav__link">
+      Think Like a Pythonista
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../thinking-in-coroutines/" title="Thinking in Coroutines" class="md-nav__link">
+      Thinking in Coroutines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../to-mock-or-not-to-mock-that-is-the-question/" title="To Mock or Not To Mock That is the Question" class="md-nav__link">
+      To Mock or Not To Mock That is the Question
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types-are-like-the-weather-type-systems-are-like-weathermen/" title="Types are Like the Weather Type Systems are Like Weathermen" class="md-nav__link">
+      Types are Like the Weather Type Systems are Like Weathermen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../wat-a-lightning-talk/" title="Wat - A Lightning Talk" class="md-nav__link">
+      Wat - A Lightning Talk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../writing-awesome-command-line-programs-in-python/" title="Writing Awesome Command Line Programs in Python" class="md-nav__link">
+      Writing Awesome Command Line Programs in Python
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="mahmoud-hashemi-the-packaging-gradient-pybay2017">Mahmoud Hashemi, "The Packaging Gradient", PyBay2017<a class="headerlink" href="#mahmoud-hashemi-the-packaging-gradient-pybay2017" title="Permanent link">&para;</a></h1>
+<p><center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iLVNWfPWAC8" frameborder="0" allowfullscreen></iframe>
+</center></p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../the-joys-and-perils-of-interactive-development/" title="The Joys and Perils of Interactive Development" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                The Joys and Perils of Interactive Development
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../the-reactjs-landscape/" title="The ReactJS Landscape" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                The ReactJS Landscape
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+        <script src="https://buttons.github.io/buttons.js"></script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-52382416-1","copperlight.github.io"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>

@@ -546,6 +546,166 @@
             "title": "SBTB 2015 - Li Haoyi - A Better Scala REPL"
         }, 
         {
+            "location": "/talks/amazon-s3-elastic-mapreduce-to-monitor-at-gigascale/", 
+            "text": "Netflix: Amazon S3 \n Amazon Elastic MapReduce to Monitor at Gigascale (BDT302) | AWS re:Invent 2013", 
+            "title": "Amazon S3 and Elastic MapReduce to Monitor at Gigascale"
+        }, 
+        {
+            "location": "/talks/amazon-s3-elastic-mapreduce-to-monitor-at-gigascale/#netflix-amazon-s3-amazon-elastic-mapreduce-to-monitor-at-gigascale-bdt302-aws-reinvent-2013", 
+            "text": "", 
+            "title": "Netflix: Amazon S3 &amp; Amazon Elastic MapReduce to Monitor at Gigascale (BDT302) | AWS re:Invent 2013"
+        }, 
+        {
+            "location": "/talks/are-we-there-yet/", 
+            "text": "Are We There Yet?\n\n\nhttps://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey", 
+            "title": "Are We There Yet?"
+        }, 
+        {
+            "location": "/talks/are-we-there-yet/#are-we-there-yet", 
+            "text": "https://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey", 
+            "title": "Are We There Yet?"
+        }, 
+        {
+            "location": "/talks/automating-your-browser-and-desktop-apps/", 
+            "text": "Al Sweigart, \"Automating Your Browser and Desktop Apps\", PyBay2016", 
+            "title": "Automating Your Browser and Desktop Apps"
+        }, 
+        {
+            "location": "/talks/automating-your-browser-and-desktop-apps/#al-sweigart-automating-your-browser-and-desktop-apps-pybay2016", 
+            "text": "", 
+            "title": "Al Sweigart, \"Automating Your Browser and Desktop Apps\", PyBay2016"
+        }, 
+        {
+            "location": "/talks/beyond-pep-8-best-practices-for-beautiful-intelligible-code/", 
+            "text": "Raymond Hettinger - Beyond PEP 8 -- Best practices for beautiful intelligible code - PyCon 2015", 
+            "title": "Beyond PEP 8 Best Practices for Beautiful Intelligible Code"
+        }, 
+        {
+            "location": "/talks/beyond-pep-8-best-practices-for-beautiful-intelligible-code/#raymond-hettinger-beyond-pep-8-best-practices-for-beautiful-intelligible-code-pycon-2015", 
+            "text": "", 
+            "title": "Raymond Hettinger - Beyond PEP 8 -- Best practices for beautiful intelligible code - PyCon 2015"
+        }, 
+        {
+            "location": "/talks/boot-can-build-it/", 
+            "text": "Alan Dipert, Micha Niskin - Boot Can Built It", 
+            "title": "Boot Can Build It"
+        }, 
+        {
+            "location": "/talks/boot-can-build-it/#alan-dipert-micha-niskin-boot-can-built-it", 
+            "text": "", 
+            "title": "Alan Dipert, Micha Niskin - Boot Can Built It"
+        }, 
+        {
+            "location": "/talks/bottom-up-vs-top-down-design-in-clojure/", 
+            "text": "Bottom Up vs Top Down Design in Clojure - Mark Bastian\n\n\nhttps://www.youtube.com/watch?v=Tb823aqgX_0", 
+            "title": "Bottom Up vs Top Down Design in Clojure"
+        }, 
+        {
+            "location": "/talks/bottom-up-vs-top-down-design-in-clojure/#bottom-up-vs-top-down-design-in-clojure-mark-bastian", 
+            "text": "https://www.youtube.com/watch?v=Tb823aqgX_0", 
+            "title": "Bottom Up vs Top Down Design in Clojure - Mark Bastian"
+        }, 
+        {
+            "location": "/talks/built-in-super-heroes/", 
+            "text": "David Beazley | Keynote: Built in Super Heroes", 
+            "title": "Built-In Super Heroes"
+        }, 
+        {
+            "location": "/talks/built-in-super-heroes/#david-beazley-keynote-built-in-super-heroes", 
+            "text": "", 
+            "title": "David Beazley | Keynote: Built in Super Heroes"
+        }, 
+        {
+            "location": "/talks/clojure-concurrency/", 
+            "text": "Clojure Concurrency - Rich Hickey\n\n\nhttps://www.youtube.com/watch?v=dGVqrGmwOAw", 
+            "title": "Clojure Concurrency"
+        }, 
+        {
+            "location": "/talks/clojure-concurrency/#clojure-concurrency-rich-hickey", 
+            "text": "https://www.youtube.com/watch?v=dGVqrGmwOAw", 
+            "title": "Clojure Concurrency - Rich Hickey"
+        }, 
+        {
+            "location": "/talks/clojure-core-async/", 
+            "text": "Clojure core.async\n\n\nhttps://www.infoq.com/presentations/clojure-core-async", 
+            "title": "Clojure core.async"
+        }, 
+        {
+            "location": "/talks/clojure-core-async/#clojure-coreasync", 
+            "text": "https://www.infoq.com/presentations/clojure-core-async", 
+            "title": "Clojure core.async"
+        }, 
+        {
+            "location": "/talks/clojure-made-simple/", 
+            "text": "Clojure Made Simple", 
+            "title": "Clojure Made Simple"
+        }, 
+        {
+            "location": "/talks/clojure-made-simple/#clojure-made-simple", 
+            "text": "", 
+            "title": "Clojure Made Simple"
+        }, 
+        {
+            "location": "/talks/clojure-parallelism-beyond-futures/", 
+            "text": "Leon Barrett - Clojure Parallelism Beyond Futures", 
+            "title": "Clojure Parallelism Beyond Futures"
+        }, 
+        {
+            "location": "/talks/clojure-parallelism-beyond-futures/#leon-barrett-clojure-parallelism-beyond-futures", 
+            "text": "", 
+            "title": "Leon Barrett - Clojure Parallelism Beyond Futures"
+        }, 
+        {
+            "location": "/talks/clojurescript-for-skeptics/", 
+            "text": "ClojureScript for Skeptics - Derek Slager\n\n\nhttps://www.youtube.com/watch?v=gsffg5xxFQI", 
+            "title": "ClojureScript for Skeptics"
+        }, 
+        {
+            "location": "/talks/clojurescript-for-skeptics/#clojurescript-for-skeptics-derek-slager", 
+            "text": "https://www.youtube.com/watch?v=gsffg5xxFQI", 
+            "title": "ClojureScript for Skeptics - Derek Slager"
+        }, 
+        {
+            "location": "/talks/composing-interactive-apps-with-zelkova/", 
+            "text": "James MacAulay - Composing Interactive Apps With Zelkova", 
+            "title": "Composing Interactive Apps with Zelkova"
+        }, 
+        {
+            "location": "/talks/composing-interactive-apps-with-zelkova/#james-macaulay-composing-interactive-apps-with-zelkova", 
+            "text": "", 
+            "title": "James MacAulay - Composing Interactive Apps With Zelkova"
+        }, 
+        {
+            "location": "/talks/dagobah-a-data-centric-meta-scheduler/", 
+            "text": "Dagobah, a Data centric Meta scheduler - Matt Bossenbroek\n\n\nhttps://www.youtube.com/watch?v=V2E1PdboYLk", 
+            "title": "Dagobah - A Data-Centric Meta-Scheduler"
+        }, 
+        {
+            "location": "/talks/dagobah-a-data-centric-meta-scheduler/#dagobah-a-data-centric-meta-scheduler-matt-bossenbroek", 
+            "text": "https://www.youtube.com/watch?v=V2E1PdboYLk", 
+            "title": "Dagobah, a Data centric Meta scheduler - Matt Bossenbroek"
+        }, 
+        {
+            "location": "/talks/debugging-clojure-code-with-cursive/", 
+            "text": "Colin Fleming - Debugging Clojure Code with Cursive", 
+            "title": "Debugging Clojure Code with Cursive"
+        }, 
+        {
+            "location": "/talks/debugging-clojure-code-with-cursive/#colin-fleming-debugging-clojure-code-with-cursive", 
+            "text": "", 
+            "title": "Colin Fleming - Debugging Clojure Code with Cursive"
+        }, 
+        {
+            "location": "/talks/design-and-prototype-a-language-in-clojure/", 
+            "text": "Jeanine Adkisson - Design and Prototype a Language In Clojure", 
+            "title": "Design and Prototype a Language in Clojure"
+        }, 
+        {
+            "location": "/talks/design-and-prototype-a-language-in-clojure/#jeanine-adkisson-design-and-prototype-a-language-in-clojure", 
+            "text": "", 
+            "title": "Jeanine Adkisson - Design and Prototype a Language In Clojure"
+        }, 
+        {
             "location": "/talks/developing-clojurescript-with-figwheel/", 
             "text": "Bruce Hauman - Developing ClojureScript With Figwheel", 
             "title": "Developing ClojureScript with Figwheel"
@@ -566,6 +726,36 @@
             "title": "Fear and Awaiting in Async - A Savage Journey to the Heart of the Coroutine Dream"
         }, 
         {
+            "location": "/talks/from-0-to-prototype-using-clojurescript-re-frame-and-friends/", 
+            "text": "From 0 to prototype using ClojureScript, re-frame and friends: Martin Clausen", 
+            "title": "From 0 to Prototype Using ClojureScript Re-Frame and Friends"
+        }, 
+        {
+            "location": "/talks/from-0-to-prototype-using-clojurescript-re-frame-and-friends/#from-0-to-prototype-using-clojurescript-re-frame-and-friends-martin-clausen", 
+            "text": "", 
+            "title": "From 0 to prototype using ClojureScript, re-frame and friends: Martin Clausen"
+        }, 
+        {
+            "location": "/talks/hammock-driven-development/", 
+            "text": "Hammock Driven Development - Rich Hickey\n\n\nhttps://www.youtube.com/watch?v=f84n5oFoZBc", 
+            "title": "Hammock Driven Development"
+        }, 
+        {
+            "location": "/talks/hammock-driven-development/#hammock-driven-development-rich-hickey", 
+            "text": "https://www.youtube.com/watch?v=f84n5oFoZBc", 
+            "title": "Hammock Driven Development - Rich Hickey"
+        }, 
+        {
+            "location": "/talks/handmade-hero-day-001-setting-up-the-windows-build/", 
+            "text": "Handmade Hero Day 001 - Setting Up the Windows Build", 
+            "title": "Handmade Hero Day 001 - Setting Up the Windows Build"
+        }, 
+        {
+            "location": "/talks/handmade-hero-day-001-setting-up-the-windows-build/#handmade-hero-day-001-setting-up-the-windows-build", 
+            "text": "", 
+            "title": "Handmade Hero Day 001 - Setting Up the Windows Build"
+        }, 
+        {
             "location": "/talks/interactive-programming-flappy-bird-in-clojurescript/", 
             "text": "Interactive Programming Flappy Bird in ClojureScript", 
             "title": "Interactive Programming Flappy Bird in ClojureScript"
@@ -574,6 +764,36 @@
             "location": "/talks/interactive-programming-flappy-bird-in-clojurescript/#interactive-programming-flappy-bird-in-clojurescript", 
             "text": "", 
             "title": "Interactive Programming Flappy Bird in ClojureScript"
+        }, 
+        {
+            "location": "/talks/logging-and-testing-and-debugging-oh-my/", 
+            "text": "Albert Sweigart, \"Logging and Testing and Debugging, Oh My!\", PyBay2017", 
+            "title": "Logging and Testing and Debugging Oh My"
+        }, 
+        {
+            "location": "/talks/logging-and-testing-and-debugging-oh-my/#albert-sweigart-logging-and-testing-and-debugging-oh-my-pybay2017", 
+            "text": "", 
+            "title": "Albert Sweigart, \"Logging and Testing and Debugging, Oh My!\", PyBay2017"
+        }, 
+        {
+            "location": "/talks/machete-mode-debugging-hacking-your-way-out-of-a-tight-spot/", 
+            "text": "Ned Batchelder - Machete-mode debugging: Hacking your way out of a tight spot - PyCon 2016", 
+            "title": "Machete-Mode Debugging Hacking Your Way Out of a Tight Spot"
+        }, 
+        {
+            "location": "/talks/machete-mode-debugging-hacking-your-way-out-of-a-tight-spot/#ned-batchelder-machete-mode-debugging-hacking-your-way-out-of-a-tight-spot-pycon-2016", 
+            "text": "", 
+            "title": "Ned Batchelder - Machete-mode debugging: Hacking your way out of a tight spot - PyCon 2016"
+        }, 
+        {
+            "location": "/talks/monitoring-monitoring-systems-at-netflix/", 
+            "text": "Monitoring Monitoring Systems at Netflix - Monitorama PDX 2017 - Roy Rapoport", 
+            "title": "Monitoring Monitoring Systems at Netflix"
+        }, 
+        {
+            "location": "/talks/monitoring-monitoring-systems-at-netflix/#monitoring-monitoring-systems-at-netflix-monitorama-pdx-2017-roy-rapoport", 
+            "text": "", 
+            "title": "Monitoring Monitoring Systems at Netflix - Monitorama PDX 2017 - Roy Rapoport"
         }, 
         {
             "location": "/talks/netflix-atlas-telemetry-a-platform-begets-an-ecosystem/", 
@@ -586,6 +806,36 @@
             "title": "Netflix Atlas Telemetry - A Platform Begets an Ecosystem"
         }, 
         {
+            "location": "/talks/parallel-programming-fork-join-and-reducers/", 
+            "text": "Parallel Programming, Fork Join, and Reducers - Daniel Higginbotham\n\n\nhttps://www.youtube.com/watch?v=fA9ZXy4N13s", 
+            "title": "Parallel Programming Fork Join and Reducers"
+        }, 
+        {
+            "location": "/talks/parallel-programming-fork-join-and-reducers/#parallel-programming-fork-join-and-reducers-daniel-higginbotham", 
+            "text": "https://www.youtube.com/watch?v=fA9ZXy4N13s", 
+            "title": "Parallel Programming, Fork Join, and Reducers - Daniel Higginbotham"
+        }, 
+        {
+            "location": "/talks/parsing-text-with-a-virtual-machine/", 
+            "text": "Parsing Text with a Virtual Machine - Ghadi Shayban\n\n\nhttps://www.youtube.com/watch?v=9Q--oX5muxw", 
+            "title": "Parsing Text with a Virtual Machine"
+        }, 
+        {
+            "location": "/talks/parsing-text-with-a-virtual-machine/#parsing-text-with-a-virtual-machine-ghadi-shayban", 
+            "text": "https://www.youtube.com/watch?v=9Q--oX5muxw", 
+            "title": "Parsing Text with a Virtual Machine - Ghadi Shayban"
+        }, 
+        {
+            "location": "/talks/python-as-a-configuration-language/", 
+            "text": "Guillermo P\u00e9rez - Python as a configuration language - PyCon 2016", 
+            "title": "Python as a Configuration Language"
+        }, 
+        {
+            "location": "/talks/python-as-a-configuration-language/#guillermo-perez-python-as-a-configuration-language-pycon-2016", 
+            "text": "", 
+            "title": "Guillermo P\u00e9rez - Python as a configuration language - PyCon 2016"
+        }, 
+        {
             "location": "/talks/python-concurrency-from-the-ground-up/", 
             "text": "David Beazley - Python Concurrency From the Ground Up: LIVE! - PyCon 2015", 
             "title": "Python Concurrency from the Ground Up"
@@ -596,9 +846,19 @@
             "title": "David Beazley - Python Concurrency From the Ground Up: LIVE! - PyCon 2015"
         }, 
         {
+            "location": "/talks/python-language-pycon-2016/", 
+            "text": "Guido van Rossum - Python Language - PyCon 2016", 
+            "title": "Python Language - PyCon 2016"
+        }, 
+        {
+            "location": "/talks/python-language-pycon-2016/#guido-van-rossum-python-language-pycon-2016", 
+            "text": "", 
+            "title": "Guido van Rossum - Python Language - PyCon 2016"
+        }, 
+        {
             "location": "/talks/python-vs-ruby-a-battle-to-the-death/", 
             "text": "Python vs Ruby - A Battle to The Death", 
-            "title": "Python vs Ruby a Battle to the Death"
+            "title": "Python vs Ruby - A Battle to the Death"
         }, 
         {
             "location": "/talks/python-vs-ruby-a-battle-to-the-death/#python-vs-ruby-a-battle-to-the-death", 
@@ -616,6 +876,46 @@
             "title": "REPL-Based Development Demo"
         }, 
         {
+            "location": "/talks/refactoring-python-why-and-how-to-restructure-your-code/", 
+            "text": "Brett Slatkin - Refactoring Python: Why and how to restructure your code - PyCon 2016", 
+            "title": "Refactoring Python Why and How to Restructure Your Code"
+        }, 
+        {
+            "location": "/talks/refactoring-python-why-and-how-to-restructure-your-code/#brett-slatkin-refactoring-python-why-and-how-to-restructure-your-code-pycon-2016", 
+            "text": "", 
+            "title": "Brett Slatkin - Refactoring Python: Why and how to restructure your code - PyCon 2016"
+        }, 
+        {
+            "location": "/talks/removing-pythons-gil-the-gilectomy/", 
+            "text": "Larry Hastings - Removing Python's GIL: The Gilectomy - PyCon 2016", 
+            "title": "Removing Pythons GIL - The Gilectomy"
+        }, 
+        {
+            "location": "/talks/removing-pythons-gil-the-gilectomy/#larry-hastings-removing-pythons-gil-the-gilectomy-pycon-2016", 
+            "text": "", 
+            "title": "Larry Hastings - Removing Python's GIL: The Gilectomy - PyCon 2016"
+        }, 
+        {
+            "location": "/talks/rethinking-the-developer-career-path/", 
+            "text": "Rethinking the Developer Career Path \u2013 Randall Koutnik | The Lead Developer UK 2017", 
+            "title": "Rethinking the Developer Career Path"
+        }, 
+        {
+            "location": "/talks/rethinking-the-developer-career-path/#rethinking-the-developer-career-path-randall-koutnik-the-lead-developer-uk-2017", 
+            "text": "", 
+            "title": "Rethinking the Developer Career Path \u2013 Randall Koutnik | The Lead Developer UK 2017"
+        }, 
+        {
+            "location": "/talks/rich-hickey-on-clojure-spec/", 
+            "text": "Rich Hickey on Clojure Spec", 
+            "title": "Rich Hickey on clojure.spec"
+        }, 
+        {
+            "location": "/talks/rich-hickey-on-clojure-spec/#rich-hickey-on-clojure-spec", 
+            "text": "", 
+            "title": "Rich Hickey on Clojure Spec"
+        }, 
+        {
             "location": "/talks/simple-made-easy/", 
             "text": "Simple Made Easy - Rich Hickey\n\n\nhttps://www.infoq.com/presentations/Simple-Made-Easy", 
             "title": "Simple Made Easy"
@@ -624,6 +924,46 @@
             "location": "/talks/simple-made-easy/#simple-made-easy-rich-hickey", 
             "text": "https://www.infoq.com/presentations/Simple-Made-Easy", 
             "title": "Simple Made Easy - Rich Hickey"
+        }, 
+        {
+            "location": "/talks/spec-ulation-keynote/", 
+            "text": "Spec-ulation Keynote - Rich Hickey", 
+            "title": "Spec-ulation Keynote"
+        }, 
+        {
+            "location": "/talks/spec-ulation-keynote/#spec-ulation-keynote-rich-hickey", 
+            "text": "", 
+            "title": "Spec-ulation Keynote - Rich Hickey"
+        }, 
+        {
+            "location": "/talks/stop-writing-classes/", 
+            "text": "Stop Writing Classes", 
+            "title": "Stop Writing Classes"
+        }, 
+        {
+            "location": "/talks/stop-writing-classes/#stop-writing-classes", 
+            "text": "", 
+            "title": "Stop Writing Classes"
+        }, 
+        {
+            "location": "/talks/the-joys-and-perils-of-interactive-development/", 
+            "text": "The Joys and Perils of Interactive Development - Stuart Sierra\n\n\nhttps://www.youtube.com/watch?v=-RaFcpNiYCo", 
+            "title": "The Joys and Perils of Interactive Development"
+        }, 
+        {
+            "location": "/talks/the-joys-and-perils-of-interactive-development/#the-joys-and-perils-of-interactive-development-stuart-sierra", 
+            "text": "https://www.youtube.com/watch?v=-RaFcpNiYCo", 
+            "title": "The Joys and Perils of Interactive Development - Stuart Sierra"
+        }, 
+        {
+            "location": "/talks/the-packaging-gradient/", 
+            "text": "Mahmoud Hashemi, \"The Packaging Gradient\", PyBay2017", 
+            "title": "The Packaging Gradient"
+        }, 
+        {
+            "location": "/talks/the-packaging-gradient/#mahmoud-hashemi-the-packaging-gradient-pybay2017", 
+            "text": "", 
+            "title": "Mahmoud Hashemi, \"The Packaging Gradient\", PyBay2017"
         }, 
         {
             "location": "/talks/the-reactjs-landscape/", 
@@ -646,6 +986,46 @@
             "title": "The Unix Chainsaw - Gary Bernhardt"
         }, 
         {
+            "location": "/talks/think-like-a-pythonista/", 
+            "text": "Luciano Ramalho, \"Think Like a Pythonista\", PyBay2017", 
+            "title": "Think Like a Pythonista"
+        }, 
+        {
+            "location": "/talks/think-like-a-pythonista/#luciano-ramalho-think-like-a-pythonista-pybay2017", 
+            "text": "", 
+            "title": "Luciano Ramalho, \"Think Like a Pythonista\", PyBay2017"
+        }, 
+        {
+            "location": "/talks/thinking-in-coroutines/", 
+            "text": "\u0141ukasz Langa - Thinking In Coroutines - PyCon 2016", 
+            "title": "Thinking in Coroutines"
+        }, 
+        {
+            "location": "/talks/thinking-in-coroutines/#ukasz-langa-thinking-in-coroutines-pycon-2016", 
+            "text": "", 
+            "title": "\u0141ukasz Langa - Thinking In Coroutines - PyCon 2016"
+        }, 
+        {
+            "location": "/talks/to-mock-or-not-to-mock-that-is-the-question/", 
+            "text": "Ana Balica - To Mock, or Not to Mock, That is the Question - PyCon 2016", 
+            "title": "To Mock or Not To Mock That is the Question"
+        }, 
+        {
+            "location": "/talks/to-mock-or-not-to-mock-that-is-the-question/#ana-balica-to-mock-or-not-to-mock-that-is-the-question-pycon-2016", 
+            "text": "", 
+            "title": "Ana Balica - To Mock, or Not to Mock, That is the Question - PyCon 2016"
+        }, 
+        {
+            "location": "/talks/types-are-like-the-weather-type-systems-are-like-weathermen/", 
+            "text": "Types are Like the Weather, Type Systems are Like Weathermen - Matthias Felleisen\n\n\nhttps://www.youtube.com/watch?v=XTl7Jn_kmio", 
+            "title": "Types are Like the Weather Type Systems are Like Weathermen"
+        }, 
+        {
+            "location": "/talks/types-are-like-the-weather-type-systems-are-like-weathermen/#types-are-like-the-weather-type-systems-are-like-weathermen-matthias-felleisen", 
+            "text": "https://www.youtube.com/watch?v=XTl7Jn_kmio", 
+            "title": "Types are Like the Weather, Type Systems are Like Weathermen - Matthias Felleisen"
+        }, 
+        {
             "location": "/talks/wat-a-lightning-talk/", 
             "text": "WAT - A Lightning Talk by Gary Bernhardt from CodeMash 2012", 
             "title": "Wat - A Lightning Talk"
@@ -654,6 +1034,16 @@
             "location": "/talks/wat-a-lightning-talk/#wat-a-lightning-talk-by-gary-bernhardt-from-codemash-2012", 
             "text": "", 
             "title": "WAT - A Lightning Talk by Gary Bernhardt from CodeMash 2012"
+        }, 
+        {
+            "location": "/talks/writing-awesome-command-line-programs-in-python/", 
+            "text": "Writing Awesome Command-Line Programs in Python", 
+            "title": "Writing Awesome Command Line Programs in Python"
+        }, 
+        {
+            "location": "/talks/writing-awesome-command-line-programs-in-python/#writing-awesome-command-line-programs-in-python", 
+            "text": "", 
+            "title": "Writing Awesome Command-Line Programs in Python"
         }
     ]
 }
