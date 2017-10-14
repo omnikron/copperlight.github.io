@@ -544,6 +544,116 @@
             "location": "/talks/netflix-atlas-telemetry-a-platform-begets-an-ecosystem/#netflix-atlas-telemetry-a-platform-begets-an-ecosystem", 
             "text": "", 
             "title": "Netflix Atlas Telemetry - A Platform Begets an Ecosystem"
+        }, 
+        {
+            "location": "/talks/developing-clojurescript-with-figwheel/", 
+            "text": "Bruce Hauman - Developing ClojureScript With Figwheel", 
+            "title": "Developing ClojureScript with Figwheel"
+        }, 
+        {
+            "location": "/talks/developing-clojurescript-with-figwheel/#bruce-hauman-developing-clojurescript-with-figwheel", 
+            "text": "", 
+            "title": "Bruce Hauman - Developing ClojureScript With Figwheel"
+        }, 
+        {
+            "location": "/talks/python-concurrency-from-the-ground-up/", 
+            "text": "David Beazley - Python Concurrency From the Ground Up: LIVE! - PyCon 2015", 
+            "title": "Python Concurrency from the Ground Up"
+        }, 
+        {
+            "location": "/talks/python-concurrency-from-the-ground-up/#david-beazley-python-concurrency-from-the-ground-up-live-pycon-2015", 
+            "text": "", 
+            "title": "David Beazley - Python Concurrency From the Ground Up: LIVE! - PyCon 2015"
+        }, 
+        {
+            "location": "/talks/fear-and-awaiting-in-async/", 
+            "text": "Fear and Awaiting in Async - A Savage Journey to the Heart of the Coroutine Dream\n\n\nhttps://www.youtube.com/watch?v=E-1Y4kSsAFc", 
+            "title": "Fear and Awaiting in Async"
+        }, 
+        {
+            "location": "/talks/fear-and-awaiting-in-async/#fear-and-awaiting-in-async-a-savage-journey-to-the-heart-of-the-coroutine-dream", 
+            "text": "https://www.youtube.com/watch?v=E-1Y4kSsAFc", 
+            "title": "Fear and Awaiting in Async - A Savage Journey to the Heart of the Coroutine Dream"
+        }, 
+        {
+            "location": "/talks/interactive-programming-flappy-bird-in-clojurescript/", 
+            "text": "Interactive Programming Flappy Bird in ClojureScript", 
+            "title": "Interactive Programming Flappy Bird in ClojureScript"
+        }, 
+        {
+            "location": "/talks/interactive-programming-flappy-bird-in-clojurescript/#interactive-programming-flappy-bird-in-clojurescript", 
+            "text": "", 
+            "title": "Interactive Programming Flappy Bird in ClojureScript"
+        }, 
+        {
+            "location": "/talks/the-reactjs-landscape/", 
+            "text": "Luke VanderHart - The ReactJS Landscape", 
+            "title": "The ReactJS Landscape"
+        }, 
+        {
+            "location": "/talks/the-reactjs-landscape/#luke-vanderhart-the-reactjs-landscape", 
+            "text": "", 
+            "title": "Luke VanderHart - The ReactJS Landscape"
+        }, 
+        {
+            "location": "/talks/python-vs-ruby-a-battle-to-the-death/", 
+            "text": "Python vs Ruby - A Battle to The Death", 
+            "title": "Python vs Ruby a Battle to the Death"
+        }, 
+        {
+            "location": "/talks/python-vs-ruby-a-battle-to-the-death/#python-vs-ruby-a-battle-to-the-death", 
+            "text": "", 
+            "title": "Python vs Ruby - A Battle to The Death"
+        }, 
+        {
+            "location": "/talks/repl-based-development-demo/", 
+            "text": "REPL-Based Development Demo", 
+            "title": "REPL Based Development Demo"
+        }, 
+        {
+            "location": "/talks/repl-based-development-demo/#repl-based-development-demo", 
+            "text": "", 
+            "title": "REPL-Based Development Demo"
+        }, 
+        {
+            "location": "/talks/a-better-scala-repl/", 
+            "text": "SBTB 2015 - Li Haoyi - A Better Scala REPL", 
+            "title": "A Better Scala REPL"
+        }, 
+        {
+            "location": "/talks/a-better-scala-repl/#sbtb-2015-li-haoyi-a-better-scala-repl", 
+            "text": "", 
+            "title": "SBTB 2015 - Li Haoyi - A Better Scala REPL"
+        }, 
+        {
+            "location": "/talks/simple-made-easy/", 
+            "text": "Simple Made Easy - Rich Hickey\n\n\nhttps://www.infoq.com/presentations/Simple-Made-Easy", 
+            "title": "Simple Made Easy"
+        }, 
+        {
+            "location": "/talks/simple-made-easy/#simple-made-easy-rich-hickey", 
+            "text": "https://www.infoq.com/presentations/Simple-Made-Easy", 
+            "title": "Simple Made Easy - Rich Hickey"
+        }, 
+        {
+            "location": "/talks/the-unix-chainsaw/", 
+            "text": "The Unix Chainsaw - Gary Bernhardt", 
+            "title": "The Unix Chainsaw"
+        }, 
+        {
+            "location": "/talks/the-unix-chainsaw/#the-unix-chainsaw-gary-bernhardt", 
+            "text": "", 
+            "title": "The Unix Chainsaw - Gary Bernhardt"
+        }, 
+        {
+            "location": "/talks/wat-a-lightning-talk/", 
+            "text": "WAT - A Lightning Talk by Gary Bernhardt from CodeMash 2012", 
+            "title": "Wat - A Lightning Talk"
+        }, 
+        {
+            "location": "/talks/wat-a-lightning-talk/#wat-a-lightning-talk-by-gary-bernhardt-from-codemash-2012", 
+            "text": "", 
+            "title": "WAT - A Lightning Talk by Gary Bernhardt from CodeMash 2012"
         }
     ]
 }
