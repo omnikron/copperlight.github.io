@@ -224,19 +224,13 @@
     
         
     <url>
-     <loc>http://copperlight.github.io//talks/netflix-atlas-telemetry-a-platform-begets-an-ecosystem/</loc>
+     <loc>http://copperlight.github.io//talks/a-better-scala-repl/</loc>
      <lastmod>2017-10-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//talks/developing-clojurescript-with-figwheel/</loc>
-     <lastmod>2017-10-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/python-concurrency-from-the-ground-up/</loc>
      <lastmod>2017-10-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -254,7 +248,13 @@
     </url>
         
     <url>
-     <loc>http://copperlight.github.io//talks/the-reactjs-landscape/</loc>
+     <loc>http://copperlight.github.io//talks/netflix-atlas-telemetry-a-platform-begets-an-ecosystem/</loc>
+     <lastmod>2017-10-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://copperlight.github.io//talks/python-concurrency-from-the-ground-up/</loc>
      <lastmod>2017-10-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -272,13 +272,13 @@
     </url>
         
     <url>
-     <loc>http://copperlight.github.io//talks/a-better-scala-repl/</loc>
+     <loc>http://copperlight.github.io//talks/simple-made-easy/</loc>
      <lastmod>2017-10-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>http://copperlight.github.io//talks/simple-made-easy/</loc>
+     <loc>http://copperlight.github.io//talks/the-reactjs-landscape/</loc>
      <lastmod>2017-10-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
