@@ -4,7 +4,7 @@
     
     <url>
      <loc>http://copperlight.github.io//</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,19 +13,19 @@
         
     <url>
      <loc>http://copperlight.github.io//ansible/ansible-vault-and-ssh-key-distribution/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//ansible/running-ansible-playbooks-on-windows/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//ansible/testing-ansible-galaxy-roles-with-docker/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -35,31 +35,31 @@
         
     <url>
      <loc>http://copperlight.github.io//aws/assume-role-with-awscli/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//aws/aws-credential-files-for-java-and-python/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//aws/build-a-fake-instance-metadata-server-for-ubuntu-on-vagrant/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//aws/checking-and-changing-content-type-of-s3-object-with-awscli/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//aws/configuring-multiple-interfaces-on-the-same-network-in-ec2/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -69,7 +69,7 @@
         
     <url>
      <loc>http://copperlight.github.io//github/how-i-built-my-site/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -79,7 +79,7 @@
         
     <url>
      <loc>http://copperlight.github.io//linux/linux-ftrace-delivers-dtrace-like-functionality/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -89,25 +89,25 @@
         
     <url>
      <loc>http://copperlight.github.io//misc/clone-stash-pull-requests/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//misc/dual-boot-osx-10.10-and-ubuntu-14.04-on-a-2013-macbook-pro-retina/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//misc/reset-jenkins-build-number/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//misc/switching-jdks-in-osx/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -117,31 +117,31 @@
         
     <url>
      <loc>http://copperlight.github.io//python/accessing-google-apis-with-python/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//python/building-rest-apis-with-python-flask/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//python/install-the-latest-python-versions-on-macosx/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//python/memory-profiling-with-pyrasite-and-heapy/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//python/stop-using-print-for-debugging/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -151,43 +151,43 @@
         
     <url>
      <loc>http://copperlight.github.io//scala/intellij-configuration-tips/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//scala/overview-of-debugging-tools/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//scala/scalafmt-configuration-tips/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//scala/starting-scala-repls-with-gradle-and-sbt/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//scala/testing-aws-clients-with-iam-assumerole-credentials-in-scala/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//scala/using-gradle-to-run-scala-projects-locally/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//scala/using-the-scala-repl-to-configure-amazon-ses-notifications/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -197,25 +197,25 @@
         
     <url>
      <loc>http://copperlight.github.io//shell/measuring-transfer-speed-over-time-with-curl/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//shell/parsing-json-on-the-command-line/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//shell/pet-cli-snippet-manager/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//shell/schedule-ad-hoc-jobs-for-later-on-an-instance-with-atd/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -224,308 +224,14 @@
     
         
     <url>
-     <loc>http://copperlight.github.io//talks/a-better-scala-repl/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/amazon-s3-elastic-mapreduce-to-monitor-at-gigascale/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/are-we-there-yet/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/automating-your-browser-and-desktop-apps/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/beyond-pep-8-best-practices-for-beautiful-intelligible-code/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/boot-can-build-it/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/bottom-up-vs-top-down-design-in-clojure/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/built-in-super-heroes/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/clojure-concurrency/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/clojure-core-async/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/clojure-made-simple/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/clojure-parallelism-beyond-futures/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/clojurescript-for-skeptics/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/composing-interactive-apps-with-zelkova/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/dagobah-a-data-centric-meta-scheduler/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/debugging-clojure-code-with-cursive/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/design-and-prototype-a-language-in-clojure/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/developing-clojurescript-with-figwheel/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/fear-and-awaiting-in-async/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/from-0-to-prototype-using-clojurescript-re-frame-and-friends/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/hammock-driven-development/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/handmade-hero-day-001-setting-up-the-windows-build/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/interactive-programming-flappy-bird-in-clojurescript/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/logging-and-testing-and-debugging-oh-my/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/machete-mode-debugging-hacking-your-way-out-of-a-tight-spot/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/monitoring-monitoring-systems-at-netflix/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <loc>http://copperlight.github.io//talks/favorite/</loc>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://copperlight.github.io//talks/netflix-atlas-telemetry-a-platform-begets-an-ecosystem/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/parallel-programming-fork-join-and-reducers/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/parsing-text-with-a-virtual-machine/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/python-as-a-configuration-language/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/python-concurrency-from-the-ground-up/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/python-language-pycon-2016/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/python-vs-ruby-a-battle-to-the-death/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/repl-based-development-demo/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/refactoring-python-why-and-how-to-restructure-your-code/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/removing-pythons-gil-the-gilectomy/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/rethinking-the-developer-career-path/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/rich-hickey-on-clojure-spec/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/simple-made-easy/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/spec-ulation-keynote/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/stop-writing-classes/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/the-joys-and-perils-of-interactive-development/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/the-packaging-gradient/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/the-reactjs-landscape/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/the-unix-chainsaw/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/think-like-a-pythonista/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/thinking-in-coroutines/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/to-mock-or-not-to-mock-that-is-the-question/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/types-are-like-the-weather-type-systems-are-like-weathermen/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/wat-a-lightning-talk/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://copperlight.github.io//talks/writing-awesome-command-line-programs-in-python/</loc>
-     <lastmod>2017-10-14</lastmod>
+     <lastmod>2017-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

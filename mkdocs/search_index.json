@@ -322,7 +322,7 @@
         }, 
         {
             "location": "/python/install-the-latest-python-versions-on-macosx/", 
-            "text": "Install the Latest Python Versions on Mac OSX\n\n\n\n  \n2017-10-12\n\n  \nDiscuss\n\n\n\n\n\n\n\nOnce you have decided that Python is an \nawesome language to learn\n\nand you have heard all about the the \ncool features\n\nawaiting you, you are determined to install the latest versions on your laptop so that you can start\ndeveloping.\n\n\n\n\nWhat\u2019s New In Python 3.6\n - December 23, 2016\n\n\nWhat\u2019s New In Python 3.5\n - September 13, 2015\n\n\nWhat\u2019s New In Python 3.4\n - March 16, 2014\n\n\nWhat\u2019s New In Python 3.3\n - September 29, 2012\n\n\nWhat\u2019s New In Python 3.2\n - February 20, 2011\n\n\nWhat\u2019s New In Python 3.1\n - June 27, 2009\n\n\nWhat\u2019s New In Python 3.0\n - December 3, 2008\n\n\nWhat\u2019s New In Python 2.7\n - July 3, 2010\n\n\nWhat\u2019s New In Python 2.6\n - October 1, 2008\n\n\n\n\nYou may be a little concerned about the differences between Python 2 and Python 3, so you want\nto make sure that you have the latest versions of each available. This will enable you to switch\nbetween them easily and work on porting Python 2 programs to Python 3.\n\n\n\n\nShould I use Python 2 or Python 3 for my development activity?\n\n\nKey Differences between Python 2.7 and Python 3 with Examples\n\n\nPorting Python 2 Code to Python 3\n\n\nWriting code that runs under both Python2 and 3\n\n\n\n\nOS vendor Python versions lag behind the latest available and can only be updated by installing a\nmajor patch or bolting-on an additional Python installation:\n\n\n\n    \n \nOS Version \nSystem Python Version\n    \n \nOSX 10.13 \n2.7.10\n    \n \nOSX 10.12 \n2.7.10\n    \n \nOSX 10.11 \n2.7.10\n    \n \nUbuntu 16.04 LTS Xenial Xerus \n2.7.11\n\n    \n \nUbuntu 14.04 LTS Trusty Tahr \n2.7.5\n\n    \n \nUbuntu 12.04 LTS Precise Pangolin \n2.7.3\n\n\n\n\n\nOne way to work around this issue is to use \npyenv\n to install the\nversions of Python you want to use.  This tool provides a simplified build environment for installing\nthe Pythons you want, while providing a set of shell script shims that makes it easy to switch between\nthem.  This tool was inspired by and forked from \nrbenv\n and\n\nruby-build\n.\n\n\nInstall Python with pyenv\n\n\n\n\n\n\nStart a Terminal session.\n\n\n\n\n\n\nInstall \nHomebrew\n and Xcode Command Line Tools.\n\n\nxcode-select --install\n\n/usr/bin/ruby -e \n$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\n\n\n\n\n\n\n\n\n\n\nInstall \npyenv\n.\n\n\nbrew install pyenv\n\n\n\n\n\n\n\n\n\nIf you already have \npyenv\n installed, you can upgrade it to gain access to the latest Python\nversions.  The \npyenv\n tool is updated periodically with new formulas for the latest releases.\n\n\nbrew upgrade pyenv\n\n\n\n\n\n\n\n\n\nAdd configuration to your \n.bash_profile\n to initialize \npyenv\n every time you start a new\nTerminal. The \nPYENV_ROOT\n, which is where Python versions and packages will be installed,\ndefaults to \n$HOME/.pyenv\n.\n\n\ncat \n$HOME/.bash_profile \nEOF\n\nif which pyenv \n /dev/null; then eval \n$(pyenv init -)\n; fi\nEOF\n\n\n\n\n\n\n\n\n\nLoad your \n.bash_profile\n configuration changes.\n\n\nsource $HOME/.bash_profile\n\n\n\n\n\n\n\n\n\nList the available Python versions.  Notice that you have access to several different\ndistributions: python.org (plain version numbers), anaconda, ironpython, jython, miniconda,\npypy and stackless.  We will install the standard Python versions released by\n\npython.org\n, otherwise known as CPython, because the\ninterpreter is written in C.\n\n\npyenv install --list\n\n\n\n\n\n\n\n\n\nInstall Python versions.\n\n\npyenv install 2.7.14\npyenv install 3.6.3\n\n\n\n\n\n\n\n\n\nList the available Python versions.\n\n\npyenv versions\n\n\n\n\n\n\n\n\n\nActivate a Python version and verify that it is available.\n\n\npyenv global 2.7.14\npyenv versions\npython -V\n\n\n\n\n\n\n\n\n\nActivate another Python version and verify that it is available.\n\n\npyenv global 3.6.3\npyenv versions\npython -V\n\n\n\n\n\n\n\n\n\nIf desired, activate multiple Python versions and verify that they are available.\n\nPEP 394 -- The \"python\" Command on Unix-Like Systems\n\nexplains conventions for naming \npython\n binaries.\n\n\npyenv global 2.7.14 3.6.3\npyenv versions\npython -V\npython2 -V\npython2.7 -V\npython3 -V\npython3.6 -V\n\n\n\n\n\n\n\n\n\nCreate new directories for Python projects, add \npyenv local\n version files and verify the Python\nversions.  Your \npython\n version will automatically switch when you change into these directories.\n\n\nmkdir python2-project\ncd python2-project\npyenv local 2.7.13\ncat .python-version\npyenv local\npython -V\ncd ..\n\nmkdir python3-project\ncd python3-project\npyenv local 3.6.3\ncat .python-version\npyenv local\npython -V\ncd ..\n\n\n\n\n\n\n\n\n\nUseful Python Packages\n\n\nThis is a small collecton of useful packages that will help get you started doing useful things\nwith Python.\n\n\nInstall \nflake8\n, which is a static analyzer that enforces\ngood Python coding style and alerts you to coding mistakes.  Now that you have Python installed,\nyou can use the \npip\n command to install any additional modules that you want to use.  You will\nneed to install modules separately for each version of Python you are actively using.\n\n\npip install flake8\n\n\n\n\n\nInstall advanced Python Read-Eval-Print-Loop (REPL) packages, which will make it easier to explore\nPython code, because they grant access to tab completion and fancy editing capabilities.  The \nipython\n\ntool is a command line REPL, which can be exited with \nctrl-d\n.  Jupyter Notebook is a browser-based\nREPL that operates on individual cells of code.  The \nIPython Interactive Computing\n\nwebsite has more information on these tools.\n\n\npip install ipython jupyter\nipython\njupyter notebook\n\n\n\n\n\nInstall \nRequests: HTTP for Humans\n, which makes it easy\nto consume HTTP services. See GitHub's \nREST API v3\n documentation\nfor more details on endpoints that are avaialble.\n\n\npip install requests\n\n\n\n\n\npython\n\n\n \nimport\n \nrequests\n\n\n \nr\n \n=\n \nrequests\n.\nget\n(\nhttps://api.github.com/users/copperlight\n)\n\n\n \nr\n.\nok\n\n\nTrue\n\n\n \nr\n.\nstatus_code\n\n\n200\n\n\n \nr\n.\nheaders\n[\ncontent-type\n]\n\n\napplication/json; charset=utf8\n\n\n \nr\n.\nencoding\n\n\nutf-8\n\n\n \nr\n.\ntext\n\n\nu\n{\nlogin\n:\ncopperlight\n, ...}\n\n\n \nr\n.\njson\n()\n\n\n{\nu\npublic_repos\n:\n \n27\n,\n \n...\n}\n\n\n \nr\n.\njson\n()[\nlogin\n]\n\n\nu\ncopperlight\n\n\n\n\n\n\nInstall \nFlask: A Python Microframework\n, which can be used to quickly build\nsmall websites that automate everyday tasks.\n\n\npip install Flask\n\n\n\n\n\nfrom\n \nflask\n \nimport\n \nFlask\n\n\napp\n \n=\n \nFlask\n(\n__name__\n)\n\n\n\n@app.route\n(\n/\n)\n\n\ndef\n \nhello\n():\n\n    \nreturn\n \nHello World!\n\n\n\n\n\n\nFLASK_APP=hello.py flask run\ncurl http://127.0.0.1:5000\n\n\n\n\n\nIf you need Python package isolation on a per-project basis, because you have conflicting sets\nof packages specified for different projects, you can use \nvirtualenv\n\nto set up separate environments.  The \nvirtualenv\n tool establishes a clean room Python installation,\neither based upon the current version of Python in use, or a version specified on the command line.\nIf you have multiple Python versions activated in \npyenv\n, you can use \nvirtualenv\n to switch between\nthem easily.\n\n\npip install virtualenv\npip list\n\nmkdir python2-project\ncd python2-project\nvirtualenv -p python2.7 venv\nsource venv/bin/activate\npython -V\nwhich python\npip list\nwhich pip\ndeactivate\ncd ..\n\nmkdir python3-project\ncd python3-project\nvirtualenv -p python3.6 venv\nsource venv/bin/activate\npython -V\nwhich python\npip list\nwhich pip\ndeactivate\ncd ..\n\n\n\n\n\nAutomated Testing with Python\n\n\nWhile working on Python programs, you may be interested in automating testing.  The most common\nchoice for implementing this is \ntox\n, which will\nallow you to run tests with multiple different versions of Python, if needed.\n\n\nPython Packaging\n\n\nAfter completing a Python program or two, you will be interested in learning how to distribute them\neffectively.  The \nPython Packaging User Guide\n has some good advice\non this topic.\n\n\nQuickstart Commands\n\n\n# if you need homebrew\n\nxcode-select --install\n/usr/bin/ruby -e \n$(\ncurl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install\n)\n\n\n\n# install pyenv and latest major python versions\n\nbrew install pyenv\n\ncat \n$HOME\n/.bash_profile \nEOF\n\n\nif\n which pyenv \n /dev/null\n;\n \nthen\n \neval\n \n$(\npyenv init -\n)\n;\n \nfi\n\nEOF\n\n\nsource\n \n$HOME\n/.bash_profile\n\npyenv install \n2\n.7.14\npyenv install \n3\n.6.3\npyenv versions", 
+            "text": "Install the Latest Python Versions on Mac OSX\n\n\n\n  \n2017-10-12\n\n  \nDiscuss\n\n\n\n\n\n\n\nOnce you have decided that Python is an \nawesome language to learn\n\nand you have heard all about the the \ncool features\n\nawaiting you, you are determined to install the latest versions on your laptop so that you can start\ndeveloping.\n\n\n\n\nWhat\u2019s New In Python 3.6\n - December 23, 2016\n\n\nWhat\u2019s New In Python 3.5\n - September 13, 2015\n\n\nWhat\u2019s New In Python 3.4\n - March 16, 2014\n\n\nWhat\u2019s New In Python 3.3\n - September 29, 2012\n\n\nWhat\u2019s New In Python 3.2\n - February 20, 2011\n\n\nWhat\u2019s New In Python 3.1\n - June 27, 2009\n\n\nWhat\u2019s New In Python 3.0\n - December 3, 2008\n\n\nWhat\u2019s New In Python 2.7\n - July 3, 2010\n\n\nWhat\u2019s New In Python 2.6\n - October 1, 2008\n\n\n\n\nYou may be a little concerned about the differences between Python 2 and Python 3, so you want\nto make sure that you have the latest versions of each available. This will enable you to switch\nbetween them easily and work on porting Python 2 programs to Python 3.\n\n\n\n\nShould I use Python 2 or Python 3 for my development activity?\n\n\nKey Differences between Python 2.7 and Python 3 with Examples\n\n\nPorting Python 2 Code to Python 3\n\n\nWriting code that runs under both Python2 and 3\n\n\n\n\nOS vendor Python versions lag behind the latest available and can only be updated by installing a\nmajor patch or bolting-on an additional Python installation:\n\n\n\n    \n \nOS Version \nSystem Python Version\n    \n \nOSX 10.13 \n2.7.10\n    \n \nOSX 10.12 \n2.7.10\n    \n \nOSX 10.11 \n2.7.10\n    \n \nUbuntu 16.04 LTS Xenial Xerus \n2.7.11\n\n    \n \nUbuntu 14.04 LTS Trusty Tahr \n2.7.5\n\n    \n \nUbuntu 12.04 LTS Precise Pangolin \n2.7.3\n\n\n\n\n\nOne way to work around this issue is to use \npyenv\n to install the\nversions of Python you want to use.  This tool provides a simplified build environment for installing\nthe Pythons you want, while providing a set of shell script shims that makes it easy to switch between\nthem.  This tool was inspired by and forked from \nrbenv\n and\n\nruby-build\n.\n\n\nInstall Python with pyenv\n\n\n\n\n\n\nStart a Terminal session.\n\n\n\n\n\n\nInstall \nHomebrew\n and Xcode Command Line Tools.\n\n\nxcode-select --install\n\n/usr/bin/ruby -e \n$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\n\n\n\n\n\n\n\n\n\n\nInstall \npyenv\n.\n\n\nbrew install pyenv\n\n\n\n\n\n\n\n\n\nIf you already have \npyenv\n installed, you can upgrade it to gain access to the latest Python\nversions.  The \npyenv\n tool is updated periodically with new formulas for the latest releases.\n\n\nbrew upgrade pyenv\n\n\n\n\n\n\n\n\n\nAdd configuration to your \n.bash_profile\n to initialize \npyenv\n every time you start a new\nTerminal. The \nPYENV_ROOT\n, which is where Python versions and packages will be installed,\ndefaults to \n$HOME/.pyenv\n.\n\n\ncat \n$HOME/.bash_profile \nEOF\n\nif which pyenv \n /dev/null 2\n1; then eval \n$(pyenv init -)\n; fi\nEOF\n\n\n\n\n\n\n\n\n\nLoad your \n.bash_profile\n configuration changes.\n\n\nsource $HOME/.bash_profile\n\n\n\n\n\n\n\n\n\nList the available Python versions.  Notice that you have access to several different\ndistributions: python.org (plain version numbers), anaconda, ironpython, jython, miniconda,\npypy and stackless.  We will install the standard Python versions released by\n\npython.org\n, otherwise known as CPython, because the\ninterpreter is written in C.\n\n\npyenv install --list\n\n\n\n\n\n\n\n\n\nInstall Python versions.\n\n\npyenv install 2.7.14\npyenv install 3.6.3\n\n\n\n\n\n\n\n\n\nList the available Python versions.\n\n\npyenv versions\n\n\n\n\n\n\n\n\n\nActivate a Python version and verify that it is available.\n\n\npyenv global 2.7.14\npyenv versions\npython -V\n\n\n\n\n\n\n\n\n\nActivate another Python version and verify that it is available.\n\n\npyenv global 3.6.3\npyenv versions\npython -V\n\n\n\n\n\n\n\n\n\nIf desired, activate multiple Python versions and verify that they are available.\n\nPEP 394 -- The \"python\" Command on Unix-Like Systems\n\nexplains conventions for naming \npython\n binaries.\n\n\npyenv global 2.7.14 3.6.3\npyenv versions\npython -V\npython2 -V\npython2.7 -V\npython3 -V\npython3.6 -V\n\n\n\n\n\n\n\n\n\nCreate new directories for Python projects, add \npyenv local\n version files and verify the Python\nversions.  Your \npython\n version will automatically switch when you change into these directories.\n\n\nmkdir python2-project\ncd python2-project\npyenv local 2.7.13\ncat .python-version\npyenv local\npython -V\ncd ..\n\nmkdir python3-project\ncd python3-project\npyenv local 3.6.3\ncat .python-version\npyenv local\npython -V\ncd ..\n\n\n\n\n\n\n\n\n\nUseful Python Packages\n\n\nThis is a small collecton of useful packages that will help get you started doing useful things\nwith Python.\n\n\nInstall \nflake8\n, which is a static analyzer that enforces\ngood Python coding style and alerts you to coding mistakes.  Now that you have Python installed,\nyou can use the \npip\n command to install any additional modules that you want to use.  You will\nneed to install modules separately for each version of Python you are actively using.\n\n\npip install flake8\n\n\n\n\n\nInstall advanced Python Read-Eval-Print-Loop (REPL) packages, which will make it easier to explore\nPython code, because they grant access to tab completion and fancy editing capabilities.  The \nipython\n\ntool is a command line REPL, which can be exited with \nctrl-d\n.  Jupyter Notebook is a browser-based\nREPL that operates on individual cells of code.  The \nIPython Interactive Computing\n\nwebsite has more information on these tools.\n\n\npip install ipython jupyter\nipython\njupyter notebook\n\n\n\n\n\nInstall \nRequests: HTTP for Humans\n, which makes it easy\nto consume HTTP services. See GitHub's \nREST API v3\n documentation\nfor more details on endpoints that are avaialble.\n\n\npip install requests\n\n\n\n\n\npython\n\n\n \nimport\n \nrequests\n\n\n \nr\n \n=\n \nrequests\n.\nget\n(\nhttps://api.github.com/users/copperlight\n)\n\n\n \nr\n.\nok\n\n\nTrue\n\n\n \nr\n.\nstatus_code\n\n\n200\n\n\n \nr\n.\nheaders\n[\ncontent-type\n]\n\n\napplication/json; charset=utf8\n\n\n \nr\n.\nencoding\n\n\nutf-8\n\n\n \nr\n.\ntext\n\n\nu\n{\nlogin\n:\ncopperlight\n, ...}\n\n\n \nr\n.\njson\n()\n\n\n{\nu\npublic_repos\n:\n \n27\n,\n \n...\n}\n\n\n \nr\n.\njson\n()[\nlogin\n]\n\n\nu\ncopperlight\n\n\n\n\n\n\nInstall \nFlask: A Python Microframework\n, which can be used to quickly build\nsmall websites that automate everyday tasks.\n\n\npip install Flask\n\n\n\n\n\nfrom\n \nflask\n \nimport\n \nFlask\n\n\napp\n \n=\n \nFlask\n(\n__name__\n)\n\n\n\n@app.route\n(\n/\n)\n\n\ndef\n \nhello\n():\n\n    \nreturn\n \nHello World!\n\n\n\n\n\n\nFLASK_APP=hello.py flask run\ncurl http://127.0.0.1:5000\n\n\n\n\n\nIf you need Python package isolation on a per-project basis, because you have conflicting sets\nof packages specified for different projects, you can use \nvirtualenv\n\nto set up separate environments.  The \nvirtualenv\n tool establishes a clean room Python installation,\neither based upon the current version of Python in use, or a version specified on the command line.\nIf you have multiple Python versions activated in \npyenv\n, you can use \nvirtualenv\n to switch between\nthem easily.\n\n\npip install virtualenv\npip list\n\nmkdir python2-project\ncd python2-project\nvirtualenv -p python2.7 venv\nsource venv/bin/activate\npython -V\nwhich python\npip list\nwhich pip\ndeactivate\ncd ..\n\nmkdir python3-project\ncd python3-project\nvirtualenv -p python3.6 venv\nsource venv/bin/activate\npython -V\nwhich python\npip list\nwhich pip\ndeactivate\ncd ..\n\n\n\n\n\nAutomated Testing with Python\n\n\nWhile working on Python programs, you may be interested in automating testing.  The most common\nchoice for implementing this is \ntox\n, which will\nallow you to run tests with multiple different versions of Python, if needed.\n\n\nPython Packaging\n\n\nAfter completing a Python program or two, you will be interested in learning how to distribute them\neffectively.  The \nPython Packaging User Guide\n has some good advice\non this topic.\n\n\nQuickstart Commands\n\n\n# if you need homebrew\n\nxcode-select --install\n/usr/bin/ruby -e \n$(\ncurl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install\n)\n\n\n\n# install pyenv and latest major python versions\n\nbrew install pyenv\n\ncat \n$HOME\n/.bash_profile \nEOF\n\n\nif\n which pyenv \n /dev/null\n;\n \nthen\n \neval\n \n$(\npyenv init -\n)\n;\n \nfi\n\nEOF\n\n\nsource\n \n$HOME\n/.bash_profile\n\npyenv install \n2\n.7.14\npyenv install \n3\n.6.3\npyenv versions", 
             "title": "Install the Latest Python Versions on Mac OSX"
         }, 
         {
@@ -332,7 +332,7 @@
         }, 
         {
             "location": "/python/install-the-latest-python-versions-on-macosx/#install-python-with-pyenv", 
-            "text": "Start a Terminal session.    Install  Homebrew  and Xcode Command Line Tools.  xcode-select --install\n\n/usr/bin/ruby -e  $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)     Install  pyenv .  brew install pyenv    If you already have  pyenv  installed, you can upgrade it to gain access to the latest Python\nversions.  The  pyenv  tool is updated periodically with new formulas for the latest releases.  brew upgrade pyenv    Add configuration to your  .bash_profile  to initialize  pyenv  every time you start a new\nTerminal. The  PYENV_ROOT , which is where Python versions and packages will be installed,\ndefaults to  $HOME/.pyenv .  cat  $HOME/.bash_profile  EOF \nif which pyenv   /dev/null; then eval  $(pyenv init -) ; fi\nEOF    Load your  .bash_profile  configuration changes.  source $HOME/.bash_profile    List the available Python versions.  Notice that you have access to several different\ndistributions: python.org (plain version numbers), anaconda, ironpython, jython, miniconda,\npypy and stackless.  We will install the standard Python versions released by python.org , otherwise known as CPython, because the\ninterpreter is written in C.  pyenv install --list    Install Python versions.  pyenv install 2.7.14\npyenv install 3.6.3    List the available Python versions.  pyenv versions    Activate a Python version and verify that it is available.  pyenv global 2.7.14\npyenv versions\npython -V    Activate another Python version and verify that it is available.  pyenv global 3.6.3\npyenv versions\npython -V    If desired, activate multiple Python versions and verify that they are available. PEP 394 -- The \"python\" Command on Unix-Like Systems \nexplains conventions for naming  python  binaries.  pyenv global 2.7.14 3.6.3\npyenv versions\npython -V\npython2 -V\npython2.7 -V\npython3 -V\npython3.6 -V    Create new directories for Python projects, add  pyenv local  version files and verify the Python\nversions.  Your  python  version will automatically switch when you change into these directories.  mkdir python2-project\ncd python2-project\npyenv local 2.7.13\ncat .python-version\npyenv local\npython -V\ncd ..\n\nmkdir python3-project\ncd python3-project\npyenv local 3.6.3\ncat .python-version\npyenv local\npython -V\ncd ..", 
+            "text": "Start a Terminal session.    Install  Homebrew  and Xcode Command Line Tools.  xcode-select --install\n\n/usr/bin/ruby -e  $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)     Install  pyenv .  brew install pyenv    If you already have  pyenv  installed, you can upgrade it to gain access to the latest Python\nversions.  The  pyenv  tool is updated periodically with new formulas for the latest releases.  brew upgrade pyenv    Add configuration to your  .bash_profile  to initialize  pyenv  every time you start a new\nTerminal. The  PYENV_ROOT , which is where Python versions and packages will be installed,\ndefaults to  $HOME/.pyenv .  cat  $HOME/.bash_profile  EOF \nif which pyenv   /dev/null 2 1; then eval  $(pyenv init -) ; fi\nEOF    Load your  .bash_profile  configuration changes.  source $HOME/.bash_profile    List the available Python versions.  Notice that you have access to several different\ndistributions: python.org (plain version numbers), anaconda, ironpython, jython, miniconda,\npypy and stackless.  We will install the standard Python versions released by python.org , otherwise known as CPython, because the\ninterpreter is written in C.  pyenv install --list    Install Python versions.  pyenv install 2.7.14\npyenv install 3.6.3    List the available Python versions.  pyenv versions    Activate a Python version and verify that it is available.  pyenv global 2.7.14\npyenv versions\npython -V    Activate another Python version and verify that it is available.  pyenv global 3.6.3\npyenv versions\npython -V    If desired, activate multiple Python versions and verify that they are available. PEP 394 -- The \"python\" Command on Unix-Like Systems \nexplains conventions for naming  python  binaries.  pyenv global 2.7.14 3.6.3\npyenv versions\npython -V\npython2 -V\npython2.7 -V\npython3 -V\npython3.6 -V    Create new directories for Python projects, add  pyenv local  version files and verify the Python\nversions.  Your  python  version will automatically switch when you change into these directories.  mkdir python2-project\ncd python2-project\npyenv local 2.7.13\ncat .python-version\npyenv local\npython -V\ncd ..\n\nmkdir python3-project\ncd python3-project\npyenv local 3.6.3\ncat .python-version\npyenv local\npython -V\ncd ..", 
             "title": "Install Python with pyenv"
         }, 
         {
@@ -536,264 +536,54 @@
             "title": "Schedule Ad-Hoc Jobs for Later on an Instance with atd"
         }, 
         {
-            "location": "/talks/a-better-scala-repl/", 
-            "text": "SBTB 2015 - Li Haoyi - A Better Scala REPL", 
-            "title": "A Better Scala REPL"
+            "location": "/talks/favorite/", 
+            "text": "Favorite Talks\n\n\nC\n\n\n\n\nHandmade Hero Day 001: Setting Up the Windows Build - Casey Muratori | 2014\n\n\n\n\nCareer\n\n\n\n\nRethinking the Developer Career Path \u2013 Randall Koutnik | The Lead Developer UK 2017\n\n\n\n\nClojure\n\n\n\n\nAre We There Yet? - Rich Hickey | JVM Language Summit 2009\n\n\nBoot Can Built It - Alan Dipert, Micha Niskin | Clojure/west 2015\n\n\nBottom Up vs Top Down Design in Clojure - Mark Bastian | Clojure/conj 2015\n\n\nClojure Concurrency - Rich Hickey | Western Mass. Developers Group\n\n\nClojure core.async - Rich Hickey | Strange Loop 2013\n\n\nClojure Made Simple - Rich Hickey | Oracle Developers 2015\n\n\nClojure Parallelism Beyond Futures - Leon Barrett | Clojure/west 2015\n\n\nclojure.spec - Rich Hickey | LispNYC 2017\n\n\nComposing Interactive Apps With Zelkova - James MacAulay | Clojure/west 2015\n\n\nDagobah, a Data centric Meta scheduler - Matt Bossenbroek | Clojure/conj 2015\n\n\nDebugging Clojure Code with Cursive - Colin Fleming | Clojure/west 2015\n\n\nDesign and Prototype a Language In Clojure - Jeanine Adkisson | Clojure/west 2015\n\n\nHammock Driven Development - Rich Hickey | Clojure/conj 2010\n\n\nParallel Programming, Fork Join, and Reducers - Daniel Higginbotham | Clojure/west 2016\n\n\nParsing Text with a Virtual Machine - Ghadi Shayban | Clojure/west 2016\n\n\nREPL-Based Development Demo - Valentin Waeselynck | 2017\n (from \nWhat makes a good REPL?\n)\n\n\nSimple Made Easy - Rich Hickey | Strange Loop 2011\n\n\nSpec-ulation - Rich Hickey | Clojure/conj 2016\n\n\nThe Joys and Perils of Interactive Development - Stuart Sierra | Clojure/west 2016\n\n\nThe ReactJS Landscape - Luke VanderHart | Clojure/west 2015\n\n\nTypes are Like the Weather, Type Systems are Like Weathermen - Matthias Felleisen | Clojure/west 2016\n\n\n\n\nClojureScript\n\n\n\n\nClojureScript for Skeptics - Derek Slager | Clojure/conj 2015\n\n\nDeveloping ClojureScript With Figwheel - Bruce Hauman | Clojure/west 2015\n\n\nFrom 0 to Prototype Using ClojureScript, Re-Frame and Friends - Martin Clausen | Dutch Clojure Days 2017\n\n\nInteractive Programming Flappy Bird in ClojureScript - Bruce Hauman | 2014\n\n\n\n\nNetflix Atlas\n\n\n\n\nNetflix: Amazon S3 \n Amazon Elastic MapReduce to Monitor at Gigascale - Roy Rapoport | AWS re:Invent 2013\n\n\nMonitoring Monitoring Systems at Netflix - Roy Rapoport | Monitorama PDX 2017\n\n\nNetflix Atlas Telemetry - A Platform Begets an Ecosystem\n\n\n\n\nPython\n\n\n\n\nAutomating Your Browser and Desktop Apps - Al Sweigart | PyBay2016\n\n\nBeyond PEP 8: Best Practices for Beautiful Intelligible Code - Raymond Hettinger | PyCon 2015\n\n\nBuilt in Super Heroes - David Beazley | PyData Chicago 2016\n\n\nFear and Awaiting in Async: A Savage Journey to the Heart of the Coroutine Dream - David Beazley | PyOhio 2016\n\n\nLogging and Testing and Debugging, Oh My! - Albert Sweigart | PyBay2017\n\n\nMachete-Mode Debugging: Hacking Your Way Out of a Tight Spot - Ned Batchelder | PyCon 2016\n\n\nPython as a Configuration Language - Guillermo P\u00e9rez | PyCon 2016\n\n\nPython Concurrency From the Ground Up: LIVE! - David Beazley | PyCon 2015\n\n\nPython Language - Guido van Rossum | PyCon 2016\n\n\nPython vs Ruby: A Battle to The Death - Gary Bernhardt | NWPD 2010\n\n\nRefactoring Python: Why and How to Restructure Your Code - Brett Slatkin | PyCon 2016\n\n\nRemoving Python's GIL: The Gilectomy - Larry Hastings | PyCon 2016\n\n\nStop Writing Classes - Jack Diederich | PyCon 2012\n\n\nThe Packaging Gradient - Mahmoud Hashemi | PyBay 2017\n\n\nThink Like a Pythonista - Luciano Ramalho | PyBay 2017\n\n\nThinking In Coroutines - \u0141ukasz Langa | PyCon 2016\n\n\nTo Mock, or Not to Mock, That is the Question - Ana Balica | PyCon 2016\n\n\nWriting Awesome Command-Line Programs in Python - Mark Smith | EuroPython 2014\n\n\n\n\nScala\n\n\n\n\nA Better Scala REPL - Li Haoyi | SBTB 2015\n\n\n\n\nUnix\n\n\n\n\nThe Unix Chainsaw - Gary Bernhardt | Cascadia Ruby Conf 2011", 
+            "title": "Favorite"
         }, 
         {
-            "location": "/talks/a-better-scala-repl/#sbtb-2015-li-haoyi-a-better-scala-repl", 
+            "location": "/talks/favorite/#favorite-talks", 
             "text": "", 
-            "title": "SBTB 2015 - Li Haoyi - A Better Scala REPL"
+            "title": "Favorite Talks"
         }, 
         {
-            "location": "/talks/amazon-s3-elastic-mapreduce-to-monitor-at-gigascale/", 
-            "text": "Netflix: Amazon S3 \n Amazon Elastic MapReduce to Monitor at Gigascale (BDT302) | AWS re:Invent 2013", 
-            "title": "Amazon S3 and Elastic MapReduce to Monitor at Gigascale"
+            "location": "/talks/favorite/#c", 
+            "text": "Handmade Hero Day 001: Setting Up the Windows Build - Casey Muratori | 2014", 
+            "title": "C"
         }, 
         {
-            "location": "/talks/amazon-s3-elastic-mapreduce-to-monitor-at-gigascale/#netflix-amazon-s3-amazon-elastic-mapreduce-to-monitor-at-gigascale-bdt302-aws-reinvent-2013", 
-            "text": "", 
-            "title": "Netflix: Amazon S3 &amp; Amazon Elastic MapReduce to Monitor at Gigascale (BDT302) | AWS re:Invent 2013"
+            "location": "/talks/favorite/#career", 
+            "text": "Rethinking the Developer Career Path \u2013 Randall Koutnik | The Lead Developer UK 2017", 
+            "title": "Career"
         }, 
         {
-            "location": "/talks/are-we-there-yet/", 
-            "text": "Are We There Yet?\n\n\nhttps://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey", 
-            "title": "Are We There Yet?"
+            "location": "/talks/favorite/#clojure", 
+            "text": "Are We There Yet? - Rich Hickey | JVM Language Summit 2009  Boot Can Built It - Alan Dipert, Micha Niskin | Clojure/west 2015  Bottom Up vs Top Down Design in Clojure - Mark Bastian | Clojure/conj 2015  Clojure Concurrency - Rich Hickey | Western Mass. Developers Group  Clojure core.async - Rich Hickey | Strange Loop 2013  Clojure Made Simple - Rich Hickey | Oracle Developers 2015  Clojure Parallelism Beyond Futures - Leon Barrett | Clojure/west 2015  clojure.spec - Rich Hickey | LispNYC 2017  Composing Interactive Apps With Zelkova - James MacAulay | Clojure/west 2015  Dagobah, a Data centric Meta scheduler - Matt Bossenbroek | Clojure/conj 2015  Debugging Clojure Code with Cursive - Colin Fleming | Clojure/west 2015  Design and Prototype a Language In Clojure - Jeanine Adkisson | Clojure/west 2015  Hammock Driven Development - Rich Hickey | Clojure/conj 2010  Parallel Programming, Fork Join, and Reducers - Daniel Higginbotham | Clojure/west 2016  Parsing Text with a Virtual Machine - Ghadi Shayban | Clojure/west 2016  REPL-Based Development Demo - Valentin Waeselynck | 2017  (from  What makes a good REPL? )  Simple Made Easy - Rich Hickey | Strange Loop 2011  Spec-ulation - Rich Hickey | Clojure/conj 2016  The Joys and Perils of Interactive Development - Stuart Sierra | Clojure/west 2016  The ReactJS Landscape - Luke VanderHart | Clojure/west 2015  Types are Like the Weather, Type Systems are Like Weathermen - Matthias Felleisen | Clojure/west 2016", 
+            "title": "Clojure"
         }, 
         {
-            "location": "/talks/are-we-there-yet/#are-we-there-yet", 
-            "text": "https://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey", 
-            "title": "Are We There Yet?"
+            "location": "/talks/favorite/#clojurescript", 
+            "text": "ClojureScript for Skeptics - Derek Slager | Clojure/conj 2015  Developing ClojureScript With Figwheel - Bruce Hauman | Clojure/west 2015  From 0 to Prototype Using ClojureScript, Re-Frame and Friends - Martin Clausen | Dutch Clojure Days 2017  Interactive Programming Flappy Bird in ClojureScript - Bruce Hauman | 2014", 
+            "title": "ClojureScript"
         }, 
         {
-            "location": "/talks/automating-your-browser-and-desktop-apps/", 
-            "text": "Al Sweigart, \"Automating Your Browser and Desktop Apps\", PyBay2016", 
-            "title": "Automating Your Browser and Desktop Apps"
+            "location": "/talks/favorite/#netflix-atlas", 
+            "text": "Netflix: Amazon S3   Amazon Elastic MapReduce to Monitor at Gigascale - Roy Rapoport | AWS re:Invent 2013  Monitoring Monitoring Systems at Netflix - Roy Rapoport | Monitorama PDX 2017  Netflix Atlas Telemetry - A Platform Begets an Ecosystem", 
+            "title": "Netflix Atlas"
         }, 
         {
-            "location": "/talks/automating-your-browser-and-desktop-apps/#al-sweigart-automating-your-browser-and-desktop-apps-pybay2016", 
-            "text": "", 
-            "title": "Al Sweigart, \"Automating Your Browser and Desktop Apps\", PyBay2016"
+            "location": "/talks/favorite/#python", 
+            "text": "Automating Your Browser and Desktop Apps - Al Sweigart | PyBay2016  Beyond PEP 8: Best Practices for Beautiful Intelligible Code - Raymond Hettinger | PyCon 2015  Built in Super Heroes - David Beazley | PyData Chicago 2016  Fear and Awaiting in Async: A Savage Journey to the Heart of the Coroutine Dream - David Beazley | PyOhio 2016  Logging and Testing and Debugging, Oh My! - Albert Sweigart | PyBay2017  Machete-Mode Debugging: Hacking Your Way Out of a Tight Spot - Ned Batchelder | PyCon 2016  Python as a Configuration Language - Guillermo P\u00e9rez | PyCon 2016  Python Concurrency From the Ground Up: LIVE! - David Beazley | PyCon 2015  Python Language - Guido van Rossum | PyCon 2016  Python vs Ruby: A Battle to The Death - Gary Bernhardt | NWPD 2010  Refactoring Python: Why and How to Restructure Your Code - Brett Slatkin | PyCon 2016  Removing Python's GIL: The Gilectomy - Larry Hastings | PyCon 2016  Stop Writing Classes - Jack Diederich | PyCon 2012  The Packaging Gradient - Mahmoud Hashemi | PyBay 2017  Think Like a Pythonista - Luciano Ramalho | PyBay 2017  Thinking In Coroutines - \u0141ukasz Langa | PyCon 2016  To Mock, or Not to Mock, That is the Question - Ana Balica | PyCon 2016  Writing Awesome Command-Line Programs in Python - Mark Smith | EuroPython 2014", 
+            "title": "Python"
         }, 
         {
-            "location": "/talks/beyond-pep-8-best-practices-for-beautiful-intelligible-code/", 
-            "text": "Raymond Hettinger - Beyond PEP 8 -- Best practices for beautiful intelligible code - PyCon 2015", 
-            "title": "Beyond PEP 8 Best Practices for Beautiful Intelligible Code"
+            "location": "/talks/favorite/#scala", 
+            "text": "A Better Scala REPL - Li Haoyi | SBTB 2015", 
+            "title": "Scala"
         }, 
         {
-            "location": "/talks/beyond-pep-8-best-practices-for-beautiful-intelligible-code/#raymond-hettinger-beyond-pep-8-best-practices-for-beautiful-intelligible-code-pycon-2015", 
-            "text": "", 
-            "title": "Raymond Hettinger - Beyond PEP 8 -- Best practices for beautiful intelligible code - PyCon 2015"
-        }, 
-        {
-            "location": "/talks/boot-can-build-it/", 
-            "text": "Alan Dipert, Micha Niskin - Boot Can Built It", 
-            "title": "Boot Can Build It"
-        }, 
-        {
-            "location": "/talks/boot-can-build-it/#alan-dipert-micha-niskin-boot-can-built-it", 
-            "text": "", 
-            "title": "Alan Dipert, Micha Niskin - Boot Can Built It"
-        }, 
-        {
-            "location": "/talks/bottom-up-vs-top-down-design-in-clojure/", 
-            "text": "Bottom Up vs Top Down Design in Clojure - Mark Bastian\n\n\nhttps://www.youtube.com/watch?v=Tb823aqgX_0", 
-            "title": "Bottom Up vs Top Down Design in Clojure"
-        }, 
-        {
-            "location": "/talks/bottom-up-vs-top-down-design-in-clojure/#bottom-up-vs-top-down-design-in-clojure-mark-bastian", 
-            "text": "https://www.youtube.com/watch?v=Tb823aqgX_0", 
-            "title": "Bottom Up vs Top Down Design in Clojure - Mark Bastian"
-        }, 
-        {
-            "location": "/talks/built-in-super-heroes/", 
-            "text": "David Beazley | Keynote: Built in Super Heroes", 
-            "title": "Built-In Super Heroes"
-        }, 
-        {
-            "location": "/talks/built-in-super-heroes/#david-beazley-keynote-built-in-super-heroes", 
-            "text": "", 
-            "title": "David Beazley | Keynote: Built in Super Heroes"
-        }, 
-        {
-            "location": "/talks/clojure-concurrency/", 
-            "text": "Clojure Concurrency - Rich Hickey\n\n\nhttps://www.youtube.com/watch?v=dGVqrGmwOAw", 
-            "title": "Clojure Concurrency"
-        }, 
-        {
-            "location": "/talks/clojure-concurrency/#clojure-concurrency-rich-hickey", 
-            "text": "https://www.youtube.com/watch?v=dGVqrGmwOAw", 
-            "title": "Clojure Concurrency - Rich Hickey"
-        }, 
-        {
-            "location": "/talks/clojure-core-async/", 
-            "text": "Clojure core.async\n\n\nhttps://www.infoq.com/presentations/clojure-core-async", 
-            "title": "Clojure core.async"
-        }, 
-        {
-            "location": "/talks/clojure-core-async/#clojure-coreasync", 
-            "text": "https://www.infoq.com/presentations/clojure-core-async", 
-            "title": "Clojure core.async"
-        }, 
-        {
-            "location": "/talks/clojure-made-simple/", 
-            "text": "Clojure Made Simple", 
-            "title": "Clojure Made Simple"
-        }, 
-        {
-            "location": "/talks/clojure-made-simple/#clojure-made-simple", 
-            "text": "", 
-            "title": "Clojure Made Simple"
-        }, 
-        {
-            "location": "/talks/clojure-parallelism-beyond-futures/", 
-            "text": "Leon Barrett - Clojure Parallelism Beyond Futures", 
-            "title": "Clojure Parallelism Beyond Futures"
-        }, 
-        {
-            "location": "/talks/clojure-parallelism-beyond-futures/#leon-barrett-clojure-parallelism-beyond-futures", 
-            "text": "", 
-            "title": "Leon Barrett - Clojure Parallelism Beyond Futures"
-        }, 
-        {
-            "location": "/talks/clojurescript-for-skeptics/", 
-            "text": "ClojureScript for Skeptics - Derek Slager\n\n\nhttps://www.youtube.com/watch?v=gsffg5xxFQI", 
-            "title": "ClojureScript for Skeptics"
-        }, 
-        {
-            "location": "/talks/clojurescript-for-skeptics/#clojurescript-for-skeptics-derek-slager", 
-            "text": "https://www.youtube.com/watch?v=gsffg5xxFQI", 
-            "title": "ClojureScript for Skeptics - Derek Slager"
-        }, 
-        {
-            "location": "/talks/composing-interactive-apps-with-zelkova/", 
-            "text": "James MacAulay - Composing Interactive Apps With Zelkova", 
-            "title": "Composing Interactive Apps with Zelkova"
-        }, 
-        {
-            "location": "/talks/composing-interactive-apps-with-zelkova/#james-macaulay-composing-interactive-apps-with-zelkova", 
-            "text": "", 
-            "title": "James MacAulay - Composing Interactive Apps With Zelkova"
-        }, 
-        {
-            "location": "/talks/dagobah-a-data-centric-meta-scheduler/", 
-            "text": "Dagobah, a Data centric Meta scheduler - Matt Bossenbroek\n\n\nhttps://www.youtube.com/watch?v=V2E1PdboYLk", 
-            "title": "Dagobah - A Data-Centric Meta-Scheduler"
-        }, 
-        {
-            "location": "/talks/dagobah-a-data-centric-meta-scheduler/#dagobah-a-data-centric-meta-scheduler-matt-bossenbroek", 
-            "text": "https://www.youtube.com/watch?v=V2E1PdboYLk", 
-            "title": "Dagobah, a Data centric Meta scheduler - Matt Bossenbroek"
-        }, 
-        {
-            "location": "/talks/debugging-clojure-code-with-cursive/", 
-            "text": "Colin Fleming - Debugging Clojure Code with Cursive", 
-            "title": "Debugging Clojure Code with Cursive"
-        }, 
-        {
-            "location": "/talks/debugging-clojure-code-with-cursive/#colin-fleming-debugging-clojure-code-with-cursive", 
-            "text": "", 
-            "title": "Colin Fleming - Debugging Clojure Code with Cursive"
-        }, 
-        {
-            "location": "/talks/design-and-prototype-a-language-in-clojure/", 
-            "text": "Jeanine Adkisson - Design and Prototype a Language In Clojure", 
-            "title": "Design and Prototype a Language in Clojure"
-        }, 
-        {
-            "location": "/talks/design-and-prototype-a-language-in-clojure/#jeanine-adkisson-design-and-prototype-a-language-in-clojure", 
-            "text": "", 
-            "title": "Jeanine Adkisson - Design and Prototype a Language In Clojure"
-        }, 
-        {
-            "location": "/talks/developing-clojurescript-with-figwheel/", 
-            "text": "Bruce Hauman - Developing ClojureScript With Figwheel", 
-            "title": "Developing ClojureScript with Figwheel"
-        }, 
-        {
-            "location": "/talks/developing-clojurescript-with-figwheel/#bruce-hauman-developing-clojurescript-with-figwheel", 
-            "text": "", 
-            "title": "Bruce Hauman - Developing ClojureScript With Figwheel"
-        }, 
-        {
-            "location": "/talks/fear-and-awaiting-in-async/", 
-            "text": "Fear and Awaiting in Async - A Savage Journey to the Heart of the Coroutine Dream\n\n\nhttps://www.youtube.com/watch?v=E-1Y4kSsAFc", 
-            "title": "Fear and Awaiting in Async"
-        }, 
-        {
-            "location": "/talks/fear-and-awaiting-in-async/#fear-and-awaiting-in-async-a-savage-journey-to-the-heart-of-the-coroutine-dream", 
-            "text": "https://www.youtube.com/watch?v=E-1Y4kSsAFc", 
-            "title": "Fear and Awaiting in Async - A Savage Journey to the Heart of the Coroutine Dream"
-        }, 
-        {
-            "location": "/talks/from-0-to-prototype-using-clojurescript-re-frame-and-friends/", 
-            "text": "From 0 to prototype using ClojureScript, re-frame and friends: Martin Clausen", 
-            "title": "From 0 to Prototype Using ClojureScript Re-Frame and Friends"
-        }, 
-        {
-            "location": "/talks/from-0-to-prototype-using-clojurescript-re-frame-and-friends/#from-0-to-prototype-using-clojurescript-re-frame-and-friends-martin-clausen", 
-            "text": "", 
-            "title": "From 0 to prototype using ClojureScript, re-frame and friends: Martin Clausen"
-        }, 
-        {
-            "location": "/talks/hammock-driven-development/", 
-            "text": "Hammock Driven Development - Rich Hickey\n\n\nhttps://www.youtube.com/watch?v=f84n5oFoZBc", 
-            "title": "Hammock Driven Development"
-        }, 
-        {
-            "location": "/talks/hammock-driven-development/#hammock-driven-development-rich-hickey", 
-            "text": "https://www.youtube.com/watch?v=f84n5oFoZBc", 
-            "title": "Hammock Driven Development - Rich Hickey"
-        }, 
-        {
-            "location": "/talks/handmade-hero-day-001-setting-up-the-windows-build/", 
-            "text": "Handmade Hero Day 001 - Setting Up the Windows Build", 
-            "title": "Handmade Hero Day 001 - Setting Up the Windows Build"
-        }, 
-        {
-            "location": "/talks/handmade-hero-day-001-setting-up-the-windows-build/#handmade-hero-day-001-setting-up-the-windows-build", 
-            "text": "", 
-            "title": "Handmade Hero Day 001 - Setting Up the Windows Build"
-        }, 
-        {
-            "location": "/talks/interactive-programming-flappy-bird-in-clojurescript/", 
-            "text": "Interactive Programming Flappy Bird in ClojureScript", 
-            "title": "Interactive Programming Flappy Bird in ClojureScript"
-        }, 
-        {
-            "location": "/talks/interactive-programming-flappy-bird-in-clojurescript/#interactive-programming-flappy-bird-in-clojurescript", 
-            "text": "", 
-            "title": "Interactive Programming Flappy Bird in ClojureScript"
-        }, 
-        {
-            "location": "/talks/logging-and-testing-and-debugging-oh-my/", 
-            "text": "Albert Sweigart, \"Logging and Testing and Debugging, Oh My!\", PyBay2017", 
-            "title": "Logging and Testing and Debugging Oh My"
-        }, 
-        {
-            "location": "/talks/logging-and-testing-and-debugging-oh-my/#albert-sweigart-logging-and-testing-and-debugging-oh-my-pybay2017", 
-            "text": "", 
-            "title": "Albert Sweigart, \"Logging and Testing and Debugging, Oh My!\", PyBay2017"
-        }, 
-        {
-            "location": "/talks/machete-mode-debugging-hacking-your-way-out-of-a-tight-spot/", 
-            "text": "Ned Batchelder - Machete-mode debugging: Hacking your way out of a tight spot - PyCon 2016", 
-            "title": "Machete-Mode Debugging Hacking Your Way Out of a Tight Spot"
-        }, 
-        {
-            "location": "/talks/machete-mode-debugging-hacking-your-way-out-of-a-tight-spot/#ned-batchelder-machete-mode-debugging-hacking-your-way-out-of-a-tight-spot-pycon-2016", 
-            "text": "", 
-            "title": "Ned Batchelder - Machete-mode debugging: Hacking your way out of a tight spot - PyCon 2016"
-        }, 
-        {
-            "location": "/talks/monitoring-monitoring-systems-at-netflix/", 
-            "text": "Monitoring Monitoring Systems at Netflix - Monitorama PDX 2017 - Roy Rapoport", 
-            "title": "Monitoring Monitoring Systems at Netflix"
-        }, 
-        {
-            "location": "/talks/monitoring-monitoring-systems-at-netflix/#monitoring-monitoring-systems-at-netflix-monitorama-pdx-2017-roy-rapoport", 
-            "text": "", 
-            "title": "Monitoring Monitoring Systems at Netflix - Monitorama PDX 2017 - Roy Rapoport"
+            "location": "/talks/favorite/#unix", 
+            "text": "The Unix Chainsaw - Gary Bernhardt | Cascadia Ruby Conf 2011", 
+            "title": "Unix"
         }, 
         {
             "location": "/talks/netflix-atlas-telemetry-a-platform-begets-an-ecosystem/", 
@@ -804,246 +594,6 @@
             "location": "/talks/netflix-atlas-telemetry-a-platform-begets-an-ecosystem/#netflix-atlas-telemetry-a-platform-begets-an-ecosystem", 
             "text": "", 
             "title": "Netflix Atlas Telemetry - A Platform Begets an Ecosystem"
-        }, 
-        {
-            "location": "/talks/parallel-programming-fork-join-and-reducers/", 
-            "text": "Parallel Programming, Fork Join, and Reducers - Daniel Higginbotham\n\n\nhttps://www.youtube.com/watch?v=fA9ZXy4N13s", 
-            "title": "Parallel Programming Fork Join and Reducers"
-        }, 
-        {
-            "location": "/talks/parallel-programming-fork-join-and-reducers/#parallel-programming-fork-join-and-reducers-daniel-higginbotham", 
-            "text": "https://www.youtube.com/watch?v=fA9ZXy4N13s", 
-            "title": "Parallel Programming, Fork Join, and Reducers - Daniel Higginbotham"
-        }, 
-        {
-            "location": "/talks/parsing-text-with-a-virtual-machine/", 
-            "text": "Parsing Text with a Virtual Machine - Ghadi Shayban\n\n\nhttps://www.youtube.com/watch?v=9Q--oX5muxw", 
-            "title": "Parsing Text with a Virtual Machine"
-        }, 
-        {
-            "location": "/talks/parsing-text-with-a-virtual-machine/#parsing-text-with-a-virtual-machine-ghadi-shayban", 
-            "text": "https://www.youtube.com/watch?v=9Q--oX5muxw", 
-            "title": "Parsing Text with a Virtual Machine - Ghadi Shayban"
-        }, 
-        {
-            "location": "/talks/python-as-a-configuration-language/", 
-            "text": "Guillermo P\u00e9rez - Python as a configuration language - PyCon 2016", 
-            "title": "Python as a Configuration Language"
-        }, 
-        {
-            "location": "/talks/python-as-a-configuration-language/#guillermo-perez-python-as-a-configuration-language-pycon-2016", 
-            "text": "", 
-            "title": "Guillermo P\u00e9rez - Python as a configuration language - PyCon 2016"
-        }, 
-        {
-            "location": "/talks/python-concurrency-from-the-ground-up/", 
-            "text": "David Beazley - Python Concurrency From the Ground Up: LIVE! - PyCon 2015", 
-            "title": "Python Concurrency from the Ground Up"
-        }, 
-        {
-            "location": "/talks/python-concurrency-from-the-ground-up/#david-beazley-python-concurrency-from-the-ground-up-live-pycon-2015", 
-            "text": "", 
-            "title": "David Beazley - Python Concurrency From the Ground Up: LIVE! - PyCon 2015"
-        }, 
-        {
-            "location": "/talks/python-language-pycon-2016/", 
-            "text": "Guido van Rossum - Python Language - PyCon 2016", 
-            "title": "Python Language - PyCon 2016"
-        }, 
-        {
-            "location": "/talks/python-language-pycon-2016/#guido-van-rossum-python-language-pycon-2016", 
-            "text": "", 
-            "title": "Guido van Rossum - Python Language - PyCon 2016"
-        }, 
-        {
-            "location": "/talks/python-vs-ruby-a-battle-to-the-death/", 
-            "text": "Python vs Ruby - A Battle to The Death", 
-            "title": "Python vs Ruby - A Battle to the Death"
-        }, 
-        {
-            "location": "/talks/python-vs-ruby-a-battle-to-the-death/#python-vs-ruby-a-battle-to-the-death", 
-            "text": "", 
-            "title": "Python vs Ruby - A Battle to The Death"
-        }, 
-        {
-            "location": "/talks/repl-based-development-demo/", 
-            "text": "REPL-Based Development Demo\n\n\nhttps://vvvvalvalval.github.io/posts/what-makes-a-good-repl.html", 
-            "title": "REPL Based Development Demo"
-        }, 
-        {
-            "location": "/talks/repl-based-development-demo/#repl-based-development-demo", 
-            "text": "https://vvvvalvalval.github.io/posts/what-makes-a-good-repl.html", 
-            "title": "REPL-Based Development Demo"
-        }, 
-        {
-            "location": "/talks/refactoring-python-why-and-how-to-restructure-your-code/", 
-            "text": "Brett Slatkin - Refactoring Python: Why and how to restructure your code - PyCon 2016", 
-            "title": "Refactoring Python Why and How to Restructure Your Code"
-        }, 
-        {
-            "location": "/talks/refactoring-python-why-and-how-to-restructure-your-code/#brett-slatkin-refactoring-python-why-and-how-to-restructure-your-code-pycon-2016", 
-            "text": "", 
-            "title": "Brett Slatkin - Refactoring Python: Why and how to restructure your code - PyCon 2016"
-        }, 
-        {
-            "location": "/talks/removing-pythons-gil-the-gilectomy/", 
-            "text": "Larry Hastings - Removing Python's GIL: The Gilectomy - PyCon 2016", 
-            "title": "Removing Pythons GIL - The Gilectomy"
-        }, 
-        {
-            "location": "/talks/removing-pythons-gil-the-gilectomy/#larry-hastings-removing-pythons-gil-the-gilectomy-pycon-2016", 
-            "text": "", 
-            "title": "Larry Hastings - Removing Python's GIL: The Gilectomy - PyCon 2016"
-        }, 
-        {
-            "location": "/talks/rethinking-the-developer-career-path/", 
-            "text": "Rethinking the Developer Career Path \u2013 Randall Koutnik | The Lead Developer UK 2017", 
-            "title": "Rethinking the Developer Career Path"
-        }, 
-        {
-            "location": "/talks/rethinking-the-developer-career-path/#rethinking-the-developer-career-path-randall-koutnik-the-lead-developer-uk-2017", 
-            "text": "", 
-            "title": "Rethinking the Developer Career Path \u2013 Randall Koutnik | The Lead Developer UK 2017"
-        }, 
-        {
-            "location": "/talks/rich-hickey-on-clojure-spec/", 
-            "text": "Rich Hickey on Clojure Spec", 
-            "title": "Rich Hickey on clojure.spec"
-        }, 
-        {
-            "location": "/talks/rich-hickey-on-clojure-spec/#rich-hickey-on-clojure-spec", 
-            "text": "", 
-            "title": "Rich Hickey on Clojure Spec"
-        }, 
-        {
-            "location": "/talks/simple-made-easy/", 
-            "text": "Simple Made Easy - Rich Hickey\n\n\nhttps://www.infoq.com/presentations/Simple-Made-Easy", 
-            "title": "Simple Made Easy"
-        }, 
-        {
-            "location": "/talks/simple-made-easy/#simple-made-easy-rich-hickey", 
-            "text": "https://www.infoq.com/presentations/Simple-Made-Easy", 
-            "title": "Simple Made Easy - Rich Hickey"
-        }, 
-        {
-            "location": "/talks/spec-ulation-keynote/", 
-            "text": "Spec-ulation Keynote - Rich Hickey", 
-            "title": "Spec-ulation Keynote"
-        }, 
-        {
-            "location": "/talks/spec-ulation-keynote/#spec-ulation-keynote-rich-hickey", 
-            "text": "", 
-            "title": "Spec-ulation Keynote - Rich Hickey"
-        }, 
-        {
-            "location": "/talks/stop-writing-classes/", 
-            "text": "Stop Writing Classes", 
-            "title": "Stop Writing Classes"
-        }, 
-        {
-            "location": "/talks/stop-writing-classes/#stop-writing-classes", 
-            "text": "", 
-            "title": "Stop Writing Classes"
-        }, 
-        {
-            "location": "/talks/the-joys-and-perils-of-interactive-development/", 
-            "text": "The Joys and Perils of Interactive Development - Stuart Sierra\n\n\nhttps://www.youtube.com/watch?v=-RaFcpNiYCo", 
-            "title": "The Joys and Perils of Interactive Development"
-        }, 
-        {
-            "location": "/talks/the-joys-and-perils-of-interactive-development/#the-joys-and-perils-of-interactive-development-stuart-sierra", 
-            "text": "https://www.youtube.com/watch?v=-RaFcpNiYCo", 
-            "title": "The Joys and Perils of Interactive Development - Stuart Sierra"
-        }, 
-        {
-            "location": "/talks/the-packaging-gradient/", 
-            "text": "Mahmoud Hashemi, \"The Packaging Gradient\", PyBay2017", 
-            "title": "The Packaging Gradient"
-        }, 
-        {
-            "location": "/talks/the-packaging-gradient/#mahmoud-hashemi-the-packaging-gradient-pybay2017", 
-            "text": "", 
-            "title": "Mahmoud Hashemi, \"The Packaging Gradient\", PyBay2017"
-        }, 
-        {
-            "location": "/talks/the-reactjs-landscape/", 
-            "text": "Luke VanderHart - The ReactJS Landscape", 
-            "title": "The ReactJS Landscape"
-        }, 
-        {
-            "location": "/talks/the-reactjs-landscape/#luke-vanderhart-the-reactjs-landscape", 
-            "text": "", 
-            "title": "Luke VanderHart - The ReactJS Landscape"
-        }, 
-        {
-            "location": "/talks/the-unix-chainsaw/", 
-            "text": "The Unix Chainsaw - Gary Bernhardt", 
-            "title": "The Unix Chainsaw"
-        }, 
-        {
-            "location": "/talks/the-unix-chainsaw/#the-unix-chainsaw-gary-bernhardt", 
-            "text": "", 
-            "title": "The Unix Chainsaw - Gary Bernhardt"
-        }, 
-        {
-            "location": "/talks/think-like-a-pythonista/", 
-            "text": "Luciano Ramalho, \"Think Like a Pythonista\", PyBay2017", 
-            "title": "Think Like a Pythonista"
-        }, 
-        {
-            "location": "/talks/think-like-a-pythonista/#luciano-ramalho-think-like-a-pythonista-pybay2017", 
-            "text": "", 
-            "title": "Luciano Ramalho, \"Think Like a Pythonista\", PyBay2017"
-        }, 
-        {
-            "location": "/talks/thinking-in-coroutines/", 
-            "text": "\u0141ukasz Langa - Thinking In Coroutines - PyCon 2016", 
-            "title": "Thinking in Coroutines"
-        }, 
-        {
-            "location": "/talks/thinking-in-coroutines/#ukasz-langa-thinking-in-coroutines-pycon-2016", 
-            "text": "", 
-            "title": "\u0141ukasz Langa - Thinking In Coroutines - PyCon 2016"
-        }, 
-        {
-            "location": "/talks/to-mock-or-not-to-mock-that-is-the-question/", 
-            "text": "Ana Balica - To Mock, or Not to Mock, That is the Question - PyCon 2016", 
-            "title": "To Mock or Not To Mock That is the Question"
-        }, 
-        {
-            "location": "/talks/to-mock-or-not-to-mock-that-is-the-question/#ana-balica-to-mock-or-not-to-mock-that-is-the-question-pycon-2016", 
-            "text": "", 
-            "title": "Ana Balica - To Mock, or Not to Mock, That is the Question - PyCon 2016"
-        }, 
-        {
-            "location": "/talks/types-are-like-the-weather-type-systems-are-like-weathermen/", 
-            "text": "Types are Like the Weather, Type Systems are Like Weathermen - Matthias Felleisen\n\n\nhttps://www.youtube.com/watch?v=XTl7Jn_kmio", 
-            "title": "Types are Like the Weather Type Systems are Like Weathermen"
-        }, 
-        {
-            "location": "/talks/types-are-like-the-weather-type-systems-are-like-weathermen/#types-are-like-the-weather-type-systems-are-like-weathermen-matthias-felleisen", 
-            "text": "https://www.youtube.com/watch?v=XTl7Jn_kmio", 
-            "title": "Types are Like the Weather, Type Systems are Like Weathermen - Matthias Felleisen"
-        }, 
-        {
-            "location": "/talks/wat-a-lightning-talk/", 
-            "text": "WAT - A Lightning Talk by Gary Bernhardt from CodeMash 2012", 
-            "title": "Wat - A Lightning Talk"
-        }, 
-        {
-            "location": "/talks/wat-a-lightning-talk/#wat-a-lightning-talk-by-gary-bernhardt-from-codemash-2012", 
-            "text": "", 
-            "title": "WAT - A Lightning Talk by Gary Bernhardt from CodeMash 2012"
-        }, 
-        {
-            "location": "/talks/writing-awesome-command-line-programs-in-python/", 
-            "text": "Writing Awesome Command-Line Programs in Python", 
-            "title": "Writing Awesome Command Line Programs in Python"
-        }, 
-        {
-            "location": "/talks/writing-awesome-command-line-programs-in-python/#writing-awesome-command-line-programs-in-python", 
-            "text": "", 
-            "title": "Writing Awesome Command-Line Programs in Python"
         }
     ]
 }
