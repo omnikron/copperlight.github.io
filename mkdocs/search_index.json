@@ -367,12 +367,12 @@
         }, 
         {
             "location": "/python/stop-using-print-for-debugging/", 
-            "text": "Stop Using \"print\" for Debugging\n\n\n\n  \n2017-10-12\n\n  \nDiscuss\n\n\n\n\n\n\n\nMy favorite quickstart guide to the Python logging module, by \nAl Sweigart\n:\n\n\nStop Using \"print\" for Debugging: A 5 Minute Quickstart Guide to Python\u2019s logging Module\n\n\nimport\n \nlogging\n\n\nlogging\n.\nbasicConfig\n(\nlevel\n=\nlogging\n.\nDEBUG\n,\n \nformat\n=\n%(asctime)s\n - \n%(levelname)s\n - \n%(message)s\n)\n\n\nlogging\n.\ndebug\n(\nThis is a log message.\n)", 
+            "text": "Stop Using \"print\" for Debugging\n\n\n\n  \n2017-10-12\n\n  \nDiscuss\n\n\n\n\n\n\n\nMy favorite quickstart guide to the Python logging module, by \nAl Sweigart\n:\n\n\nStop Using \"print\" for Debugging: A 5 Minute Quickstart Guide to Python\u2019s logging Module\n\n\nThis is a slight tweak to that pattern, which adds the name of the logging source and an example of disabling selected log sources.\n\n\nimport\n \nlogging\n\n\nlogging\n.\nbasicConfig\n(\nlevel\n=\nlogging\n.\nDEBUG\n,\n \nformat\n=\n%(asctime)s\n - \n%(name)s\n - \n%(levelname)s\n - \n%(message)s\n)\n\n\nlogging\n.\ngetLogger\n(\nurllib3\n)\n.\nsetLevel\n(\nlogging\n.\nCRITICAL\n)\n\n\nlogging\n.\ndebug\n(\nThis is a log message.\n)", 
             "title": "Stop Using \"print\" for Debugging"
         }, 
         {
             "location": "/python/stop-using-print-for-debugging/#stop-using-print-for-debugging", 
-            "text": "2017-10-12 \n   Discuss    My favorite quickstart guide to the Python logging module, by  Al Sweigart :  Stop Using \"print\" for Debugging: A 5 Minute Quickstart Guide to Python\u2019s logging Module  import   logging  logging . basicConfig ( level = logging . DEBUG ,   format = %(asctime)s  -  %(levelname)s  -  %(message)s )  logging . debug ( This is a log message. )", 
+            "text": "2017-10-12 \n   Discuss    My favorite quickstart guide to the Python logging module, by  Al Sweigart :  Stop Using \"print\" for Debugging: A 5 Minute Quickstart Guide to Python\u2019s logging Module  This is a slight tweak to that pattern, which adds the name of the logging source and an example of disabling selected log sources.  import   logging  logging . basicConfig ( level = logging . DEBUG ,   format = %(asctime)s  -  %(name)s  -  %(levelname)s  -  %(message)s )  logging . getLogger ( urllib3 ) . setLevel ( logging . CRITICAL )  logging . debug ( This is a log message. )", 
             "title": "Stop Using \"print\" for Debugging"
         }, 
         {
