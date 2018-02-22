@@ -16,24 +16,9 @@
         <meta name="author" content="Matthew Johnson">
       
       
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.languages" content="">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
-      
         <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.4">
     
     
       
@@ -44,7 +29,7 @@
       <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-04ea671600.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-0741cbeb94.css">
       
     
     
@@ -121,8 +106,8 @@
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
             Type to start searching
           </div>
           <ol class="md-search-result__list"></ol>
@@ -175,11 +160,11 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <span class="md-nav__button md-logo">
+    <div class="md-nav__button md-logo">
       
         <i class="md-icon md-icon--home"></i>
       
-    </span>
+    </div>
     Copperlight Writes
   </label>
   
@@ -686,9 +671,70 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Scalafmt Configuration Tips
+      </label>
+    
     <a href="./" title="Scalafmt Configuration Tips" class="md-nav__link md-nav__link--active">
       Scalafmt Configuration Tips
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" title="Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-tips" title="Usage Tips" class="md-nav__link">
+    Usage Tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enforce-formatting" title="Enforce Formatting" class="md-nav__link">
+    Enforce Formatting
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gradle" title="Gradle" class="md-nav__link">
+    Gradle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sbt" title="Sbt" class="md-nav__link">
+    Sbt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -883,6 +929,54 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" title="Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-tips" title="Usage Tips" class="md-nav__link">
+    Usage Tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enforce-formatting" title="Enforce Formatting" class="md-nav__link">
+    Enforce Formatting
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gradle" title="Gradle" class="md-nav__link">
+    Gradle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sbt" title="Sbt" class="md-nav__link">
+    Sbt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -896,7 +990,7 @@
                 
                 <h1 id="scalafmt-configuration-tips">Scalafmt Configuration Tips<a class="headerlink" href="#scalafmt-configuration-tips" title="Permanent link">&para;</a></h1>
 <div class="meta">
-  <span class="date"><small>2017-08-03</small></span>
+  <span class="date"><small>2018-02-22</small></span>
   <span class="discuss"><a class="github-button" href="https://github.com/copperlight/copperlight.github.io/issues" data-icon="octicon-issue-opened" aria-label="Discuss copperlight/copperlight.github.io on GitHub">Discuss</a></span>
 </div>
 
@@ -908,7 +1002,9 @@ be installed using <a href="http://scalameta.org/scalafmt/#Homebrew">Homebrew</a
 </pre></div>
 
 
-<p>The following <code>.scalafmt.conf</code> configuration is recommended for use with Insight projects:</p>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<p>The following <code>.scalafmt.conf</code> configuration is recommended for use with Scala projects. It
+should be created in the project's root directory.</p>
 <div class="codehilite"><pre><span></span>style = defaultWithAlign
 
 align.openParenCallSite = false
@@ -927,20 +1023,46 @@ unindentTopLevelOperators = true
 </pre></div>
 
 
-<p>This config file should be created in the project's root directory or the user's home directory. To
-enable formatting on file save in IntelliJ: IntelliJ IDEA &gt; Preferences &gt; Tools &gt; Scalafmt &gt; check:
-Format on file save.</p>
-<p>Blank lines separate alignment blocks.</p>
-<p>For sections of code that require formatting which does not follow the scalafmt conventions,
-use <a href="http://scalameta.org/scalafmt/#//format:off">format:off</a> blocks to disable the formatter.</p>
-<p>When formatter changes include altering whitespace to align operators, it can make diffs more
-difficult to read.  You can use <code>git diff -w</code> to ignore whitespace changes.</p>
 <p>The <code>maxColumn</code> value is chosen so that it is easy to do side-by-side views of code and tests,
-while also avoiding wrapping in diffs on GitGub and Stash.</p>
+while also avoiding wrapping in diffs on GitHub and Stash.</p>
 <p>Alignment is allowed for case statements <code>=&gt;</code> and map assignments <code>-&gt;</code> and it is disallowed for
 assignment <code>=</code>.  This option taken together with the <code>openParen.*Site</code> configuration minimizes
 the amount of whitespace fiddling that will occur in code changes, which should lead to more
 readable diffs.</p>
+<h2 id="usage-tips">Usage Tips<a class="headerlink" href="#usage-tips" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Blank lines separate alignment blocks.</li>
+<li>For sections of code that require formatting which does not follow the scalafmt conventions,
+use <a href="http://scalameta.org/scalafmt/#//format:off">format:off</a> blocks to disable the formatter.</li>
+<li>When formatter changes include altering whitespace to align operators, it can make diffs more
+difficult to read.  You can use <code>git diff -w</code> to ignore whitespace changes.</li>
+<li>To enable formatting on file save in IntelliJ: IntelliJ IDEA &gt; Preferences &gt; Tools &gt; Scalafmt &gt;
+check: Format on file save.</li>
+</ul>
+<h2 id="enforce-formatting">Enforce Formatting<a class="headerlink" href="#enforce-formatting" title="Permanent link">&para;</a></h2>
+<h3 id="gradle">Gradle<a class="headerlink" href="#gradle" title="Permanent link">&para;</a></h3>
+<p>A <a href="https://github.com/alenkacz/gradle-scalafmt">Scalafmt Gradle plugin</a> is available, which can be
+used to enforce scalafmt conventions for your project.  It expects the configuration file to be
+located in the root of your project.</p>
+<p>Add the following to your <code>build.gradle</code> file:</p>
+<div class="codehilite"><pre><span></span>buildscript {
+    dependencies {
+        classpath &#39;cz.alenkacz:gradle-scalafmt:1.6.0&#39;
+    }
+}
+
+apply plugin: &#39;scalafmt&#39;
+</pre></div>
+
+
+<p>This adds a task <code>checkScalafmtAll</code> to your project, which can be used to verify that your project
+files adhere to the established configuration.</p>
+<h3 id="sbt">Sbt<a class="headerlink" href="#sbt" title="Permanent link">&para;</a></h3>
+<p>A <a href="https://github.com/lucidsoftware/neo-sbt-scalafmt">Scalafmt sbt plugin</a> is available, which can
+be used to enforce scalafmt conventions for your project.  It expects the configuration file to be
+located in the root of your project.</p>
+<div class="codehilite"><pre><span></span>scalafmt::test test:scalafmt::test
+</pre></div>
                 
                   
                 
@@ -1014,10 +1136,10 @@ readable diffs.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application-946997f430.js"></script>
+      <script src="../../assets/javascripts/application-683e1b679e.js"></script>
       
       
-      <script>app.initialize({version:"0.16.3",url:{base:"../.."}})</script>
+      <script>app.initialize({url:{base:"../.."}})</script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       
