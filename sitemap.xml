@@ -166,6 +166,12 @@
     </url>
         
     <url>
+     <loc>http://copperlight.github.io//scala/jmh-testing-with-scala/</loc>
+     <lastmod>2018-02-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>http://copperlight.github.io//scala/overview-of-debugging-tools/</loc>
      <lastmod>2018-02-22</lastmod>
      <changefreq>daily</changefreq>
