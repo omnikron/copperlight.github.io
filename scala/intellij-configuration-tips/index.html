@@ -736,6 +736,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#sbt-projects" class="md-nav__link">
+    sbt Projects
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#optimize-imports" class="md-nav__link">
     Optimize Imports
   </a>
@@ -1097,6 +1104,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#sbt-projects" class="md-nav__link">
+    sbt Projects
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#optimize-imports" class="md-nav__link">
     Optimize Imports
   </a>
@@ -1185,6 +1199,15 @@
 
 <p><br/></p>
 <p>This page provides a few tips on configuring IntelliJ for working with Scala code.</p>
+<h2 id="sbt-projects">sbt Projects<a class="headerlink" href="#sbt-projects" title="Permanent link">&para;</a></h2>
+<p>Sometimes, IntelliJ <a href="https://stackoverflow.com/questions/47697141/intellij-cannot-import-sbt-project">struggles to import sbt projects</a> - the build phase will last forever (20 min
+is not uncommon), when it should complete in 3-4 minutes. The solution is to switch the sbt build
+process to use sbt shell.</p>
+<ul>
+<li>IntelliJ IDEA &gt; Preferences</li>
+<li>Build, Execution, Deployment &gt; Build Tools &gt; sbt</li>
+<li>sbt projects &gt; sbt shell &gt; use for: project reload, builds</li>
+</ul>
 <h2 id="optimize-imports">Optimize Imports<a class="headerlink" href="#optimize-imports" title="Permanent link">&para;</a></h2>
 <p>The preference for organizing imports is to keep them on a single line per import, rather than
 bunching them together with curly braces.  You can enforce this behavior with IntelliJ by modifying
